@@ -28,3 +28,8 @@ test-results/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Project-owned PostgreSQL data and generated local configuration
+.local/
+*.zip
+__pycache__/

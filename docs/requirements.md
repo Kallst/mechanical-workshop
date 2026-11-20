@@ -1,6 +1,6 @@
 # Requirements catalog
 
-Status: planning baseline. No requirement in this catalog is implemented or verified by the documentation increment.
+Status: functional scope implemented in the academic application. See [implementation evidence](implementation.md) for per-capability verification and limits. Quality targets below remain proposed unless explicitly supported by measurements.
 
 ## Source and naming
 
