@@ -1,0 +1,362 @@
+[
+  {
+    "id": "UC-01",
+    "name": "Maintain customers and vehicles",
+    "actors": [
+      "manager"
+    ],
+    "requirements": [
+      "FR-01"
+    ],
+    "actor_description": "Workshop manager",
+    "preconditions": "Authenticated manager in an owned scenario.",
+    "normal_flow": [
+      "Enter customer details.",
+      "Register a vehicle against the customer with a unique scenario-scoped reference.",
+      "Confirm and retrieve the linked records."
+    ],
+    "alternative_flow": "An existing reference opens the existing record; invalid fields are shown for correction.",
+    "technical_exception": "A persistence failure saves neither a partial vehicle nor an invalid relationship.",
+    "postconditions": "Valid customer and vehicle records are available for orders."
+  },
+  {
+    "id": "UC-02",
+    "name": "Manage service orders",
+    "actors": [
+      "manager"
+    ],
+    "requirements": [
+      "FR-01"
+    ],
+    "actor_description": "Workshop manager",
+    "preconditions": "Customer and vehicle exist; user is authorized.",
+    "normal_flow": [
+      "Create a Draft order and describe the requested service.",
+      "Submit to Open after validating references.",
+      "Request review only after interventions and material requests are settled.",
+      "Close after reviewing reconciled costs, or return to work with a reason."
+    ],
+    "alternative_flow": "Cancel Draft or Open only before fulfilled work; invalid lifecycle transitions return their guard reason.",
+    "technical_exception": "A failed transition leaves the previous state and its history intact.",
+    "postconditions": "The order retains its state history; closure does not implicitly create an invoice."
+  },
+  {
+    "id": "UC-03",
+    "name": "Assign technicians",
+    "actors": [
+      "manager"
+    ],
+    "requirements": [
+      "FR-02"
+    ],
+    "actor_description": "Workshop manager",
+    "preconditions": "A nonterminal order and enabled technician records exist.",
+    "normal_flow": [
+      "Select the order.",
+      "Select one or more technicians and review current workload.",
+      "Confirm and store assignments without starting their timers."
+    ],
+    "alternative_flow": "Multiple planned assignments are allowed; attempting to remove a technician with unsettled work requires resolving that work first.",
+    "technical_exception": "Concurrent conflicting assignment edits are rejected or refreshed without losing confirmed changes.",
+    "postconditions": "Assignments identify who may perform interventions or receive material."
+  },
+  {
+    "id": "UC-04",
+    "name": "Record interventions",
+    "actors": [
+      "technician"
+    ],
+    "requirements": [
+      "FR-03"
+    ],
+    "actor_description": "Technician",
+    "preconditions": "User is assigned to an Open or In progress order.",
+    "normal_flow": [
+      "Start an intervention after checking that the technician has no other running intervention.",
+      "Record active segments; pause and resume when appropriate.",
+      "Finish with an outcome and close the last running segment."
+    ],
+    "alternative_flow": "On hold orders reject starts and resumes; paused time is excluded; finishing while paused adds no paused duration.",
+    "technical_exception": "An interrupted save retains the previous committed state and supports an idempotent retry.",
+    "postconditions": "Recorded running segments determine labor duration and the order reflects actual started work."
+  },
+  {
+    "id": "UC-05",
+    "name": "Request materials",
+    "actors": [
+      "technician"
+    ],
+    "requirements": [
+      "FR-16"
+    ],
+    "actor_description": "Technician",
+    "preconditions": "User is assigned to an order permitting material requests.",
+    "normal_flow": [
+      "Select the order and item.",
+      "Enter a positive quantity in the declared unit.",
+      "Submit and receive a pending request reference."
+    ],
+    "alternative_flow": "Invalid quantities or assignments return a correction message; a pending request does not reserve stock.",
+    "technical_exception": "If saving fails, no request is reported as confirmed.",
+    "postconditions": "The request is attributable and visible to the warehouse clerk."
+  },
+  {
+    "id": "UC-06",
+    "name": "Issue materials",
+    "actors": [
+      "clerk"
+    ],
+    "requirements": [
+      "FR-04",
+      "FR-05",
+      "FR-07"
+    ],
+    "actor_description": "Warehouse clerk; technician is the material recipient",
+    "preconditions": "Request exists; order is Open or In progress; recipient is assigned.",
+    "normal_flow": [
+      "Review the requested item, recipient, order, and quantity.",
+      "Validate the order and assignment (included behavior).",
+      "Within one transaction, revalidate current stock and order, record the issue and cost snapshot, update stock, fulfillment, and audit history (included stock movement).",
+      "Confirm the issue and resulting cost; at the extension point after stock commit, suggest replenishment when inventory position is below the reorder point."
+    ],
+    "alternative_flow": "Insufficient stock permits an explicitly accepted partial quantity or leaves the remainder pending; invalid or changed assignment rejects delivery without a stock change.",
+    "technical_exception": "A technical or concurrency failure rolls back all related writes and returns a retryable result where appropriate.",
+    "postconditions": "Stock, ledger, fulfillment, and attributed cost agree; one physical delivery is not duplicated by a retry."
+  },
+  {
+    "id": "UC-07",
+    "name": "Accept material returns",
+    "actors": [
+      "clerk"
+    ],
+    "requirements": [
+      "FR-16"
+    ],
+    "actor_description": "Warehouse clerk; technician declares the return",
+    "preconditions": "An original issue exists in the owned scenario and the order permits corrective return.",
+    "normal_flow": [
+      "Select the original issue.",
+      "Verify returned item and positive quantity against the unreturned balance.",
+      "Commit a compensating stock movement and original-cost reversal, then confirm."
+    ],
+    "alternative_flow": "Over-return or an unsupported post-closure correction is rejected; partial returns retain the remaining returnable balance.",
+    "technical_exception": "A failed commit changes neither stock nor net order cost.",
+    "postconditions": "The original issue remains intact and the accepted return is attributable."
+  },
+  {
+    "id": "UC-08",
+    "name": "Receive or adjust stock",
+    "actors": [
+      "clerk"
+    ],
+    "requirements": [
+      "FR-06"
+    ],
+    "actor_description": "Warehouse clerk",
+    "preconditions": "Item exists and the user can record stock movements.",
+    "normal_flow": [
+      "Select a receipt or justified adjustment.",
+      "Enter quantity, unit, and reference or reason.",
+      "Commit the movement and valuation changes and retrieve the new balance."
+    ],
+    "alternative_flow": "A negative adjustment that would overdraw stock is rejected; a purchase receipt uses its remaining outstanding quantity.",
+    "technical_exception": "Duplicate receipt keys cannot add stock twice; failed persistence rolls back the movement.",
+    "postconditions": "The stock balance and movement ledger reconcile."
+  },
+  {
+    "id": "UC-09",
+    "name": "Manage replenishment",
+    "actors": [
+      "admin",
+      "clerk"
+    ],
+    "requirements": [
+      "FR-08",
+      "FR-17"
+    ],
+    "actor_description": "Administrator approves; warehouse clerk receives",
+    "preconditions": "Item demand history and replenishment settings are available.",
+    "normal_flow": [
+      "Calculate inventory position, reorder point, and pack-rounded suggested quantity.",
+      "Administrator reviews and approves the suggestion and records the purchase as Ordered.",
+      "Warehouse clerk records full or partial delivery.",
+      "Reduce outstanding quantity and add only the received quantity to on-hand stock."
+    ],
+    "alternative_flow": "Reject or revise an unapproved suggestion; approved quantities prevent duplicate replenishment suggestions for the same shortfall.",
+    "technical_exception": "A receipt failure leaves outstanding and on-hand quantities unchanged.",
+    "postconditions": "Purchasing history distinguishes a suggestion, commitment, order, and actual receipt."
+  },
+  {
+    "id": "UC-10",
+    "name": "Monitor equipment",
+    "actors": [
+      "manager",
+      "telemetry"
+    ],
+    "requirements": [
+      "FR-09",
+      "FR-10"
+    ],
+    "actor_description": "Workshop manager; simulated telemetry source is a supporting actor",
+    "preconditions": "Equipment profile, scenario time basis, and event principal are valid.",
+    "normal_flow": [
+      "Receive a uniquely identified timestamped power or activity event.",
+      "Validate its source, ownership, order, and event sequence; deduplicate retries.",
+      "Close the previous observed interval and update the new observation state.",
+      "Update durations and coverage; at the duration-update extension point create one alert if continuous observed idle reaches the configured threshold."
+    ],
+    "alternative_flow": "Missing or stale data becomes unknown; out-of-order events are quarantined rather than silently rewriting finalized intervals.",
+    "technical_exception": "A storage failure keeps the event unconfirmed and allows an idempotent resend.",
+    "postconditions": "Known effective, idle, powered-unknown, and unknown-power durations remain distinguishable."
+  },
+  {
+    "id": "UC-11",
+    "name": "Resolve idle alerts",
+    "actors": [
+      "manager"
+    ],
+    "requirements": [
+      "FR-10"
+    ],
+    "actor_description": "Workshop manager",
+    "preconditions": "An idle episode has an open or acknowledged alert.",
+    "normal_flow": [
+      "Inspect the equipment state and alert evidence.",
+      "Acknowledge responsibility.",
+      "Power off the equipment or resume useful work, represented by an observed event in this simulation.",
+      "Resolve the alert only after the corrective observation is confirmed."
+    ],
+    "alternative_flow": "Acknowledgement alone leaves the alert unresolved; stale telemetry labels the observation Unverified.",
+    "technical_exception": "A failed command or missing confirmation cannot be displayed as a successful equipment action.",
+    "postconditions": "The action and resolution are attributable and the feedback loop has an observable effect."
+  },
+  {
+    "id": "UC-12",
+    "name": "Review order costs",
+    "actors": [
+      "admin",
+      "manager"
+    ],
+    "requirements": [
+      "FR-11"
+    ],
+    "actor_description": "Administrator or workshop manager",
+    "preconditions": "Order records exist and user has read permission.",
+    "normal_flow": [
+      "Select an order.",
+      "Calculate the included cost breakdown from net issues, active labor, and allocated known energy.",
+      "Inspect estimates, coverage, and any unallocated equipment overhead."
+    ],
+    "alternative_flow": "An open order shows a provisional total; unknown energy coverage is not silently treated as zero measured consumption.",
+    "technical_exception": "Unavailable source data produces an incomplete-data result instead of a fabricated total.",
+    "postconditions": "The user sees attributable components and explicit calculation assumptions."
+  },
+  {
+    "id": "UC-13",
+    "name": "Issue educational invoice",
+    "actors": [
+      "admin",
+      "recipient"
+    ],
+    "requirements": [
+      "FR-12"
+    ],
+    "actor_description": "Administrator; invoice recipient is a supporting actor",
+    "preconditions": "Order is Closed and its costs and pricing assumptions are reconciled.",
+    "normal_flow": [
+      "Select the closed order.",
+      "Calculate the included cost breakdown and apply the declared educational pricing policy.",
+      "Persist a unique invoice header and line snapshot atomically.",
+      "Generate the educational invoice document for administrator delivery to its recipient."
+    ],
+    "alternative_flow": "A repeated command returns the existing invoice; open orders cannot be invoiced.",
+    "technical_exception": "A failed invoice transaction creates no partial invoice; document rendering may be retried from the committed snapshot.",
+    "postconditions": "The issued invoice is stable and explicitly educational, with no tax-invoicing integration claimed."
+  },
+  {
+    "id": "UC-14",
+    "name": "View indicators and reports",
+    "actors": [
+      "admin",
+      "manager",
+      "clerk"
+    ],
+    "requirements": [
+      "FR-13",
+      "FR-14"
+    ],
+    "actor_description": "Administrator; workshop manager and warehouse clerk have scoped views",
+    "preconditions": "User has reporting permission in the owned scenario.",
+    "normal_flow": [
+      "Choose the authorized operational view and time window.",
+      "Read consistent persisted records and calculate indicators.",
+      "Display units, time basis, observation coverage, and data refresh status.",
+      "Export a report when the implementation provides the verified export path."
+    ],
+    "alternative_flow": "An empty period shows a valid empty result; role restrictions limit data fields and actions.",
+    "technical_exception": "A connection or query failure preserves a visible stale/error state rather than presenting old data as current.",
+    "postconditions": "Totals are traceable to their records and selected period."
+  },
+  {
+    "id": "UC-15",
+    "name": "Sign in",
+    "actors": [
+      "staff"
+    ],
+    "requirements": [
+      "FR-15"
+    ],
+    "actor_description": "Staff member",
+    "preconditions": "A provisioned account exists.",
+    "normal_flow": [
+      "Submit credentials.",
+      "Validate the stored credential verifier, account status, and login-attempt policy.",
+      "Create a protected session with a server-derived role and scenario access."
+    ],
+    "alternative_flow": "Invalid credentials return a generic access error; the proposed failed-attempt threshold is configurable and must include a recovery policy.",
+    "technical_exception": "An identity-store failure creates no authenticated session.",
+    "postconditions": "Authorized sessions exist only after verified authentication; role selection in a mockup is not this use case."
+  },
+  {
+    "id": "UC-16",
+    "name": "Run owned demonstration",
+    "actors": [
+      "operator"
+    ],
+    "requirements": [
+      "FR-18",
+      "FR-19"
+    ],
+    "actor_description": "Demonstration operator acting as a scenario owner",
+    "preconditions": "Authenticated user owns or can create the requested demonstration scenario.",
+    "normal_flow": [
+      "Choose a declared seed and clock rate or load the baseline.",
+      "Pause or advance scenario time and produce synthetic operations through the same domain contracts.",
+      "Inspect outcomes or compare equivalent control-policy runs.",
+      "Reset or version only the owned scenario with an audit record."
+    ],
+    "alternative_flow": "Cross-scenario commands and unauthorized resets are rejected; comparison runs keep demand, prices, horizon, and seed equivalent.",
+    "technical_exception": "A failed reset leaves the previous scenario recoverable and does not affect another owner.",
+    "postconditions": "The scenario is reproducible, isolated, and explicitly simulated."
+  },
+  {
+    "id": "UC-17",
+    "name": "Inspect operation history",
+    "actors": [
+      "admin"
+    ],
+    "requirements": [
+      "FR-20"
+    ],
+    "actor_description": "Administrator",
+    "preconditions": "User has permission to inspect the owned scenario audit trail.",
+    "normal_flow": [
+      "Select an operation, record reference, or time range.",
+      "Read attributed audit records.",
+      "Follow original and compensating records to explain a correction."
+    ],
+    "alternative_flow": "No matching records produces an empty result; history is not edited through this view.",
+    "technical_exception": "An audit query failure is reported without implying that no operations occurred.",
+    "postconditions": "The operational history remains attributable and readable without ordinary-user mutation."
+  }
+]

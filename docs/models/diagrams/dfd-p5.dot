@@ -1,0 +1,27 @@
+digraph dfd_p5 {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="DFD Level 1 projection - 5.0 Calculate costs and invoice", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+admin [shape=box, style=filled, fillcolor="#ffffff", label="Administrator"];
+d2 [shape=record, style=filled, fillcolor="#fff8eb", label="D2 | Customers vehicles orders and interventions"];
+d3 [shape=record, style=filled, fillcolor="#fff8eb", label="D3 | Items requests movements and purchases"];
+d4 [shape=record, style=filled, fillcolor="#fff8eb", label="D4 | Equipment events sessions and alerts"];
+d5 [shape=record, style=filled, fillcolor="#fff8eb", label="D5 | Cost snapshots and invoices"];
+d7 [shape=record, style=filled, fillcolor="#fff8eb", label="D7 | Audit trail"];
+p1 [shape=ellipse, fillcolor="#f3f6fa", label="1.0\nManage identity and access"];
+p5 [shape=ellipse, fillcolor="#c9e8e1", label="5.0\nCalculate costs and invoice"];
+p6 [shape=ellipse, fillcolor="#f3f6fa", label="6.0\nReport and run scenarios"];
+recipient [shape=box, style=filled, fillcolor="#ffffff", label="Invoice recipient\n(no customer portal)"];
+"admin" -> "p5" [label="F17\nCost review and invoice command"];
+"p5" -> "admin" [label="F18\nCost breakdown and invoice result"];
+"p5" -> "recipient" [label="F19\nEducational invoice document"];
+"p1" -> "p5" [label="Authorized identity and scenario\ncontext"];
+"d2" -> "p5" [label="Intervention durations and rates"];
+"d3" -> "p5" [label="Net issue cost snapshots"];
+"d4" -> "p5" [label="Estimated energy and allocation\nrecords"];
+"p5" -> "d5" [label="Cost and invoice snapshots"];
+"d5" -> "p5" [label="Existing invoice and snapshot data"];
+"p6" -> "p5" [label="Scenario cost and invoice commands"];
+"p5" -> "d7" [label="Attributed operation record"];
+
+}

@@ -1,0 +1,22 @@
+digraph dfd_p2 {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="DFD Level 1 projection - 2.0 Manage workshop operations", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+d2 [shape=record, style=filled, fillcolor="#fff8eb", label="D2 | Customers vehicles orders and interventions"];
+d7 [shape=record, style=filled, fillcolor="#fff8eb", label="D7 | Audit trail"];
+manager [shape=box, style=filled, fillcolor="#ffffff", label="Workshop manager"];
+p1 [shape=ellipse, fillcolor="#f3f6fa", label="1.0\nManage identity and access"];
+p2 [shape=ellipse, fillcolor="#c9e8e1", label="2.0\nManage workshop operations"];
+p6 [shape=ellipse, fillcolor="#f3f6fa", label="6.0\nReport and run scenarios"];
+technician [shape=box, style=filled, fillcolor="#ffffff", label="Technician"];
+"manager" -> "p2" [label="F03\nOrders and assignment commands"];
+"p2" -> "manager" [label="F04\nOrder and workload status"];
+"technician" -> "p2" [label="F05\nIntervention commands"];
+"p2" -> "technician" [label="F06\nAssigned work and intervention\nstatus"];
+"p1" -> "p2" [label="Authorized identity and scenario\ncontext"];
+"p2" -> "d2" [label="Order assignment and intervention\nchanges"];
+"d2" -> "p2" [label="Customer vehicle and work records"];
+"p6" -> "p2" [label="Scenario workshop commands"];
+"p2" -> "d7" [label="Attributed operation record"];
+
+}

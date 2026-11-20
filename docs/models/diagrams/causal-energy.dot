@@ -1,0 +1,16 @@
+digraph causal_energy {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="B2 - idle equipment control feedback", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+
+idle [label="Powered idle time\nper operating window"];
+alerts [label="Open idle alerts"];
+response [label="Acknowledged alerts\nwith corrective action"];
+cost [label="Estimated idle energy cost\nper operating window"];
+control [shape=note, fillcolor="#fff8eb", label="B2 - balancing loop\nAction reduces future powered idle duration.\nDetection threshold and human response add delay.\nAcknowledgement without action has no guaranteed effect."];
+"idle" -> "alerts" [label="+\n[15-minute detection delay]"];
+"alerts" -> "response" [label="+\n[human response delay]"];
+"response" -> "idle" [label="-\n[power off or resume useful work]"];
+"idle" -> "cost" [label="+\n[fixed power profile and tariff]"];
+
+}

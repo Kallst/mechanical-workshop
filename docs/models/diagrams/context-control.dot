@@ -1,0 +1,22 @@
+digraph context_control {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Application context - monitoring and delivery view", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+app [shape=ellipse, fillcolor="#e5f3f1", color="#227b70", penwidth=1.6, label="0\nMechanical Workshop\ninformation system"];
+"telemetry" -> "app" [label="F13\nPower activity and heartbeat events"];
+"app" -> "telemetry" [label="F14\nEvent acceptance or rejection"];
+"manager" -> "app" [label="F15\nEquipment actions and alert\nacknowledgement"];
+"app" -> "manager" [label="F16\nUtilization alerts and action\nresults"];
+"admin" -> "app" [label="F17\nCost review and invoice command"];
+"app" -> "admin" [label="F18\nCost breakdown and invoice result"];
+"app" -> "recipient" [label="F19\nEducational invoice document"];
+"admin" -> "app" [label="F20\nReport and history query"];
+"app" -> "admin" [label="F21\nIndicators and period reports"];
+"operator" -> "app" [label="F22\nScenario create pause advance and\nreset commands"];
+"app" -> "operator" [label="F23\nScenario status and comparison\nresults"];
+admin [shape=box, style="filled", fillcolor="#ffffff", label="Administrator"];
+manager [shape=box, style="filled", fillcolor="#ffffff", label="Workshop manager"];
+operator [shape=box, style="filled", fillcolor="#ffffff", label="Demonstration operator\n(own scenario only)"];
+recipient [shape=box, style="filled", fillcolor="#ffffff", label="Invoice recipient\n(no customer portal)"];
+telemetry [shape=box, style="filled", fillcolor="#ffffff", label="Simulated telemetry source"];
+}

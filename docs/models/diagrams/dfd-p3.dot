@@ -1,0 +1,27 @@
+digraph dfd_p3 {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="DFD Level 1 projection - 3.0 Manage stock and purchasing", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+admin [shape=box, style=filled, fillcolor="#ffffff", label="Administrator"];
+clerk [shape=box, style=filled, fillcolor="#ffffff", label="Warehouse clerk"];
+d2 [shape=record, style=filled, fillcolor="#fff8eb", label="D2 | Customers vehicles orders and interventions"];
+d3 [shape=record, style=filled, fillcolor="#fff8eb", label="D3 | Items requests movements and purchases"];
+d7 [shape=record, style=filled, fillcolor="#fff8eb", label="D7 | Audit trail"];
+p1 [shape=ellipse, fillcolor="#f3f6fa", label="1.0\nManage identity and access"];
+p3 [shape=ellipse, fillcolor="#c9e8e1", label="3.0\nManage stock and purchasing"];
+p6 [shape=ellipse, fillcolor="#f3f6fa", label="6.0\nReport and run scenarios"];
+technician [shape=box, style=filled, fillcolor="#ffffff", label="Technician"];
+"technician" -> "p3" [label="F07\nMaterial requests and return\ndeclarations"];
+"p3" -> "technician" [label="F08\nRequest and return status"];
+"clerk" -> "p3" [label="F09\nIssues receipts returns and\nadjustments"];
+"p3" -> "clerk" [label="F10\nStock and fulfillment results"];
+"admin" -> "p3" [label="F11\nPurchase decisions and reorder\nsettings"];
+"p3" -> "admin" [label="F12\nPurchase suggestions and order\nstatus"];
+"p1" -> "p3" [label="Authorized identity and scenario\ncontext"];
+"d2" -> "p3" [label="Order state and assigned technician"];
+"p3" -> "d3" [label="Requests movements and purchase\nchanges"];
+"d3" -> "p3" [label="Stock costs demand and outstanding\npurchases"];
+"p6" -> "p3" [label="Scenario material and purchase\ncommands"];
+"p3" -> "d7" [label="Attributed operation record"];
+
+}

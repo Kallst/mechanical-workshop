@@ -1,0 +1,31 @@
+requirement_id,model_ids,use_cases,mockup_view,evidence_status
+FR-01,context-operations;dfd-p2;order-states,UC-01;UC-02,orders,Design only; implementation verification pending
+FR-02,order-states;dfd-p2,UC-03,orders,Design only; implementation verification pending
+FR-03,intervention-states;order-states,UC-04,orders,Design only; implementation verification pending
+FR-04,material-delivery-activity;dfd-p3,UC-06,inventory,Design only; implementation verification pending
+FR-05,material-delivery-activity;order-states,UC-06,inventory,Design only; implementation verification pending
+FR-06,dfd-p3,UC-08,inventory,Design only; implementation verification pending
+FR-07,material-delivery-activity;dfd-p3,UC-06,inventory,Design only; implementation verification pending
+FR-08,causal-inventory;dfd-p3,UC-09,purchasing,Design only; implementation verification pending
+FR-09,equipment-states;dfd-p4,UC-10,equipment,Design only; implementation verification pending
+FR-10,equipment-states;causal-energy,UC-10;UC-11,equipment,Design only; implementation verification pending
+FR-11,dfd-p5,UC-12,costs,Design only; implementation verification pending
+FR-12,dfd-p5;use-cases-control,UC-13,costs,Design only; implementation verification pending
+FR-13,dfd-p6,UC-14,overview,Design only; implementation verification pending
+FR-14,dfd-p6,UC-14,reports,Design only; implementation verification pending
+FR-15,dfd-p1;use-cases-control,UC-15,role preview only; authentication not mocked,Design only; implementation verification pending
+FR-16,material-delivery-activity;dfd-p3,UC-05;UC-07,inventory,Design only; implementation verification pending
+FR-17,causal-inventory;dfd-p3,UC-09,purchasing,Design only; implementation verification pending
+FR-18,context-control;dfd-p6,UC-16,scenario toolbar,Design only; implementation verification pending
+FR-19,dfd-p6,UC-16,temporary single-browser scenario; server isolation deferred,Design only; implementation verification pending
+FR-20,dfd-p6,UC-17,reports,Design only; implementation verification pending
+NFR-01,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-02,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-03,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-04,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-05,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-06,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-07,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-08,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending
+NFR-09,architecture and quality requirements; no behavioral diagram claims,,responsive views,Design only; implementation verification pending
+LNG-01,architecture and quality requirements; no behavioral diagram claims,,not proven by mockup,Design only; implementation verification pending

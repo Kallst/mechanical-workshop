@@ -1,0 +1,33 @@
+digraph equipment_states {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Equipment observation states - composite view", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+
+newrank=true;
+start [shape=point, width=0.14, fillcolor="#17253b", color="#17253b"];
+"Unknown power" [label="Unknown power"];
+Off [label="Off"];
+subgraph cluster_powered {
+  label="Powered - power known on"; color="#9cb5bf"; style=rounded;
+  "Powered unknown activity" [label="Unknown activity"];
+  Working [label="Working"];
+  Idle [shape=record, label="{Idle|after 15 min [no alert for episode]\n/ open alert (internal action)}"];
+}
+note [shape=note, fillcolor="#fff8eb", label="Shared power-off and heartbeat transitions\napply to every Powered substate.\nOpening or acknowledging an alert\ndoes not leave or reset Idle.\nUnknown intervals remain explicit."];
+"start" -> "Unknown power" [label=""];
+"Unknown power" -> "Off" [label="power sample\n[off observed]"];
+"Unknown power" -> "Powered unknown activity" [label="power sample\n[on observed and activity unknown]"];
+"Unknown power" -> "Working" [label="complete sample\n[on and working observed]"];
+"Unknown power" -> "Idle" [label="complete sample\n[on and idle observed]"];
+"Off" -> "Powered unknown activity" [label="power on\n[new event accepted]"];
+"Powered unknown activity" -> "Working" [label="activity sample\n[working observed]"];
+"Powered unknown activity" -> "Idle" [label="activity sample\n[idle observed]"];
+"Working" -> "Idle" [label="activity idle\n[timestamp accepted]"];
+"Idle" -> "Working" [label="activity working\n[timestamp accepted]"];
+"Working" -> "Powered unknown activity" [label="activity stale\n[power remains known on]"];
+"Idle" -> "Powered unknown activity" [label="activity stale\n[power remains known on]"];
+"Off" -> "Unknown power" [label="heartbeat timeout\n[freshness limit exceeded]"];
+"Working" -> "Off" [label="power off\n[timestamp accepted]", ltail=cluster_powered];
+"Idle" -> "Unknown power" [label="heartbeat timeout\n[freshness limit exceeded]", ltail=cluster_powered];
+
+}

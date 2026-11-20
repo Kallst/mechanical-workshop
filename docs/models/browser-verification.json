@@ -1,0 +1,625 @@
+{
+  "behaviorChecks": [
+    {
+      "name": "Baseline overview total",
+      "result": "passed"
+    },
+    {
+      "name": "Issue updates material cost",
+      "result": "passed"
+    },
+    {
+      "name": "Issue updates stock",
+      "result": "passed"
+    },
+    {
+      "name": "Fulfilled request cannot repeat",
+      "result": "passed"
+    },
+    {
+      "name": "Reorder recalculates from issue",
+      "result": "passed"
+    },
+    {
+      "name": "Approval leaves stock unchanged",
+      "result": "passed"
+    },
+    {
+      "name": "Receipt adds exactly ordered quantity",
+      "result": "passed"
+    },
+    {
+      "name": "Receipt cannot repeat",
+      "result": "passed"
+    },
+    {
+      "name": "Idle threshold creates one alert",
+      "result": "passed"
+    },
+    {
+      "name": "Repeated ticks do not duplicate alert",
+      "result": "passed"
+    },
+    {
+      "name": "Acknowledgement does not resolve idle",
+      "result": "passed"
+    },
+    {
+      "name": "Corrective power-off resolves alert",
+      "result": "passed"
+    },
+    {
+      "name": "Unknown coverage displayed",
+      "result": "passed"
+    },
+    {
+      "name": "Unknown interval does not invent energy",
+      "result": "passed"
+    },
+    {
+      "name": "Running work blocks hold",
+      "result": "passed"
+    },
+    {
+      "name": "Paused intervention excludes elapsed time",
+      "result": "passed"
+    },
+    {
+      "name": "Settled work permits hold",
+      "result": "passed"
+    },
+    {
+      "name": "On hold blocks intervention start",
+      "result": "passed"
+    },
+    {
+      "name": "Request leaves material cost unchanged",
+      "result": "passed"
+    },
+    {
+      "name": "Over-withdrawal is rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Rejected issue leaves stock intact",
+      "result": "passed"
+    },
+    {
+      "name": "Rejected issue leaves cost intact",
+      "result": "passed"
+    },
+    {
+      "name": "Warehouse report hides labor and energy",
+      "result": "passed"
+    },
+    {
+      "name": "Warehouse report hides full audit",
+      "result": "passed"
+    },
+    {
+      "name": "Report filter excludes other orders",
+      "result": "passed"
+    },
+    {
+      "name": "Admin can inspect history",
+      "result": "passed"
+    },
+    {
+      "name": "Settled order reaches Closed",
+      "result": "passed"
+    },
+    {
+      "name": "Closed order can be invoiced",
+      "result": "passed"
+    },
+    {
+      "name": "Closed invoice reconciles",
+      "result": "passed"
+    },
+    {
+      "name": "Closed invoice stays stable as clock advances",
+      "result": "passed"
+    }
+  ],
+  "layoutChecks": [
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Overview",
+      "client": 1425,
+      "heading": "Workshop overview",
+      "scroll": 1425,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Service orders",
+      "client": 1425,
+      "heading": "Service orders",
+      "scroll": 1425,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Warehouse",
+      "client": 1425,
+      "heading": "Warehouse",
+      "scroll": 1425,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Purchasing",
+      "client": 1440,
+      "heading": "Purchasing",
+      "scroll": 1440,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Equipment",
+      "client": 1440,
+      "heading": "Equipment",
+      "scroll": 1440,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Costs & invoices",
+      "client": 1440,
+      "heading": "Costs & invoices",
+      "scroll": 1440,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Reports & history",
+      "client": 1425,
+      "heading": "Reports & history",
+      "scroll": 1425,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Overview",
+      "client": 753,
+      "heading": "Workshop overview",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Service orders",
+      "client": 753,
+      "heading": "Service orders",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Warehouse",
+      "client": 753,
+      "heading": "Warehouse",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Purchasing",
+      "client": 768,
+      "heading": "Purchasing",
+      "scroll": 768,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Equipment",
+      "client": 753,
+      "heading": "Equipment",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Costs & invoices",
+      "client": 753,
+      "heading": "Costs & invoices",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Reports & history",
+      "client": 753,
+      "heading": "Reports & history",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Overview",
+      "client": 375,
+      "heading": "Workshop overview",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Service orders",
+      "client": 375,
+      "heading": "Service orders",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Warehouse",
+      "client": 375,
+      "heading": "Warehouse",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Purchasing",
+      "client": 375,
+      "heading": "Purchasing",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Equipment",
+      "client": 375,
+      "heading": "Equipment",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Costs & invoices",
+      "client": 375,
+      "heading": "Costs & invoices",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Reports & history",
+      "client": 375,
+      "heading": "Reports & history",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    }
+  ],
+  "atlasChecks": [
+    {
+      "name": "Operational boundary",
+      "height": 1308,
+      "loaded": true,
+      "width": 893,
+      "result": "passed"
+    },
+    {
+      "name": "Monitoring and delivery boundary",
+      "height": 1196,
+      "loaded": true,
+      "width": 913,
+      "result": "passed"
+    },
+    {
+      "name": "1.0 Identity and access",
+      "height": 1077,
+      "loaded": true,
+      "width": 1607,
+      "result": "passed"
+    },
+    {
+      "name": "2.0 Workshop operations",
+      "height": 533,
+      "loaded": true,
+      "width": 1613,
+      "result": "passed"
+    },
+    {
+      "name": "3.0 Stock and purchasing",
+      "height": 751,
+      "loaded": true,
+      "width": 1811,
+      "result": "passed"
+    },
+    {
+      "name": "4.0 Equipment monitoring",
+      "height": 753,
+      "loaded": true,
+      "width": 1620,
+      "result": "passed"
+    },
+    {
+      "name": "5.0 Costs and invoices",
+      "height": 905,
+      "loaded": true,
+      "width": 1668,
+      "result": "passed"
+    },
+    {
+      "name": "6.0 Reporting and scenarios",
+      "height": 1127,
+      "loaded": true,
+      "width": 1759,
+      "result": "passed"
+    },
+    {
+      "name": "Complete Level 1 reference",
+      "height": 1820,
+      "loaded": true,
+      "width": 5015,
+      "result": "passed"
+    },
+    {
+      "name": "Service order lifecycle",
+      "height": 572,
+      "loaded": true,
+      "width": 1920,
+      "result": "passed"
+    },
+    {
+      "name": "Intervention lifecycle",
+      "height": 325,
+      "loaded": true,
+      "width": 1739,
+      "result": "passed"
+    },
+    {
+      "name": "Equipment observation lifecycle",
+      "height": 796,
+      "loaded": true,
+      "width": 2572,
+      "result": "passed"
+    },
+    {
+      "name": "Material delivery across roles",
+      "height": 2280,
+      "loaded": true,
+      "width": 1444,
+      "result": "passed"
+    },
+    {
+      "name": "B1 Inventory replenishment",
+      "height": 340,
+      "loaded": true,
+      "width": 2049,
+      "result": "passed"
+    },
+    {
+      "name": "B2 Idle equipment control",
+      "height": 416,
+      "loaded": true,
+      "width": 1489,
+      "result": "passed"
+    },
+    {
+      "name": "Workshop and warehouse goals",
+      "height": 1404,
+      "loaded": true,
+      "width": 1863,
+      "result": "passed"
+    },
+    {
+      "name": "Monitoring and control goals",
+      "height": 1463,
+      "loaded": true,
+      "width": 1380,
+      "result": "passed"
+    }
+  ],
+  "additionalChecks": [
+    {
+      "name": "Atlas 100 percent zoom applies",
+      "result": "passed"
+    },
+    {
+      "name": "Warehouse CSV excludes labor and energy columns",
+      "result": "passed"
+    },
+    {
+      "name": "Phone request dialog visible",
+      "result": "passed"
+    }
+  ],
+  "finalTypographyChecks": [
+    {
+      "size": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screen": "Overview",
+      "client": 1425,
+      "heading": "Workshop overview",
+      "scroll": 1425,
+      "width": 1440,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 768,
+        "height": 1024
+      },
+      "screen": "Overview",
+      "client": 753,
+      "heading": "Workshop overview",
+      "scroll": 753,
+      "width": 768,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Overview",
+      "client": 375,
+      "heading": "Workshop overview",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Service orders",
+      "client": 375,
+      "heading": "Service orders",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Warehouse",
+      "client": 375,
+      "heading": "Warehouse",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Purchasing",
+      "client": 375,
+      "heading": "Purchasing",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Equipment",
+      "client": 375,
+      "heading": "Equipment",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Costs & invoices",
+      "client": 375,
+      "heading": "Costs & invoices",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    },
+    {
+      "size": {
+        "width": 390,
+        "height": 844
+      },
+      "screen": "Reports & history",
+      "client": 375,
+      "heading": "Reports & history",
+      "scroll": 375,
+      "width": 390,
+      "result": "passed"
+    }
+  ],
+  "chartLabelSize": "14px at all tested widths",
+  "scope": "Browser-only prototype and model atlas; no full-stack or cross-browser certification"
+}

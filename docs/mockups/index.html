@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Interactive English design prototype for Mechanical Workshop. Temporary browser state, no server or authentication.">
+  <title>Mechanical Workshop · Design prototype</title>
+  <link rel="stylesheet" href="prototype.css?v=system-models-2">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="prototype-bar">
+    <span><strong>Design prototype</strong><span class="desktop-note"> · Temporary browser data · No authentication</span></span>
+    <div class="scenario-controls"><span id="scenario-time"></span><button id="advance-time" type="button">Advance 5 min</button><button id="reset-scenario" type="button">Reset scenario</button></div>
+  </div>
+  <div class="app-layout">
+    <aside class="sidebar">
+      <a class="brand" href="#overview"><span class="brand-mark">MW</span><span>Mechanical<br><strong>Workshop</strong></span></a>
+      <p class="nav-label">OPERATIONS</p>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-footer"><span class="environment-mark">D</span><div><strong>Heavy vehicle workshop</strong><small>Demonstration scenario</small></div></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><div class="breadcrumb">Workspace <span>/</span> <strong id="section-label">Overview</strong></div><label class="profile-label">View as <select id="profile" aria-label="Preview employee role"></select></label></header>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer"><span>Mechanical Workshop · Proposed interface</span><a href="../models/index.html">Explore system models</a></footer>
+    </div>
+  </div>
+  <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
+  <dialog id="request-dialog" aria-labelledby="request-title">
+    <form id="request-form"><div class="dialog-header"><h2 id="request-title">Request materials</h2><button type="button" class="icon-button" id="close-dialog" aria-label="Close request form">×</button></div>
+      <p class="muted">The warehouse clerk will review and fulfill your request. Submitting does not reserve stock.</p>
+      <label class="field">Service order<select name="order" id="request-order" required></select></label>
+      <label class="field">Material<select name="item" id="request-item" required></select></label>
+      <label class="field">Quantity<input name="quantity" type="number" min="1" step="1" value="1" required></label>
+      <p id="request-error" class="error" role="alert"></p><button class="primary" type="submit">Submit request</button>
+    </form>
+  </dialog>
+  <script src="prototype.js?v=system-models-2"></script>
+</body>
+</html>
