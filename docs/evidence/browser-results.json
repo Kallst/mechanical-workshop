@@ -1,0 +1,98 @@
+{
+  "browser": "157.0.8103.80",
+  "checks": [
+    {
+      "width": 1440,
+      "screen": "Overview",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Service orders",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Customers & vehicles",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Warehouse",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Purchasing",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Equipment",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Costs & invoices",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Reports & history",
+      "overflow": false
+    },
+    {
+      "width": 1440,
+      "screen": "Simulation",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Overview",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Service orders",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Customers & vehicles",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Warehouse",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Purchasing",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Equipment",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Costs & invoices",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Reports & history",
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "screen": "Simulation",
+      "overflow": false
+    }
+  ],
+  "persistedInvoice": true,
+  "realTechnicianSignIn": true,
+  "pageErrors": []
+}

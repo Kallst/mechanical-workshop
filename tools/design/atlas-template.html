@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mechanical Workshop · System models</title>
+<style>
+:root{font-family:"Segoe UI",Arial,sans-serif;color:#17253b;background:#f3f6fa;font-size:16px}*{box-sizing:border-box}body{margin:0}header{background:#12243a;color:#e9f1fa;padding:25px 30px;display:flex;justify-content:space-between;gap:25px;align-items:center}header a{color:#b2e4d9;font-size:.9rem}header h1{font-size:1.25rem;margin:0 0 6px;letter-spacing:-.02em}header p{margin:0;color:#a3b7ce;font-size:.82rem}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);min-height:calc(100vh - 98px)}aside{border-right:1px solid #dce3ed;padding:20px 16px;background:white}aside h2{font-size:.68rem;text-transform:uppercase;letter-spacing:.12em;color:#6e7e92;margin:20px 10px 9px}button,select{font:inherit}button{cursor:pointer}aside button{display:block;width:100%;text-align:left;background:none;border:0;border-radius:7px;padding:10px 12px;color:#586a82;font-size:.84rem;line-height:1.35}aside button.active{background:#e5f3ef;color:#176d58;font-weight:600}aside button:hover{background:#f0f5f9}main{padding:28px;min-width:0}h2{font-size:1.4rem;letter-spacing:-.025em;margin:0 0 10px}#description{font-size:.9rem;color:#5f7087;line-height:1.65;max-width:1000px;margin:0 0 20px}.toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:14px;font-size:.82rem}.toolbar select{padding:9px 30px 9px 12px;border:1px solid #cbd6e4;border-radius:6px;background:white;min-height:40px}.toolbar a{color:#147b70;text-underline-offset:3px;padding:8px 3px}.toolbar label{display:flex;align-items:center;gap:8px}.canvas{background:white;border:1px solid #dce3ed;border-radius:8px;overflow:auto;max-height:calc(100vh - 330px);min-height:360px;padding:18px}.canvas img{display:block;max-width:none;height:auto}.canvas.fit img{width:100%;height:auto;min-width:620px}.note{font-size:.77rem;color:#64738a;margin:14px 0 0;line-height:1.6}button:focus-visible,a:focus-visible,select:focus-visible{outline:3px solid #147b70;outline-offset:3px}@media(max-width:800px){header{padding:20px;flex-wrap:wrap;gap:10px}.layout{display:block}aside{padding:12px 16px;border:0;border-bottom:1px solid #dce3ed}aside h2{display:none}#model-nav{display:flex;overflow:auto;gap:5px}aside button{width:auto;flex-shrink:0;max-width:190px;white-space:normal;font-size:.78rem}main{padding:22px 16px}.canvas{min-height:330px;max-height:65vh;padding:8px}.canvas.fit img{min-width:620px}.note{font-size:.74rem}h2{font-size:1.25rem}}
+</style>
+</head>
+<body>
+<header><div><h1>Mechanical Workshop / System models</h1><p>Design baseline · 17 diagrams · English technical project</p></div><a href="../mockups/index.html">Open application prototype</a></header>
+<div class="layout"><aside><nav id="model-nav" aria-label="System model views"></nav></aside><main><h2 id="title"></h2><p id="description"></p><div class="toolbar"><label>Zoom<select id="zoom"><option value="fit">Fit width</option><option value="0.5">50%</option><option value="0.75">75%</option><option value="1">100%</option><option value="1.5">150%</option></select></label><a id="source" href="#">DOT source</a><a id="vector" href="#" target="_blank" rel="noopener">Open vector diagram</a><a href="README.md">Model specifications</a></div><div class="canvas fit" id="canvas"><img id="diagram" alt=""></div><p class="note">Design intent, not implementation evidence. The context projections share one application boundary; process projections share one Level 1 DFD. Scroll inside wide diagrams or select 100% for full label size.</p></main></div>
+<script>
+const models = /* MODEL_DATA */;
+let selected = models.find(model => model.id === location.hash.slice(1)) || models[0];
+function render() {
+  let group = '';
+  document.getElementById('model-nav').innerHTML = models.map(model => { const heading = group !== model.group ? `<h2>${model.group}</h2>` : ''; group = model.group; return heading + `<button type="button" data-id="${model.id}" class="${model.id === selected.id ? 'active' : ''}" ${model.id === selected.id ? 'aria-current="true"' : ''}>${model.title}</button>`; }).join('');
+  document.getElementById('title').textContent = selected.title;
+  document.getElementById('description').textContent = selected.description;
+  document.getElementById('diagram').src = selected.image;
+  document.getElementById('diagram').alt = selected.title + '. ' + selected.description;
+  document.getElementById('source').href = `diagrams/${selected.id}.dot`;
+  document.getElementById('vector').href = `diagrams/${selected.id}.svg`;
+  document.getElementById('canvas').scrollTo(0,0);
+}
+function resize() { const value = document.getElementById('zoom').value; const image = document.getElementById('diagram'); document.getElementById('canvas').classList.toggle('fit', value === 'fit'); image.style.width = value === 'fit' ? '' : `${image.naturalWidth * Number(value)}px`; }
+document.getElementById('diagram').addEventListener('load', resize);
+document.getElementById('model-nav').addEventListener('click', event => { const button = event.target.closest('button'); if (!button) return; selected = models.find(model => model.id === button.dataset.id); history.replaceState(null, '', `#${selected.id}`); render(); });
+document.getElementById('zoom').addEventListener('change', resize);
+render();
+</script>
+</body></html>

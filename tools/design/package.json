@@ -1,0 +1,11 @@
+{
+  "name": "mechanical-workshop-design-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node render-models.mjs"
+  },
+  "dependencies": {
+    "@viz-js/viz": "3.25.0"
+  }
+}

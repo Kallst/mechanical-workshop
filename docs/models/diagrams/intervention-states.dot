@@ -1,0 +1,19 @@
+digraph intervention_states {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Intervention lifecycle", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+start [shape=point, width=0.14, fillcolor="#17253b", color="#17253b"];
+"Planned" [label="Planned"];
+"Running" [label="Running"];
+"Paused" [label="Paused"];
+"Completed" [label="Completed"];
+"start" -> "Planned" [label=""];
+"Planned" -> "Running" [label="start\n[order permits work and technician\nassigned and free]\n/ open running time segment"];
+"Running" -> "Paused" [label="pause\n[caller owns running intervention]\n/ close running time segment"];
+"Paused" -> "Running" [label="resume\n[order permits work and technician\nfree]\n/ open new running time segment"];
+"Running" -> "Completed" [label="finish\n[outcome supplied and caller\nauthorized]\n/ close segment and record outcome"];
+"Paused" -> "Completed" [label="finish\n[outcome supplied and caller\nauthorized]\n/ record outcome; do not add paused\ntime"];
+end0 [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#17253b", color="#17253b"];
+"Completed" -> "end0" [label=""];
+
+}

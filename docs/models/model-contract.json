@@ -1,0 +1,870 @@
+{
+  "status": "Design contract, not application implementation",
+  "actors": {
+    "staff": "Staff member\n(all four operational roles)",
+    "manager": "Workshop manager",
+    "technician": "Technician",
+    "clerk": "Warehouse clerk",
+    "admin": "Administrator",
+    "telemetry": "Simulated telemetry source",
+    "recipient": "Invoice recipient\n(no customer portal)",
+    "operator": "Demonstration operator\n(own scenario only)"
+  },
+  "processes": {
+    "p1": "1.0\nManage identity and access",
+    "p2": "2.0\nManage workshop operations",
+    "p3": "3.0\nManage stock and purchasing",
+    "p4": "4.0\nMonitor equipment",
+    "p5": "5.0\nCalculate costs and invoice",
+    "p6": "6.0\nReport and run scenarios"
+  },
+  "stores": {
+    "d1": "D1 | Identity and permissions",
+    "d2": "D2 | Customers vehicles orders and interventions",
+    "d3": "D3 | Items requests movements and purchases",
+    "d4": "D4 | Equipment events sessions and alerts",
+    "d5": "D5 | Cost snapshots and invoices",
+    "d6": "D6 | Scenario clock and ownership",
+    "d7": "D7 | Audit trail"
+  },
+  "boundary_flows": [
+    {
+      "id": "F01",
+      "source": "staff",
+      "target": "p1",
+      "name": "Sign-in credentials"
+    },
+    {
+      "id": "F02",
+      "source": "p1",
+      "target": "staff",
+      "name": "Session or access error"
+    },
+    {
+      "id": "F03",
+      "source": "manager",
+      "target": "p2",
+      "name": "Orders and assignment commands"
+    },
+    {
+      "id": "F04",
+      "source": "p2",
+      "target": "manager",
+      "name": "Order and workload status"
+    },
+    {
+      "id": "F05",
+      "source": "technician",
+      "target": "p2",
+      "name": "Intervention commands"
+    },
+    {
+      "id": "F06",
+      "source": "p2",
+      "target": "technician",
+      "name": "Assigned work and intervention status"
+    },
+    {
+      "id": "F07",
+      "source": "technician",
+      "target": "p3",
+      "name": "Material requests and return declarations"
+    },
+    {
+      "id": "F08",
+      "source": "p3",
+      "target": "technician",
+      "name": "Request and return status"
+    },
+    {
+      "id": "F09",
+      "source": "clerk",
+      "target": "p3",
+      "name": "Issues receipts returns and adjustments"
+    },
+    {
+      "id": "F10",
+      "source": "p3",
+      "target": "clerk",
+      "name": "Stock and fulfillment results"
+    },
+    {
+      "id": "F11",
+      "source": "admin",
+      "target": "p3",
+      "name": "Purchase decisions and reorder settings"
+    },
+    {
+      "id": "F12",
+      "source": "p3",
+      "target": "admin",
+      "name": "Purchase suggestions and order status"
+    },
+    {
+      "id": "F13",
+      "source": "telemetry",
+      "target": "p4",
+      "name": "Power activity and heartbeat events"
+    },
+    {
+      "id": "F14",
+      "source": "p4",
+      "target": "telemetry",
+      "name": "Event acceptance or rejection"
+    },
+    {
+      "id": "F15",
+      "source": "manager",
+      "target": "p4",
+      "name": "Equipment actions and alert acknowledgement"
+    },
+    {
+      "id": "F16",
+      "source": "p4",
+      "target": "manager",
+      "name": "Utilization alerts and action results"
+    },
+    {
+      "id": "F17",
+      "source": "admin",
+      "target": "p5",
+      "name": "Cost review and invoice command"
+    },
+    {
+      "id": "F18",
+      "source": "p5",
+      "target": "admin",
+      "name": "Cost breakdown and invoice result"
+    },
+    {
+      "id": "F19",
+      "source": "p5",
+      "target": "recipient",
+      "name": "Educational invoice document"
+    },
+    {
+      "id": "F20",
+      "source": "admin",
+      "target": "p6",
+      "name": "Report and history query"
+    },
+    {
+      "id": "F21",
+      "source": "p6",
+      "target": "admin",
+      "name": "Indicators and period reports"
+    },
+    {
+      "id": "F22",
+      "source": "operator",
+      "target": "p6",
+      "name": "Scenario create pause advance and reset commands"
+    },
+    {
+      "id": "F23",
+      "source": "p6",
+      "target": "operator",
+      "name": "Scenario status and comparison results"
+    }
+  ],
+  "context_views": {
+    "context-operations": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06",
+      "F07",
+      "F08",
+      "F09",
+      "F10",
+      "F11",
+      "F12"
+    ],
+    "context-control": [
+      "F13",
+      "F14",
+      "F15",
+      "F16",
+      "F17",
+      "F18",
+      "F19",
+      "F20",
+      "F21",
+      "F22",
+      "F23"
+    ]
+  },
+  "internal_flows": [
+    {
+      "source": "p1",
+      "target": "d1",
+      "name": "Session and login attempt record"
+    },
+    {
+      "source": "d1",
+      "target": "p1",
+      "name": "Account role and credential verifier"
+    },
+    {
+      "source": "p1",
+      "target": "p2",
+      "name": "Authorized identity and scenario context"
+    },
+    {
+      "source": "p1",
+      "target": "p3",
+      "name": "Authorized identity and scenario context"
+    },
+    {
+      "source": "p1",
+      "target": "p4",
+      "name": "Authorized identity or telemetry principal"
+    },
+    {
+      "source": "p1",
+      "target": "p5",
+      "name": "Authorized identity and scenario context"
+    },
+    {
+      "source": "p1",
+      "target": "p6",
+      "name": "Authorized identity and scenario context"
+    },
+    {
+      "source": "p2",
+      "target": "d2",
+      "name": "Order assignment and intervention changes"
+    },
+    {
+      "source": "d2",
+      "target": "p2",
+      "name": "Customer vehicle and work records"
+    },
+    {
+      "source": "d2",
+      "target": "p3",
+      "name": "Order state and assigned technician"
+    },
+    {
+      "source": "p3",
+      "target": "d3",
+      "name": "Requests movements and purchase changes"
+    },
+    {
+      "source": "d3",
+      "target": "p3",
+      "name": "Stock costs demand and outstanding purchases"
+    },
+    {
+      "source": "d2",
+      "target": "p4",
+      "name": "Order links and assignment data"
+    },
+    {
+      "source": "p4",
+      "target": "d4",
+      "name": "Events sessions alerts and acknowledgements"
+    },
+    {
+      "source": "d4",
+      "target": "p4",
+      "name": "Equipment profile and session history"
+    },
+    {
+      "source": "d2",
+      "target": "p5",
+      "name": "Intervention durations and rates"
+    },
+    {
+      "source": "d3",
+      "target": "p5",
+      "name": "Net issue cost snapshots"
+    },
+    {
+      "source": "d4",
+      "target": "p5",
+      "name": "Estimated energy and allocation records"
+    },
+    {
+      "source": "p5",
+      "target": "d5",
+      "name": "Cost and invoice snapshots"
+    },
+    {
+      "source": "d5",
+      "target": "p5",
+      "name": "Existing invoice and snapshot data"
+    },
+    {
+      "source": "d2",
+      "target": "p6",
+      "name": "Order and labor records"
+    },
+    {
+      "source": "d3",
+      "target": "p6",
+      "name": "Inventory and purchasing records"
+    },
+    {
+      "source": "d4",
+      "target": "p6",
+      "name": "Equipment and alert records"
+    },
+    {
+      "source": "d5",
+      "target": "p6",
+      "name": "Cost and invoice records"
+    },
+    {
+      "source": "d7",
+      "target": "p6",
+      "name": "Attributed operation history"
+    },
+    {
+      "source": "p6",
+      "target": "d6",
+      "name": "Owned scenario and clock state"
+    },
+    {
+      "source": "d6",
+      "target": "p6",
+      "name": "Scenario seed clock and ownership"
+    },
+    {
+      "source": "p6",
+      "target": "p2",
+      "name": "Scenario workshop commands"
+    },
+    {
+      "source": "p6",
+      "target": "p3",
+      "name": "Scenario material and purchase commands"
+    },
+    {
+      "source": "p6",
+      "target": "p4",
+      "name": "Scenario equipment events"
+    },
+    {
+      "source": "p6",
+      "target": "p5",
+      "name": "Scenario cost and invoice commands"
+    },
+    {
+      "source": "p1",
+      "target": "d7",
+      "name": "Attributed operation record"
+    },
+    {
+      "source": "p2",
+      "target": "d7",
+      "name": "Attributed operation record"
+    },
+    {
+      "source": "p3",
+      "target": "d7",
+      "name": "Attributed operation record"
+    },
+    {
+      "source": "p4",
+      "target": "d7",
+      "name": "Attributed operation record"
+    },
+    {
+      "source": "p5",
+      "target": "d7",
+      "name": "Attributed operation record"
+    },
+    {
+      "source": "p6",
+      "target": "d7",
+      "name": "Attributed operation record"
+    }
+  ],
+  "lifecycles": {
+    "service_order": {
+      "initial": "Draft",
+      "states": [
+        "Draft",
+        "Open",
+        "In progress",
+        "On hold",
+        "Ready for review",
+        "Closed",
+        "Cancelled"
+      ],
+      "terminal": [
+        "Closed",
+        "Cancelled"
+      ],
+      "transitions": [
+        [
+          "Draft",
+          "Open",
+          "submit",
+          "customer and vehicle valid"
+        ],
+        [
+          "Draft",
+          "Cancelled",
+          "cancel",
+          "no fulfilled work"
+        ],
+        [
+          "Open",
+          "Cancelled",
+          "cancel",
+          "no net issues or started work"
+        ],
+        [
+          "Open",
+          "In progress",
+          "start intervention",
+          "technician assigned and no overlapping running work"
+        ],
+        [
+          "In progress",
+          "On hold",
+          "hold",
+          "no running intervention or active exclusive equipment session"
+        ],
+        [
+          "On hold",
+          "In progress",
+          "resume",
+          "assigned technician available"
+        ],
+        [
+          "In progress",
+          "Ready for review",
+          "request review",
+          "all interventions completed and requests settled and no active exclusive session"
+        ],
+        [
+          "Ready for review",
+          "In progress",
+          "return for work",
+          "reason recorded"
+        ],
+        [
+          "Ready for review",
+          "Closed",
+          "close",
+          "costs reconciled and manager authorized"
+        ]
+      ],
+      "material_issue_states": [
+        "Open",
+        "In progress"
+      ]
+    },
+    "intervention": {
+      "initial": "Planned",
+      "states": [
+        "Planned",
+        "Running",
+        "Paused",
+        "Completed"
+      ],
+      "terminal": [
+        "Completed"
+      ],
+      "transitions": [
+        [
+          "Planned",
+          "Running",
+          "start",
+          "order permits work and technician assigned and free"
+        ],
+        [
+          "Running",
+          "Paused",
+          "pause",
+          "caller owns running intervention"
+        ],
+        [
+          "Paused",
+          "Running",
+          "resume",
+          "order permits work and technician free"
+        ],
+        [
+          "Running",
+          "Completed",
+          "finish",
+          "outcome supplied and caller authorized"
+        ],
+        [
+          "Paused",
+          "Completed",
+          "finish",
+          "outcome supplied and caller authorized"
+        ]
+      ],
+      "effects": {
+        "Planned:start": "open running time segment",
+        "Running:pause": "close running time segment",
+        "Paused:resume": "open new running time segment",
+        "Running:finish": "close segment and record outcome",
+        "Paused:finish": "record outcome; do not add paused time"
+      }
+    },
+    "equipment": {
+      "initial": "Unknown power",
+      "states": [
+        "Unknown power",
+        "Off",
+        "Powered unknown activity",
+        "Working",
+        "Idle"
+      ],
+      "terminal": [],
+      "transitions": [
+        [
+          "Unknown power",
+          "Off",
+          "power sample",
+          "off observed"
+        ],
+        [
+          "Unknown power",
+          "Powered unknown activity",
+          "power sample",
+          "on observed and activity unknown"
+        ],
+        [
+          "Unknown power",
+          "Working",
+          "complete sample",
+          "on and working observed"
+        ],
+        [
+          "Unknown power",
+          "Idle",
+          "complete sample",
+          "on and idle observed"
+        ],
+        [
+          "Off",
+          "Powered unknown activity",
+          "power on",
+          "new event accepted"
+        ],
+        [
+          "Powered unknown activity",
+          "Working",
+          "activity sample",
+          "working observed"
+        ],
+        [
+          "Powered unknown activity",
+          "Idle",
+          "activity sample",
+          "idle observed"
+        ],
+        [
+          "Working",
+          "Idle",
+          "activity idle",
+          "timestamp accepted"
+        ],
+        [
+          "Idle",
+          "Working",
+          "activity working",
+          "timestamp accepted"
+        ],
+        [
+          "Working",
+          "Powered unknown activity",
+          "activity stale",
+          "power remains known on"
+        ],
+        [
+          "Idle",
+          "Powered unknown activity",
+          "activity stale",
+          "power remains known on"
+        ],
+        [
+          "Powered unknown activity",
+          "Off",
+          "power off",
+          "timestamp accepted"
+        ],
+        [
+          "Working",
+          "Off",
+          "power off",
+          "timestamp accepted"
+        ],
+        [
+          "Idle",
+          "Off",
+          "power off",
+          "timestamp accepted"
+        ],
+        [
+          "Off",
+          "Unknown power",
+          "heartbeat timeout",
+          "freshness limit exceeded"
+        ],
+        [
+          "Powered unknown activity",
+          "Unknown power",
+          "heartbeat timeout",
+          "freshness limit exceeded"
+        ],
+        [
+          "Working",
+          "Unknown power",
+          "heartbeat timeout",
+          "freshness limit exceeded"
+        ],
+        [
+          "Idle",
+          "Unknown power",
+          "heartbeat timeout",
+          "freshness limit exceeded"
+        ]
+      ]
+    }
+  },
+  "use_cases": [
+    {
+      "id": "UC-01",
+      "name": "Maintain customers and vehicles",
+      "actors": [
+        "manager"
+      ],
+      "requirements": [
+        "FR-01"
+      ]
+    },
+    {
+      "id": "UC-02",
+      "name": "Manage service orders",
+      "actors": [
+        "manager"
+      ],
+      "requirements": [
+        "FR-01"
+      ]
+    },
+    {
+      "id": "UC-03",
+      "name": "Assign technicians",
+      "actors": [
+        "manager"
+      ],
+      "requirements": [
+        "FR-02"
+      ]
+    },
+    {
+      "id": "UC-04",
+      "name": "Record interventions",
+      "actors": [
+        "technician"
+      ],
+      "requirements": [
+        "FR-03"
+      ]
+    },
+    {
+      "id": "UC-05",
+      "name": "Request materials",
+      "actors": [
+        "technician"
+      ],
+      "requirements": [
+        "FR-16"
+      ]
+    },
+    {
+      "id": "UC-06",
+      "name": "Issue materials",
+      "actors": [
+        "clerk"
+      ],
+      "requirements": [
+        "FR-04",
+        "FR-05",
+        "FR-07"
+      ]
+    },
+    {
+      "id": "UC-07",
+      "name": "Accept material returns",
+      "actors": [
+        "clerk"
+      ],
+      "requirements": [
+        "FR-16"
+      ]
+    },
+    {
+      "id": "UC-08",
+      "name": "Receive or adjust stock",
+      "actors": [
+        "clerk"
+      ],
+      "requirements": [
+        "FR-06"
+      ]
+    },
+    {
+      "id": "UC-09",
+      "name": "Manage replenishment",
+      "actors": [
+        "admin",
+        "clerk"
+      ],
+      "requirements": [
+        "FR-08",
+        "FR-17"
+      ]
+    },
+    {
+      "id": "UC-10",
+      "name": "Monitor equipment",
+      "actors": [
+        "manager",
+        "telemetry"
+      ],
+      "requirements": [
+        "FR-09",
+        "FR-10"
+      ]
+    },
+    {
+      "id": "UC-11",
+      "name": "Resolve idle alerts",
+      "actors": [
+        "manager"
+      ],
+      "requirements": [
+        "FR-10"
+      ]
+    },
+    {
+      "id": "UC-12",
+      "name": "Review order costs",
+      "actors": [
+        "admin",
+        "manager"
+      ],
+      "requirements": [
+        "FR-11"
+      ]
+    },
+    {
+      "id": "UC-13",
+      "name": "Issue educational invoice",
+      "actors": [
+        "admin",
+        "recipient"
+      ],
+      "requirements": [
+        "FR-12"
+      ]
+    },
+    {
+      "id": "UC-14",
+      "name": "View indicators and reports",
+      "actors": [
+        "admin",
+        "manager",
+        "clerk"
+      ],
+      "requirements": [
+        "FR-13",
+        "FR-14"
+      ]
+    },
+    {
+      "id": "UC-15",
+      "name": "Sign in",
+      "actors": [
+        "staff"
+      ],
+      "requirements": [
+        "FR-15"
+      ]
+    },
+    {
+      "id": "UC-16",
+      "name": "Run owned demonstration",
+      "actors": [
+        "operator"
+      ],
+      "requirements": [
+        "FR-18",
+        "FR-19"
+      ]
+    },
+    {
+      "id": "UC-17",
+      "name": "Inspect operation history",
+      "actors": [
+        "admin"
+      ],
+      "requirements": [
+        "FR-20"
+      ]
+    }
+  ],
+  "use_case_relationships": [
+    {
+      "source": "UC-06",
+      "target": "S1",
+      "kind": "include",
+      "condition": ""
+    },
+    {
+      "source": "UC-06",
+      "target": "S2",
+      "kind": "include",
+      "condition": ""
+    },
+    {
+      "source": "UC-07",
+      "target": "S2",
+      "kind": "include",
+      "condition": ""
+    },
+    {
+      "source": "UC-08",
+      "target": "S2",
+      "kind": "include",
+      "condition": ""
+    },
+    {
+      "source": "S3",
+      "target": "UC-06",
+      "kind": "extend",
+      "condition": "after stock commit [inventory position below reorder point]"
+    },
+    {
+      "source": "S4",
+      "target": "UC-10",
+      "kind": "extend",
+      "condition": "after duration update [observed idle >= threshold]"
+    },
+    {
+      "source": "UC-12",
+      "target": "S5",
+      "kind": "include",
+      "condition": ""
+    },
+    {
+      "source": "UC-13",
+      "target": "S5",
+      "kind": "include",
+      "condition": ""
+    }
+  ]
+}

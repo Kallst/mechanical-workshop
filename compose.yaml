@@ -1,0 +1,30 @@
+services:
+  database:
+    image: postgres:18
+    environment:
+      POSTGRES_USER: workshop
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      POSTGRES_DB: mechanical_workshop
+    volumes:
+      - workshop-data:/var/lib/postgresql
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U workshop -d mechanical_workshop"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  app:
+    build: .
+    ports: ["3070:3070"]
+    environment:
+      DATABASE_URL: postgresql://workshop:${POSTGRES_PASSWORD}@database:5432/mechanical_workshop
+      APP_ORIGIN: ${APP_ORIGIN:-http://localhost:3070}
+      COOKIE_SECURE: ${COOKIE_SECURE:-false}
+      DEMO_PASSWORD: ${DEMO_PASSWORD:?Set DEMO_PASSWORD}
+      ALLOW_DEMO_SIGNUP: "true"
+      MAX_DEMO_WORKSPACES: "100"
+    depends_on:
+      database:
+        condition: service_healthy
+    command: [sh, -c, "npm run db:migrate && npm run db:seed && node node_modules/next/dist/bin/next start --hostname 0.0.0.0 --port 3070"]
+volumes:
+  workshop-data:

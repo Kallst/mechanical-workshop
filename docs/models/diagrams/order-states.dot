@@ -1,0 +1,28 @@
+digraph order_states {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Service order lifecycle", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+start [shape=point, width=0.14, fillcolor="#17253b", color="#17253b"];
+"Draft" [label="Draft"];
+"Open" [label="Open"];
+"In progress" [label="In progress"];
+"On hold" [label="On hold"];
+"Ready for review" [label="Ready for review"];
+"Closed" [label="Closed"];
+"Cancelled" [label="Cancelled"];
+"start" -> "Draft" [label=""];
+"Draft" -> "Open" [label="submit\n[customer and vehicle valid]"];
+"Draft" -> "Cancelled" [label="cancel\n[no fulfilled work]"];
+"Open" -> "Cancelled" [label="cancel\n[no net issues or started work]"];
+"Open" -> "In progress" [label="start intervention\n[technician assigned and no\noverlapping running work]"];
+"In progress" -> "On hold" [label="hold\n[no running intervention or active\nexclusive equipment session]"];
+"On hold" -> "In progress" [label="resume\n[assigned technician available]"];
+"In progress" -> "Ready for review" [label="request review\n[all interventions completed and\nrequests settled and no active\nexclusive session]"];
+"Ready for review" -> "In progress" [label="return for work\n[reason recorded]"];
+"Ready for review" -> "Closed" [label="close\n[costs reconciled and manager\nauthorized]"];
+end0 [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#17253b", color="#17253b"];
+"Closed" -> "end0" [label=""];
+end1 [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#17253b", color="#17253b"];
+"Cancelled" -> "end1" [label=""];
+
+}
