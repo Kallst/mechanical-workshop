@@ -1,0 +1,24 @@
+digraph dfd_p4 {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="DFD Level 1 projection - 4.0 Monitor equipment", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+d2 [shape=record, style=filled, fillcolor="#fff8eb", label="D2 | Customers vehicles orders and interventions"];
+d4 [shape=record, style=filled, fillcolor="#fff8eb", label="D4 | Equipment events sessions and alerts"];
+d7 [shape=record, style=filled, fillcolor="#fff8eb", label="D7 | Audit trail"];
+manager [shape=box, style=filled, fillcolor="#ffffff", label="Workshop manager"];
+p1 [shape=ellipse, fillcolor="#f3f6fa", label="1.0\nManage identity and access"];
+p4 [shape=ellipse, fillcolor="#c9e8e1", label="4.0\nMonitor equipment"];
+p6 [shape=ellipse, fillcolor="#f3f6fa", label="6.0\nReport and run scenarios"];
+telemetry [shape=box, style=filled, fillcolor="#ffffff", label="Simulated telemetry source"];
+"telemetry" -> "p4" [label="F13\nPower activity and heartbeat events"];
+"p4" -> "telemetry" [label="F14\nEvent acceptance or rejection"];
+"manager" -> "p4" [label="F15\nEquipment actions and alert\nacknowledgement"];
+"p4" -> "manager" [label="F16\nUtilization alerts and action\nresults"];
+"p1" -> "p4" [label="Authorized identity or telemetry\nprincipal"];
+"d2" -> "p4" [label="Order links and assignment data"];
+"p4" -> "d4" [label="Events sessions alerts and\nacknowledgements"];
+"d4" -> "p4" [label="Equipment profile and session\nhistory"];
+"p6" -> "p4" [label="Scenario equipment events"];
+"p4" -> "d7" [label="Attributed operation record"];
+
+}

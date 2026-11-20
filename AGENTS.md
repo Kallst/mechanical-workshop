@@ -31,4 +31,4 @@
 
 ## Scope
 
-The initial increment contains documentation only. Do not describe the application as runnable until implementation and its startup path have been verified. Architecture versions, package selection, hosting, and installation commands must be validated when implementation starts.
+The repository foundation contains documentation; the modeling increment adds generated diagrams and a browser-only interactive prototype. Do not describe that prototype as the full-stack application or its role selector as authentication. Do not describe the application as runnable until implementation and its startup path have been verified. Architecture versions, package selection, hosting, and installation commands must be validated when implementation starts.

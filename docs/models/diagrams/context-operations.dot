@@ -1,0 +1,23 @@
+digraph context_operations {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Application context - operational view", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+app [shape=ellipse, fillcolor="#e5f3f1", color="#227b70", penwidth=1.6, label="0\nMechanical Workshop\ninformation system"];
+"staff" -> "app" [label="F01\nSign-in credentials"];
+"app" -> "staff" [label="F02\nSession or access error"];
+"manager" -> "app" [label="F03\nOrders and assignment commands"];
+"app" -> "manager" [label="F04\nOrder and workload status"];
+"technician" -> "app" [label="F05\nIntervention commands"];
+"app" -> "technician" [label="F06\nAssigned work and intervention\nstatus"];
+"technician" -> "app" [label="F07\nMaterial requests and return\ndeclarations"];
+"app" -> "technician" [label="F08\nRequest and return status"];
+"clerk" -> "app" [label="F09\nIssues receipts returns and\nadjustments"];
+"app" -> "clerk" [label="F10\nStock and fulfillment results"];
+"admin" -> "app" [label="F11\nPurchase decisions and reorder\nsettings"];
+"app" -> "admin" [label="F12\nPurchase suggestions and order\nstatus"];
+admin [shape=box, style="filled", fillcolor="#ffffff", label="Administrator"];
+clerk [shape=box, style="filled", fillcolor="#ffffff", label="Warehouse clerk"];
+manager [shape=box, style="filled", fillcolor="#ffffff", label="Workshop manager"];
+staff [shape=box, style="filled", fillcolor="#ffffff", label="Staff member\n(all four operational roles)"];
+technician [shape=box, style="filled", fillcolor="#ffffff", label="Technician"];
+}

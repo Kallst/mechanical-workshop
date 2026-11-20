@@ -1,0 +1,41 @@
+digraph use_cases_control {
+graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Use cases - monitoring, finance, and demonstration", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+admin [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nAdministrator"];
+clerk [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nWarehouse clerk"];
+manager [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nWorkshop manager"];
+operator [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nDemonstration operator\n(own scenario only)"];
+recipient [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nInvoice recipient\n(no customer portal)"];
+staff [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nStaff member\n(all four operational roles)"];
+telemetry [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nSimulated telemetry source"];
+subgraph cluster_subject { label="Mechanical Workshop"; labeljust=l; color="#bdc9d8";
+"UC-10" [shape=ellipse, label="UC-10\nMonitor equipment"];
+"UC-11" [shape=ellipse, label="UC-11\nResolve idle alerts"];
+"UC-12" [shape=ellipse, label="UC-12\nReview order costs"];
+"UC-13" [shape=ellipse, label="UC-13\nIssue educational invoice"];
+"UC-14" [shape=ellipse, label="UC-14\nView indicators and reports"];
+"UC-15" [shape=ellipse, label="UC-15\nSign in"];
+"UC-16" [shape=ellipse, label="UC-16\nRun owned demonstration"];
+"UC-17" [shape=ellipse, label="UC-17\nInspect operation history"];
+S4 [shape=ellipse, fillcolor="#fff8eb", label="Create idle alert"];
+S5 [shape=ellipse, fillcolor="#fff8eb", label="Calculate cost breakdown"];
+}
+"manager" -> "UC-10" [label="", dir=none];
+"telemetry" -> "UC-10" [label="", dir=none];
+"manager" -> "UC-11" [label="", dir=none];
+"admin" -> "UC-12" [label="", dir=none];
+"manager" -> "UC-12" [label="", dir=none];
+"admin" -> "UC-13" [label="", dir=none];
+"recipient" -> "UC-13" [label="", dir=none];
+"admin" -> "UC-14" [label="", dir=none];
+"manager" -> "UC-14" [label="", dir=none];
+"clerk" -> "UC-14" [label="", dir=none];
+"staff" -> "UC-15" [label="", dir=none];
+"operator" -> "UC-16" [label="", dir=none];
+"admin" -> "UC-17" [label="", dir=none];
+"S4" -> "UC-10" [label="<<extend>>\nafter duration update [observed idle\n>= threshold]", style=dashed, arrowhead=vee, color="#a66a21"];
+"UC-12" -> "S5" [label="<<include>>", style=dashed, arrowhead=vee, color="#a66a21"];
+"UC-13" -> "S5" [label="<<include>>", style=dashed, arrowhead=vee, color="#a66a21"];
+
+}

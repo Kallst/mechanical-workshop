@@ -2,6 +2,8 @@
 
 Implementation proceeds in reviewable increments. Each increment contributes academic evidence and executable behavior where applicable. This roadmap is a plan, not a fabricated development history.
 
+Completed design work is available in the [model atlas](models/index.html), [specifications](models/README.md), and [browser-only prototype](mockups/index.html). This does not complete the application-foundation or subsequent server-backed increments. [Verification evidence](models/verification.md) distinguishes design checks from future application tests.
+
 | Increment | Work | Completion evidence |
 | --- | --- | --- |
 | Repository foundation | English policy, scope, requirements, domain rules, architecture direction, GitFlow, templates | Reviewed documents and first feature pull request into develop |
