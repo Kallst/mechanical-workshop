@@ -1,0 +1,31 @@
+requirement_id,original_requirement_id,capability,primary_role,planned_model,planned_evidence,status
+FR-01,RF-01,Register customers vehicles and service orders,Workshop manager,Context and order lifecycle,Create and retrieve a linked order,Planned
+FR-02,RF-02,Assign technicians,Workshop manager,Order state diagram,Reject active work without assignment,Planned
+FR-03,RF-03,Record interventions,Technician,Intervention activity and state diagrams,Record time and reject overlapping active work,Planned
+FR-04,RF-04,Record material issues,Warehouse clerk,Material delivery activity and DFD,Issue linked to technician and order,Planned
+FR-05,RF-05,Validate material recipients,Warehouse clerk,Material delivery activity,Reject closed or unassigned order,Planned
+FR-06,RF-06,Record stock receipts and adjustments,Warehouse clerk,Inventory DFD,Attributable ledger entries,Planned
+FR-07,RF-07,Update inventory atomically,Warehouse clerk,Inventory balance invariant,Rollback and concurrent withdrawal verification,Planned
+FR-08,RF-08,Calculate reorder points and purchase suggestions,Administrator,Purchasing DFD and feedback loop,Reproducible calculation without duplicate suggestions,Planned
+FR-09,RF-09,Record equipment power events,Simulated telemetry source,Equipment state diagram,Timestamped deduplicated power events,Planned
+FR-10,RF-10,Detect idle equipment and notify,Workshop manager,Equipment state and causal diagrams,Idle alert acknowledgement and corrective action,Planned
+FR-11,RF-11,Calculate attributed operating costs,Administrator,Cost DFD,Material labor and energy reconciliation,Planned
+FR-12,RF-12,Generate educational invoices,Administrator,Invoice use case,Stable cost and price snapshot,Planned
+FR-13,RF-13,Show operational indicators,Administrator,Information transformation and DFD,Automatic update from persisted events,Planned
+FR-14,RF-14,Generate period reports,Administrator,Reporting DFD,Consistent filtered totals,Planned
+FR-15,RF-15,Authenticate and authorize users,All operational roles,Access use cases,Server authorization and failed-login tests,Planned
+FR-16,Accepted scope extension,Manage requests and material returns,Technician and warehouse clerk,Request lifecycle and activity diagram,Attributable fulfillment and bounded returns,Planned
+FR-17,Accepted scope extension,Process purchasing and receiving,Administrator and warehouse clerk,Purchase state diagram,Authorize order and receive once,Planned
+FR-18,Accepted scope extension,Run reproducible accelerated scenarios,Demonstration operator,Simulation clock model,Repeat scenario with identical seed,Planned
+FR-19,Accepted scope extension,Isolate demonstration sessions,All demonstration users,Application context and data ownership,Reject cross-session access,Planned
+FR-20,Accepted scope extension,Preserve operation history,Administrator,Audit DFD,Attributed append-only corrections,Planned
+NFR-01,RNF-01,Indicator latency,All operational roles,Architecture,Measured end-to-end latency,Proposed target
+NFR-02,RNF-02,Concurrent workload,All operational roles,Architecture,Reproducible load test,Proposed target
+NFR-03,RNF-03,Availability,Administrator,Deployment architecture,Monthly monitoring evidence,Proposed target
+NFR-04,RNF-04,Data protection,All operational roles,Deployment architecture,TLS storage and secret configuration inspection,Proposed target
+NFR-05,RNF-05,Request usability,Technician,Request mockup,Observed participant usability study,Proposed target
+NFR-06,RNF-06,Backup and recovery,Administrator,Operations design,Measured restoration exercise,Proposed target
+NFR-07,RNF-07,MQTT event interoperability,External telemetry adapter,Telemetry contract,Future adapter and loss measurement,Deferred integration target
+NFR-08,RNF-08,History retention,Administrator,Audit design,Permission checks and retention policy evidence,Proposed target
+NFR-09,RNF-09,Browser and device compatibility,All operational roles,Responsive mockups,Recorded browser and viewport verification,Proposed target
+LNG-01,User instruction,English software and technical workflow,All contributors,All software artifacts,UI and contribution review,Accepted constraint
