@@ -2,11 +2,28 @@
 
 A full-stack heavy-vehicle workshop management and simulation project grounded in Systems Theory.
 
-The workshop needs to connect technicians, service orders, material consumption, and equipment use so that managers can act while work is happening. The software will make those relationships visible and enforce the rules that keep the operation consistent.
+The workshop needs to connect technicians, service orders, material consumption, and equipment use so that managers can act while work is happening. The software makes those relationships visible and enforce the rules that keep the operation consistent.
 
 ## Current status
 
-The repository contains the scope, requirements, architecture direction, development workflow, a reviewed system-model baseline, and a responsive browser-only design prototype. The full-stack application is not implemented yet. The prototype has temporary local state and no server, authentication, or database. Features and quality targets described here are planned unless explicitly marked as verified.
+The repository contains a working Next.js/React/TypeScript application, PostgreSQL persistence, real employee sessions and server permissions, guarded workshop workflows, inventory and purchasing, simulated equipment events, operational reports, stable educational invoices, and isolated demonstration workspaces. The model atlas and the original browser-only prototype remain available as design evidence.
+
+Local production compilation, 15 domain tests, 10 HTTP integration subtests, backup restoration and 18 Chrome viewport checks passed. See [implementation evidence and limits](docs/implementation.md). Quality targets, physical telemetry and real savings are not proven by these tests.
+
+## Run locally
+
+Install Node 24 and PostgreSQL 18, then run:
+
+```sh
+npm ci
+npm run db:local
+npm run db:migrate
+npm run db:seed
+npm run build
+npm run start
+```
+
+Open **http://127.0.0.1:3070** and choose **Create an isolated demo workspace**. Supply your own demonstration password and keep the generated workspace code. The seven fictional employee accounts use that chosen password for role play. Switching accounts requires a real sign-in. See [complete startup and demonstration instructions](docs/running.md), including external databases, backup verification and deployment limitations.
 
 Active development takes place on `develop`. The `main` branch contains the stable baseline and will receive reviewed releases.
 
@@ -14,7 +31,7 @@ Active development takes place on `develop`. The `main` branch contains the stab
 
 All software interfaces, source code, identifiers, comments, errors, API contracts, technical documentation, issues, pull requests, and commits use English. The academic presentation and spoken explanations use Spanish and are separate deliverables. Personal names retain their original spelling and accents.
 
-## Planned capabilities
+## Implemented academic capabilities
 
 - Role-based access for administrators, workshop managers, warehouse clerks, and technicians.
 - Customers, heavy vehicles, service orders, technician assignments, and interventions.
@@ -29,10 +46,12 @@ All software interfaces, source code, identifiers, comments, errors, API contrac
 
 | Document | Purpose |
 | --- | --- |
+| [Running and demonstration](docs/running.md) | Installation, accounts, workflows, backup and deployment |
+| [Implementation evidence](docs/implementation.md) | Verified behavior, persistence decisions and limits |
 | [Project scope](docs/project-scope.md) | Boundaries, users, planned capabilities, and completion criteria |
 | [Requirements](docs/requirements.md) | Functional requirements and proposed quality targets |
-| [Systems Theory coverage](docs/systems-theory-coverage.md) | Existing academic work and models still to develop |
-| [Architecture decision](docs/architecture.md) | Proposed stack, module boundaries, and implementation constraints |
+| [Systems Theory coverage](docs/systems-theory-coverage.md) | Audit of original academic evidence and the delivered modeling increment |
+| [Architecture decision](docs/architecture.md) | Stack, module boundaries, and links to physical persistence decisions |
 | [Domain rules](docs/domain-rules.md) | Invariants, accounting relationships, and assumptions |
 | [Traceability](docs/traceability.csv) | Links from original requirement IDs to the English catalog and planned work |
 | [Delivery roadmap](docs/roadmap.md) | Implementation sequence and evidence required for each increment |
@@ -60,7 +79,7 @@ The following names identify fictional workshop employees. Their initial roles a
 
 Create a service order, assign Nicolás, start an intervention, request and issue a filter, observe inventory and cost changes, trigger a reorder suggestion, simulate an idle compressor, acknowledge its alert, finish the intervention, and close the order with its cost breakdown and educational invoice.
 
-The implementation must derive indicators from persisted operations. Simulation assumptions and measured software behavior will be reported separately from any claimed real-world savings.
+The application derives indicators from persisted operations. Simulation assumptions and measured software behavior will be reported separately from any claimed real-world savings.
 
 ## Previewing the design
 

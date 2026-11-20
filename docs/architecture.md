@@ -1,12 +1,12 @@
 # Architecture decision
 
-Status: proposed direction accepted for planning; implementation and dependency versions are not established yet.
+Status: implemented academic application. See [physical persistence decisions and verified versions](implementation.md) and [startup instructions](running.md). The logical boundaries below remain the design baseline.
 
 ## Stack and structure
 
 Use a modular monolith with Next.js, React, and TypeScript for the responsive interface and HTTP API, backed by PostgreSQL. Keep domain rules separate from rendering and request handling. One application deployment reduces operational overhead for a solo project while preserving visible module responsibilities.
 
-Next.js Route Handlers provide an HTTP API surface. PostgreSQL provides relational constraints and transactions. Select the authentication library, SQL access library, component tools, and compatible package versions after checking their current official documentation and runtime requirements when scaffolding the application.
+Next.js Route Handlers provide an HTTP API surface. PostgreSQL provides relational constraints and transactions. The implementation uses pg with single-client transactions, custom scrypt password hashes and opaque database-backed sessions; there is no external identity provider. Pinned versions and limitations are documented in implementation.md.
 
 References: [Next.js Route Handlers](https://nextjs.org/docs/app/getting-started/route-handlers), [PostgreSQL constraints](https://www.postgresql.org/docs/current/ddl-constraints.html), and [PostgreSQL transactions](https://www.postgresql.org/docs/current/tutorial-transactions.html).
 
@@ -28,7 +28,7 @@ References: [Next.js Route Handlers](https://nextjs.org/docs/app/getting-started
 
 A user action enters an authenticated request handler. Server authorization and input validation run before a domain operation. The operation reads and writes through a transaction where related updates must succeed together. After commit, the reporting layer exposes the resulting state to authorized clients.
 
-The interface will refresh operational information automatically. Select and verify the live-update transport during implementation; do not claim a particular latency until measured. Report data staleness and connection failures visibly.
+The interface polls versioned snapshots every 2.5 seconds while visible; this does not establish a latency percentile under load. Report data staleness and connection failures visibly.
 
 ## Inventory integrity
 
@@ -46,7 +46,7 @@ Keep wall-clock timestamps distinct from simulation time. A scenario has a decla
 
 ## Money and time
 
-Use PostgreSQL decimal values and decimal-safe server calculations for money, with explicit rounding rules. Store timestamps with an explicit timezone convention and display the demonstration timezone consistently. Duration calculations use a single declared time basis per scenario.
+The chosen implementation stores integer COP cents and integer thousandth-unit quantities inside the PostgreSQL JSONB scenario aggregate, using BigInt intermediate calculations and explicit rounding. This refines the initial decimal-column proposal; see implementation.md. Store timestamps with an explicit timezone convention and display the demonstration timezone consistently. Duration calculations use a single declared time basis per scenario.
 
 Energy is an estimate from configured power profiles and elapsed states unless actual measured energy is available. Preserve the power profile, tariff, and allocation assumptions used in a calculation. Attribute shared-equipment costs without charging the same session twice.
 

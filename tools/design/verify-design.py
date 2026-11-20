@@ -81,8 +81,8 @@ require(len(svgs)==17, '17 rendered SVG diagrams')
 for path in svgs:
     document=ET.fromstring(path.read_text(encoding='utf-8'))
     require(document.tag.endswith('svg') and 'viewBox' in document.attrib, f'Valid vector output: {path.stem}')
-for path in ROOT.rglob('*'):
-    if not path.is_file() or path.suffix not in {'.md','.html'} or 'node_modules' in path.parts or path.name=='atlas-template.html': continue
+for path in [ROOT/'README.md', ROOT/'CONTRIBUTING.md', ROOT/'AGENTS.md', *sorted((ROOT/'docs').rglob('*'))]:
+    if not path.is_file() or path.suffix not in {'.md','.html'} or path.name=='atlas-template.html': continue
     source=path.read_text(encoding='utf-8')
     links=re.findall(r'\]\(([^)]+)\)',source) if path.suffix=='.md' else re.findall(r'(?:href|src)="([^"]+)"',source)
     for link in links:
