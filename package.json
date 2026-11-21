@@ -1,13 +1,15 @@
 {
   "name": "mechanical-workshop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22.19.0" },
+  "engines": {
+    "node": ">=22.19.0"
+  },
   "scripts": {
     "dev": "next dev --hostname 127.0.0.1 --port 3070",
     "build": "next build --webpack",
-    "start": "next start --hostname 127.0.0.1 --port 3070",
+    "start": "node scripts/start.mjs",
     "typecheck": "tsc --noEmit",
     "db:local": "node scripts/local-postgres.mjs start",
     "db:stop": "node scripts/local-postgres.mjs stop",
@@ -16,7 +18,9 @@
     "test": "node --env-file-if-exists=.env.local --import tsx --test tests/*.test.ts",
     "test:integration": "node --env-file-if-exists=.env.local --import tsx --test tests/integration/*.test.ts",
     "check:design": "python tools/design/verify-design.py",
-    "backup": "node --env-file-if-exists=.env.local scripts/backup.mjs"
+    "backup": "node --env-file-if-exists=.env.local scripts/backup.mjs",
+    "start:server": "next start --hostname 127.0.0.1 --port 3070",
+    "test:startup": "node --test tests/startup.test.mjs"
   },
   "dependencies": {
     "next": "16.4.6",

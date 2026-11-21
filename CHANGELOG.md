@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1
+
+- Add one-command local startup with `npm start`: locked dependency installation, local PostgreSQL supervision, migrations, idempotent seed and conditional production compilation.
+- Preserve saved ports and data; select free defaults for new clones, accept PowerShell UTF-8 BOM configuration and reject duplicate launchers clearly.
+- Keep `start:server` for CI and managed hosting; add startup regression tests.
+- Node 24 and PostgreSQL 18 remain installation prerequisites.
+
+
 ## 1.0.0 — Academic application
 
 The first executable release connects the Systems Theory model baseline to persistent workshop operations. It adds real employee sessions, workspace isolation, guarded orders and interventions, atomic stock movements, partial requests and deliveries, attributable returns, purchasing, simulated equipment states and idle alerts, cost reconciliation, educational invoices and date-filtered CSV exports. The UI and all technical artifacts use English.
