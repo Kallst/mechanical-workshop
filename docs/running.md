@@ -20,6 +20,8 @@ The seven staff accounts share a workspace owner's chosen demonstration password
 
 A fresh clone creates ignored `.env.local` with random credentials and available loopback ports, starting the search at 3070 for HTTP and 55432 for PostgreSQL. The local database remains in `.local/postgres`; subsequent starts use the saved `DATABASE_URL` and `APP_ORIGIN`, including custom ports such as 55433 and 3071. There is no need to repeat a PowerShell port variable. A conflicting explicit `WORKSHOP_PG_PORT` or `PORT` is rejected rather than silently changing credentials or origins. Existing configuration is never overwritten. UTF-8 files written with a Windows PowerShell BOM are accepted.
 
+An occupied database port is reused only after authentication and comparison of the server system identifier with pg_controldata for this clone. This handles Windows installations in accented paths even when pg_ctl status misidentifies the running server.
+
 If a saved port is occupied by a different process, the launcher stops with a specific explanation; it does not terminate that process or attach this clone to an unrelated cluster. Use the existing application's terminal or deliberately change this clone's configuration. A second launcher in the same clone is rejected before installation/build/database work. Do not remove `.local` or `.env.local` to resolve an error.
 
 Windows defaults to `C:/Program Files/PostgreSQL/18/bin`; override `PG_BIN` if installed elsewhere. On Linux/macOS put the PostgreSQL binaries on PATH or set `PG_BIN`. These tools must already be installed. The launcher does not install system software or require Docker. `npm run db:local` and `npm run db:stop` remain advanced helpers for the project-owned cluster; normal use needs only `npm start`.

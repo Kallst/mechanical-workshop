@@ -5,6 +5,15 @@ import { tmpdir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
 import net from 'node:net';
 import { readConfiguration, prepareConfiguration, localDatabase, applicationOrigin, sourceFingerprint, startupLock } from '../scripts/local-runtime.mjs';
+import { sameSystemIdentifier } from '../scripts/postgres-runtime.mjs';
+
+test('cluster identity accepts the same system and rejects unrelated or missing control data', () => {
+  const control = 'pg_control version number: 1800\nDatabase system identifier: 7654321098765432100\n';
+  assert.equal(sameSystemIdentifier(control, '7654321098765432100'), true);
+  assert.equal(sameSystemIdentifier(control, '7654321098765432101'), false);
+  assert.equal(sameSystemIdentifier('', '7654321098765432100'), false);
+  assert.equal(sameSystemIdentifier(control, undefined), false);
+});
 
 function fixture(t) {
   const root = mkdtempSync(join(tmpdir(), 'workshop-startup-'));
