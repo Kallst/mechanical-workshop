@@ -1,3 +1,4 @@
+import { translateText, type Locale } from '../i18n/messages';
 import { createHash, randomUUID } from 'node:crypto';
 import { z } from 'zod';
 import { applyCommand, comparePolicies, costFor, DomainError, ensure, equipmentStats, interval, mulDiv, replenishment, settleClock } from '../domain/engine';
@@ -51,7 +52,7 @@ export async function snapshotFor(actor: Actor, scenarioId?: string) {
   const audit = actor.role === 'Administrator' ? (await pool().query('SELECT actor_name,action,details,scenario_minute,recorded_at FROM audit_events WHERE scenario_id=$1 AND workspace_id=$2 ORDER BY recorded_at DESC LIMIT 100', [scenario.id, actor.workspaceId])).rows : [];
   return { actor, scenario: { id: scenario.id, name: scenario.name, revision: scenario.revision }, state, costs, suggestions: technician ? [] : full.items.map(item => ({ itemId: item.id, ...replenishment(full, item) })), equipmentStats: technician ? {} : Object.fromEntries(full.equipment.map(equipment => [equipment.id, equipmentStats(full, equipment)])), audit, comparison: actor.role === 'Administrator' ? comparePolicies() : null };
 }
-export async function csvFor(actor: Actor, scenarioId: string | undefined, orderId?: string, fromDate?: string, toDate?: string, kind = 'orders') {
+export async function csvFor(actor: Actor, scenarioId: string | undefined, orderId?: string, fromDate?: string, toDate?: string, kind = 'orders', locale: Locale = 'en') {
   ensure(actor.role !== 'Technician', 'Your role cannot export workshop reports.', 403);
   const { state } = await readScenario(actor, scenarioId); const financial = actor.role !== 'Warehouse clerk';
   const epoch = Date.parse('2026-11-20T09:00:00-05:00');
@@ -59,7 +60,7 @@ export async function csvFor(actor: Actor, scenarioId: string | undefined, order
   const to = toDate ? (Date.parse(`${toDate}T23:59:59-05:00`) - epoch) / 60000 : state.clock.minute;
   ensure((Number.isFinite(from) || from === -Infinity) && Number.isFinite(to) && from <= to, 'Choose a valid report date range.');
   const cell = (value: unknown) => `"${String(typeof value === 'string' && /^[=+@-]/.test(value) ? `'${value}` : value).replaceAll('"', '""')}"`;
-  const csv = (rows: unknown[][]) => rows.map(row => row.map(cell).join(',')).join('\r\n') + '\r\n';
+  const csv = (rows: unknown[][]) => rows.map((row,index) => row.map((value,column) => cell(index === 0 || (kind === 'orders' && column === 1) || (kind === 'materials' && column === 1) || value === 'Allocated to service orders only' ? translateText(locale,String(value)) : value)).join(',')).join('\r\n') + '\r\n';
   ensure(['orders', 'materials', 'equipment', 'vehicles', 'technicians'].includes(kind), 'Unknown report type.', 400);
   if (kind === 'materials') return csv([
     ['movement', 'kind', 'item', 'unit', 'quantity', 'order', 'technician', 'scenario_minute', 'value_cop', 'reference'],
@@ -83,7 +84,7 @@ export async function csvFor(actor: Actor, scenarioId: string | undefined, order
   }
   const header = financial ? ['order', 'status', 'materials_cop', 'labor_cop', 'known_estimated_energy_cop', 'period_operating_cost_cop', 'unknown_minutes'] : ['order', 'status', 'materials_cop'];
   const lines = state.orders.filter(order => !orderId || order.id === orderId).map(order => { const cost = costFor(state, order.id, from, to, false); return financial ? [order.id, order.status, (cost.materials / 100).toFixed(2), (cost.labor / 100).toFixed(2), (cost.energy / 100).toFixed(2), (cost.total / 100).toFixed(2), cost.unknownMinutes] : [order.id, order.status, (cost.materials / 100).toFixed(2)]; });
-  return [header, ...lines].map(line => line.map(cell).join(',')).join('\r\n') + '\r\n';
+  return csv([header, ...lines]);
 }
 export function publicError(error: unknown) {
   if (error instanceof DomainError) return { error: error.message, status: error.status };

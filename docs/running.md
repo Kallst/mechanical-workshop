@@ -66,3 +66,11 @@ Schedule `npm run backup` in your deployment's scheduler if operating continuous
 For other devices, deploy behind HTTPS, set `APP_ORIGIN` to the exact public origin and `COOKIE_SECURE=true`, and keep PostgreSQL private. The default local command binds only to loopback and is accessible on this computer. No public deployment has been performed. Sign-up is bounded by `MAX_DEMO_WORKSPACES`; disable it with `ALLOW_DEMO_SIGNUP=false` for a provisioned demonstration. Infrastructure TLS, encrypted storage, resource controls, routine backup scheduling and retention require deployment verification.
 
 The CI workflow uses the official [checkout](https://github.com/actions/checkout) and [setup-node](https://github.com/actions/setup-node) actions, Node 24 and a disposable PostgreSQL 18 service. Local success and a remotely completed workflow are separate evidence.
+
+## Visual interface and language
+
+The application opens in Spanish. Choose ES / EN on the login screen or header to change all application copy; the browser remembers the selection. User-written names and service descriptions remain as entered. The printed educational invoice and CSV report opened from the interface follow the selection. API consumers can request `lang=es`; English is the default for existing CSV consumers.
+
+Start at Workshop / Overview. Select a vehicle in the illustrative isometric floor, then View order for assignments and interventions. The floor is a visual index of up to three orders, including historical work; it does not measure physical bay occupancy. Warehouse contains requests, issues, returns and stock. Purchasing covers approval, ordering and actual receipt. Results contains costs, invoices and reports. The role controls available actions. Expand histories for detailed records.
+
+For a new private demonstration, create the workshop using a password of at least 12 characters. Keep its displayed workspace code. All seven fictional employee accounts use that password; select the employee account when signing in or switching accounts. No global shared worker password is published.

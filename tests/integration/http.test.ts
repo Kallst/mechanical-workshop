@@ -73,6 +73,9 @@ test('authenticated persisted workshop workflow, ownership, replay, concurrency,
   await t.test('period reports expose source movements and keep financial exports restricted', async () => {
     const report = async (kind: string, user = admin, window = '') => fetch(origin + `/api/reports?scenario=${admin.scenario}&kind=${kind}${window}`, { headers: { Cookie: user.cookie } });
     const materials = await (await report('materials', clerk)).text(); assert.match(materials, /"movement","kind","item"/); assert.match(materials, /"Issue"/);
+    const spanishOrders = await (await report('orders', admin, '&lang=es')).text(); assert.match(spanishOrders, /"orden","estado","materiales_cop"/); assert.match(spanishOrders, /"SO-1042","En trabajo","350000.00"/);
+    const spanishMaterials = await (await report('materials', clerk, '&lang=es')).text(); assert.match(spanishMaterials, /"movimiento","tipo","material"/); assert.match(spanishMaterials, /"Entrega"/); assert.match(spanishMaterials, /"MOV-06"/);
+    const spanishError = await report('technicians', clerk, '&lang=es'); assert.equal(spanishError.status,403); assert.equal((await spanishError.json()).error,'Tu rol no permite exportar costos financieros.');
     const equipment = await (await report('equipment')).text(); assert.match(equipment, /coverage_ratio/); assert.match(equipment, /"C-01","60","10"/);
     assert.equal((await report('technicians', clerk)).status, 403);
     const technician = await (await report('technicians')).text(); assert.match(technician, /Nicolás/); assert.match(technician, /Allocated to service orders only/);

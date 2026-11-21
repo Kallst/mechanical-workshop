@@ -75,3 +75,16 @@ test('duplicate startup is rejected without releasing the first launcher lock', 
   release();
   const nextRelease = startupLock(root); nextRelease();
 });
+
+test('Windows build directory retry is bounded and limited to recursive .next directories', async () => {
+  const { buildMkdir } = await import('../scripts/windows-build-mkdir.mjs');
+  const root = process.cwd(); const target = join(root, '.next', 'server', 'app', 'test.segments', 'test');
+  let calls = 0; const waits = [];
+  const transient = async () => { if (++calls < 3) throw Object.assign(new Error('Transient lock'), { code: 'EPERM' }); return 'created'; };
+  assert.equal(await buildMkdir(transient, target, { recursive: true }, root, 'win32', async ms => { waits.push(ms); }), 'created');
+  assert.equal(calls, 3); assert.deepEqual(waits, [20,40]);
+  for (const [path, options, platform, code] of [[join(root,'db','migrations'),{recursive:true},'win32','EPERM'],[target,{},'win32','EPERM'],[target,{recursive:true},'linux','EPERM'],[target,{recursive:true},'win32','ENOSPC']]) {
+    let tries=0; await assert.rejects(buildMkdir(async()=>{tries++;throw Object.assign(new Error('Failure'),{code});},path,options,root,platform,async()=>{})); assert.equal(tries,1);
+  }
+  let tries=0;await assert.rejects(buildMkdir(async()=>{tries++;throw Object.assign(new Error('Still denied'),{code:'EACCES'});},target,{recursive:true},root,'win32',async()=>{}));assert.equal(tries,7);
+});

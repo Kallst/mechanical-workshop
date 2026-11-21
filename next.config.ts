@@ -2,6 +2,8 @@ import type { NextConfig } from 'next';
 const config: NextConfig = {
   poweredByHeader: false,
   serverExternalPackages: ['pg'],
+  // Bound Windows export concurrency; a build-only retry handles transient directory locks.
+  experimental: process.platform === 'win32' ? { cpus: 1 } : undefined,
   async headers() {
     return [{ source: '/:path*', headers: [
       { key: 'X-Content-Type-Options', value: 'nosniff' },

@@ -2,7 +2,7 @@
 
 ## Language
 
-Use English for every software contribution, including UI copy, source code, comments, errors, documentation, issue descriptions, pull requests, and commits. Preserve personal names and accents. The Spanish academic presentation is a separate deliverable.
+Use English for source code, comments, API errors, documentation, issue descriptions, pull requests, and commits. Product copy is bilingual: Spanish and English, as authorized in issue #17. Preserve personal names and accents. Keep translation at the presentation boundary and preserve English persisted enum values. The Spanish academic presentation is a separate deliverable.
 
 ## GitFlow
 
@@ -54,7 +54,7 @@ Use `type(scope): imperative summary`, with an optional scope.
 
 ## Review and completion
 
-Before merging, confirm that the change addresses its issue, uses English consistently, preserves names, and matches the relevant domain rules. For executable changes, run the applicable automated checks and record their actual results. For diagrams, inspect the rendered result and compare it with the modeled workflow.
+Before merging, confirm that the change addresses its issue, supplies both UI locales and uses English consistently for technical artifacts, preserves names, and matches the relevant domain rules. For executable changes, run the applicable automated checks and record their actual results. For diagrams, inspect the rendered result and compare it with the modeled workflow.
 
 Solo work uses an explicitly identified self-review. Do not invent approval by another engineer. Record limitations, deferred requirements, and proposed thresholds honestly.
 
