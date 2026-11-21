@@ -1,0 +1,147 @@
+{
+  "browser": "157.0.8103.80",
+  "baseline": false,
+  "checks": [
+    {
+      "role": "juanita",
+      "order": "SO-1042",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juanita",
+      "order": "SO-1042",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juanita",
+      "order": "SO-1043",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juanita",
+      "order": "SO-1043",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juanita",
+      "order": "SO-1041",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juanita",
+      "order": "SO-1041",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "brian",
+      "order": "SO-1042",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "brian",
+      "order": "SO-1042",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juan-jacobo",
+      "order": "SO-1042",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juan-jacobo",
+      "order": "SO-1042",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juan-jacobo",
+      "order": "SO-1043",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juan-jacobo",
+      "order": "SO-1043",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juan-jacobo",
+      "order": "SO-1041",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "juan-jacobo",
+      "order": "SO-1041",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "tamara",
+      "order": "SO-1042",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "tamara",
+      "order": "SO-1042",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "tamara",
+      "order": "SO-1043",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "tamara",
+      "order": "SO-1043",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "tamara",
+      "order": "SO-1041",
+      "button": "open-order",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    },
+    {
+      "role": "tamara",
+      "order": "SO-1041",
+      "button": "view-all",
+      "remainsOnOrdersAfterPoll": true,
+      "selectionPreserved": true
+    }
+  ],
+  "errors": []
+}
