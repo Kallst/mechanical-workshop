@@ -40,17 +40,16 @@ jobs:
       - run: npm ci
       - run: npm run typecheck
       - run: npm test
+      - run: npm run test:startup
       - run: npm run check:design
-      - run: npm run db:migrate && npm run db:seed
-      - run: npm run build
-      - name: Verify production HTTP workflows
+      - name: Verify one-command production HTTP workflows
         shell: bash
         run: |
-          npm run start > /tmp/workshop-server.log 2>&1 &
+          npm start > /tmp/workshop-server.log 2>&1 &
           server_pid=$!
           trap 'kill "$server_pid" || true' EXIT
           ready=false
-          for attempt in {1..30}; do
+          for attempt in {1..120}; do
             if curl --silent --fail "$APP_ORIGIN" >/dev/null; then ready=true; break; fi
             sleep 1
           done

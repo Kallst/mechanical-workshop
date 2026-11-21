@@ -15,15 +15,12 @@ Local production compilation, 15 domain tests, 10 HTTP integration subtests, bac
 Install Node 24 and PostgreSQL 18, then run:
 
 ```sh
-npm ci
-npm run db:local
-npm run db:migrate
-npm run db:seed
-npm run build
-npm run start
+npm start
 ```
 
-Open **http://127.0.0.1:3070** and choose **Create an isolated demo workspace**. Supply your own demonstration password and keep the generated workspace code. The seven fictional employee accounts use that chosen password for role play. Switching accounts requires a real sign-in. See [complete startup and demonstration instructions](docs/running.md), including external databases, backup verification and deployment limitations.
+The launcher installs locked dependencies, prepares the local database, applies migrations and seed, builds when needed, and keeps the application and its owned PostgreSQL process together. Keep its terminal open; Ctrl+C stops what it started. The first launch needs Internet for npm packages. Node 24 and PostgreSQL 18 must already be installed.
+
+Open the **Workshop URL printed in the terminal** (normally http://127.0.0.1:3070) and choose **Create an isolated demo workspace**. A fresh clone selects free ports when defaults are occupied. Supply your own demonstration password and keep the generated workspace code. The seven fictional employee accounts use that chosen password for role play. Switching accounts requires a real sign-in. See [complete startup and demonstration instructions](docs/running.md), including external databases, backup verification and deployment limitations.
 
 Active development takes place on `develop`. The `main` branch contains the stable baseline and will receive reviewed releases.
 
