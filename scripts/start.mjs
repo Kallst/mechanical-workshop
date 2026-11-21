@@ -52,7 +52,7 @@ try {
   const fingerprint = sourceFingerprint(root);
   if (!existsSync(join(root, '.next', 'BUILD_ID')) || !existsSync(buildStamp) || readFileSync(buildStamp, 'utf8') !== fingerprint) {
     if (process.platform === 'win32') for (const route of ['_not-found', '_global-error']) mkdirSync(join(root, '.next/server/app', `${route}.segments`, route), { recursive: true });
-    await run(['node_modules/next/dist/bin/next', 'build', '--webpack'], env, 'Building the production application');
+    await run(['scripts/build.mjs'], env, 'Building the production application');
     writeFileSync(buildStamp, sourceFingerprint(root));
   } else console.log('Production build is current; skipping compilation.');
   server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(app.port)], { cwd: root, env, windowsHide: true, stdio: 'inherit' });

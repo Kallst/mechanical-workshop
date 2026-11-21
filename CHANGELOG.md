@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.1.0
+
+- Replace the flat menu with four role-aware navigation groups and a graphite/orange visual operations cockpit.
+- Add an interactive isometric workshop, vehicle/material/equipment illustrations, recorded cost proportions, stock levels and equipment observation timelines.
+- Support Spanish by default and English throughout the application, browser form validation, invoices and optional localized CSV exports. Preserve IDs, proper names and user content.
+- Make histories expandable and support mobile layouts, keyboard selection, reduced motion and invoice printing.
+- Preserve domain rules, authentication and atomic stock/cost persistence.
+- Accept equivalent LF/CRLF migration digests and bound transient Windows production-build directory retries without changing database contents.
+- See [visual design and verification](docs/visual-redesign.md) and [browser evidence](docs/evidence/visual-1.1.0.json).
+
 ## 1.0.2
 
 - Verify PostgreSQL cluster ownership using its authenticated system identifier when an occupied Windows port cannot be identified through pg_ctl and Unicode paths.
