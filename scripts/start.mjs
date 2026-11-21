@@ -12,7 +12,7 @@ async function cleanup() {
   stopping = true;
   if (activeStep && activeStep.exitCode === null) activeStep.kill();
   if (server && server.exitCode === null) { server.kill(); await Promise.race([once(server, 'exit'), new Promise(resolve => setTimeout(resolve, 3000))]); }
-  try { database?.stop(); } finally { releaseLock?.(); releaseLock = undefined; }
+  try { await database?.stop(); } finally { releaseLock?.(); releaseLock = undefined; }
 }
 for (const signal of ['SIGINT', 'SIGTERM']) process.on(signal, () => {
   if (!stopping) void cleanup().then(() => process.exit(0)).catch(error => { console.error(error.message); process.exit(1); });

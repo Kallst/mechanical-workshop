@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2
+
+- Verify PostgreSQL cluster ownership using its authenticated system identifier when an occupied Windows port cannot be identified through pg_ctl and Unicode paths.
+- Preserve existing ports, data and credentials; reject mismatched cluster identities.
+- Stop only the PostgreSQL child owned by the launcher using its native handle identity.
+
+
 ## 1.0.1
 
 - Add one-command local startup with `npm start`: locked dependency installation, local PostgreSQL supervision, migrations, idempotent seed and conditional production compilation.
