@@ -26,7 +26,13 @@ Active development takes place on `develop`. The `main` branch contains the stab
 
 ## Language
 
-All software interfaces, source code, identifiers, comments, errors, API contracts, technical documentation, issues, pull requests, and commits use English. The academic presentation and spoken explanations use Spanish and are separate deliverables. Personal names retain their original spelling and accents.
+The application supports Spanish (default) and English. Use ES / EN at sign-in or in the header; the choice persists on this browser and also applies to printable invoices and UI-generated CSV reports. Source code, stored enums, API contracts, technical documentation, issues, pull requests, and commits remain English. Personal names retain their original spelling and accents.
+
+## Visual operations cockpit
+
+The graphite and orange interface groups work into Workshop, Warehouse, Purchasing, and Results. The native SVG isometric floor links visible vehicles to real service orders in the authenticated snapshot. Selecting a vehicle updates its technician and cost card. The floor shows up to three representative orders; use Service orders for the complete register. Positions are illustrative and do not represent physical bay tracking. Stock graphics show availability against the replenishment target, not storage capacity. Equipment diagrams and state strips reflect recorded simulated observations.
+
+Long histories are expandable. The simulation remains explicitly identified; it is not live physical telemetry. See [visual design and asset provenance](docs/visual-redesign.md).
 
 ## Implemented academic capabilities
 

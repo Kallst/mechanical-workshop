@@ -2,9 +2,10 @@
 
 ## Language and terminology
 
-- Use English for all software artifacts: UI copy, source code, identifiers, comments, tests, fixtures other than proper names, logs, errors, database schema, API contracts, documentation, issues, pull requests, branches, and commits.
+- Use English for source code, identifiers, comments, tests, stored fixtures other than proper names, logs, database schema, API contracts, technical documentation, issues, pull requests, branches, and commits.
+- The product UI supports Spanish (default) and English, including forms, feedback, seeded descriptions, invoices and optional localized CSV exports. Keep persisted enums and API payloads in English.
 - Preserve these employee names exactly: Brian, Nicolás, Álan, Tamara, Juan Jacobo, Anderson, Juanita.
-- The academic presentation and spoken explanations are in Spanish and are separate from the English software project. Do not translate the product UI into Spanish.
+- The academic presentation and spoken explanations are in Spanish. The owner explicitly authorized the bilingual UI redesign in issue #17; this replaces the original English-only UI constraint.
 - Use `technician`, `workshop manager`, `warehouse clerk`, `service order`, `intervention`, `material issue`, and `equipment idle time` consistently.
 - Original academic requirement identifiers are source references. The software catalog uses `FR-*` and `NFR-*`; maintain the mapping in `docs/traceability.csv`.
 
