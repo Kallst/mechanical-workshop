@@ -30,7 +30,7 @@ type ModalSpec = {
 const staff = [{ value: 'tamara', label: 'Tamara · Administrator' }, { value: 'juan-jacobo', label: 'Juan Jacobo · Workshop manager' }, { value: 'juanita', label: 'Juanita · Warehouse clerk' }, { value: 'brian', label: 'Brian · Technician' }, { value: 'nicolas', label: 'Nicolás · Technician' }, { value: 'alan', label: 'Álan · Technician' }, { value: 'anderson', label: 'Anderson · Technician' }];
 const screens = [['overview', 'Overview'], ['orders', 'Service orders'], ['directory', 'Customers & vehicles'], ['inventory', 'Warehouse'], ['purchasing', 'Purchasing'], ['equipment', 'Equipment'], ['costs', 'Costs & invoices'], ['reports', 'Reports & history'], ['simulation', 'Simulation']] as const;
 type Screen = typeof screens[number][0];
-const allowed: Record<Role, Screen[]> = { Administrator: screens.map(([id]) => id), 'Workshop manager': ['overview', 'orders', 'directory', 'equipment', 'costs', 'reports'], 'Warehouse clerk': ['overview', 'inventory', 'purchasing', 'equipment', 'reports'], Technician: ['overview', 'orders', 'inventory'] };
+const allowed: Record<Role, Screen[]> = { Administrator: screens.map(([id]) => id), 'Workshop manager': ['overview', 'orders', 'directory', 'equipment', 'costs', 'reports'], 'Warehouse clerk': ['overview', 'orders', 'inventory', 'purchasing', 'equipment', 'reports'], Technician: ['overview', 'orders', 'inventory'] };
 const hidden = (name: string, value: string): Field => ({ name, label: name, type: 'hidden', value });
 function Badge({ children, color = '' }: {
     children: ReactNode;

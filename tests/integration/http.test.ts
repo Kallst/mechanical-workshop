@@ -59,6 +59,13 @@ test('authenticated persisted workshop workflow, ownership, replay, concurrency,
   });
   await t.test('server filters confidential role views and CSV fields', async () => {
     const technician = (await call('/api/workshop', {}, tech.cookie)).data; assert.equal(technician.audit.length, 0); assert.equal(technician.costs['SO-1042'].labor, null); assert.equal(technician.state.invoices.length, 0);
+    const warehouse = (await call('/api/workshop', {}, clerk.cookie)).data;
+    assert.deepEqual(warehouse.state.orders.map((order: { id: string }) => order.id).sort(), ['SO-1041','SO-1042','SO-1043']);
+    assert.equal(warehouse.costs['SO-1042'].total, null); assert.equal(warehouse.costs['SO-1042'].labor, null); assert.equal(warehouse.costs['SO-1042'].energy, null);
+    assert.equal(warehouse.state.interventions.length, 0); assert.equal(warehouse.state.invoices.length, 0);
+    assert.equal((await command(clerk, 'order.assign', { orderId: 'SO-1042', employeeIds: ['brian'] })).response.status, 403);
+    assert.equal((await command(clerk, 'order.close', { orderId: 'SO-1042' })).response.status, 403);
+    assert.equal((await command(clerk, 'intervention.start', { orderId: 'SO-1042' })).response.status, 403);
     const response = await fetch(origin + `/api/reports?scenario=${clerk.scenario}`, { headers: { Cookie: clerk.cookie } }); assert.equal(response.status, 200); const csv = await response.text(); assert.equal(csv.split('\r\n')[0], '"order","status","materials_cop"');
     assert.equal((await fetch(origin + '/api/reports', { headers: { Cookie: tech.cookie } })).status, 403);
   });

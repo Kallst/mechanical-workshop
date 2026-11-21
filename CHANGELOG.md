@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1
+
+- Allow warehouse staff to consult service orders already present in their redacted snapshot. Both overview order links now stay on the selected order instead of bouncing back to overview.
+- Keep assignment, intervention, closeout and financial permissions unchanged.
+- Related to #21.
+
 ## 1.1.0
 
 - Replace the flat menu with four role-aware navigation groups and a graphite/orange visual operations cockpit.
