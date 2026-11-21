@@ -129,5 +129,17 @@
     "Illustrative vehicle placement; no physical bay occupancy tracking",
     "Simulated equipment observations; energy remains estimated",
     "Solo self-review; no independent human review"
-  ]
+  ],
+  "cleanInstallation": {
+    "initialState": "No dependencies, private configuration, database or build",
+    "pathKind": "Windows accented directory",
+    "command": "npm start",
+    "dependencyPackages": 46,
+    "accounts": 7,
+    "invoiceCents": 59977000,
+    "restartSkippedInstall": true,
+    "restartSkippedBuild": true,
+    "restartSessionScenarioInvoicePreserved": true
+  },
+  "featureCI": "https://github.com/Kallst/mechanical-workshop/actions/runs/44866849199"
 }
