@@ -46,3 +46,11 @@ The proposed 15% material, 10% energy and 30% idle-time improvements remain hypo
 ## Release validation
 
 GitHub Actions [run 44806930267](https://github.com/Kallst/mechanical-workshop/actions/runs/44806930267) completed successfully for application PR #6 on a fresh Linux runner with PostgreSQL 18. This independently executes the supplied workflow environment, but is not an independent human review. The local [browser evidence](evidence/browser-results.json) records Chrome 157.0.8103.80, nine screens at both 1440 and 390 pixels wide, persistence after reload and real employee switching, with no page errors or page-level horizontal overflow. Container deployment itself remains untested.
+
+## One-command local startup (1.0.1)
+
+`npm start` now bootstraps locked dependencies, generates private configuration only for a new clone, supervises a project-owned PostgreSQL child, applies migrations and idempotent seed, and caches the production build by its inputs. Existing custom ports and credentials remain unchanged. Local configuration accepts a PowerShell UTF-8 BOM. Direct managed hosting retains `npm run start:server`.
+
+The Windows acceptance exercise started from a separate copy without node_modules, .env.local, .next or a database. One command installed 46 packages, initialized PostgreSQL 18, migrated, seeded, compiled, and served HTTP. Registration created seven employees; the guided scenario produced COP 599,770. After stopping and restarting, dependency installation and compilation were skipped, the same authenticated session and invoice persisted, and a duplicate launcher was rejected. Six startup regression tests, 15 domain tests, strict TypeScript and 10 HTTP integration subtests passed. This is local startup evidence, not a participant usability study or a production availability claim.
+
+GitHub Actions [run 44860796248](https://github.com/Kallst/mechanical-workshop/actions/runs/44860796248) passed for startup PR #11, including the one-command startup against its external PostgreSQL service and production HTTP integration tests. This complements the Windows project-owned cluster exercise; it does not test Docker or replace a human review.

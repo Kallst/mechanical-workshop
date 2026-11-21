@@ -7,23 +7,26 @@ Node.js 24.19.0, npm 11.17.0 and PostgreSQL 18.6 on Windows were used for the lo
 From the repository root:
 
 ```sh
-npm ci
-npm run db:local
-npm run db:migrate
-npm run db:seed
-npm run build
-npm run start
+npm start
 ```
 
-Visit **http://127.0.0.1:3070**. Choose **Create an isolated demo workspace**, supply a name and a password of at least 12 characters, and keep the generated workspace code. Tamara signs in automatically. Use **Switch account**, choose an employee, and enter that workspace's chosen password to demonstrate another role. This performs a real server sign-in and revokes the old session.
+The single command installs locked dependencies on first use or lockfile changes, prepares PostgreSQL, applies migrations, seeds without resetting existing data, and compiles when build inputs change. First use needs Internet for npm packages; later starts reuse dependencies and the production build. Node 24 and PostgreSQL 18 must already be installed.
+
+Keep the terminal open. The launcher runs an owned PostgreSQL child directly and stops that child when you press Ctrl+C. It never stops an already-running or externally managed database. If its owned database exits unexpectedly, it stops the web server instead of leaving a broken registration page.
+
+Visit the **Workshop URL printed by the launcher** (normally http://127.0.0.1:3070). Choose **Create an isolated demo workspace**, supply a name and a password of at least 12 characters, and keep the generated workspace code. Tamara signs in automatically. Use **Switch account**, choose an employee, and enter that workspace's chosen password to demonstrate another role. This performs a real server sign-in and revokes the old session.
 
 The seven staff accounts share a workspace owner's chosen demonstration password intentionally for role play. Each account has a separately salted hash and its own role, lockout and sessions. This is an academic demonstration provisioner, not a staff account administration product. Do not reuse a personal or production password. Anyone given the workspace password can sign in as its administrator; create separate workspaces for separate visitors.
 
-`db:local` manages only `.local/postgres`, bound to `127.0.0.1:55432`. It generates ignored `.env.local` with random database and seeded-demo credentials. It never modifies an existing external cluster. Windows defaults to `C:/Program Files/PostgreSQL/18/bin`; override `PG_BIN` if necessary. On Linux/macOS put the PostgreSQL binaries on PATH or set `PG_BIN`. PostgreSQL must already be installed. When using an execution environment that kills child processes at command exit, keep the shell that starts PostgreSQL alive; an ordinary terminal does not normally need this workaround. Stop the project cluster with `npm run db:stop`.
+A fresh clone creates ignored `.env.local` with random credentials and available loopback ports, starting the search at 3070 for HTTP and 55432 for PostgreSQL. The local database remains in `.local/postgres`; subsequent starts use the saved `DATABASE_URL` and `APP_ORIGIN`, including custom ports such as 55433 and 3071. There is no need to repeat a PowerShell port variable. A conflicting explicit `WORKSHOP_PG_PORT` or `PORT` is rejected rather than silently changing credentials or origins. Existing configuration is never overwritten. UTF-8 files written with a Windows PowerShell BOM are accepted.
+
+If a saved port is occupied by a different process, the launcher stops with a specific explanation; it does not terminate that process or attach this clone to an unrelated cluster. Use the existing application's terminal or deliberately change this clone's configuration. A second launcher in the same clone is rejected before installation/build/database work. Do not remove `.local` or `.env.local` to resolve an error.
+
+Windows defaults to `C:/Program Files/PostgreSQL/18/bin`; override `PG_BIN` if installed elsewhere. On Linux/macOS put the PostgreSQL binaries on PATH or set `PG_BIN`. These tools must already be installed. The launcher does not install system software or require Docker. `npm run db:local` and `npm run db:stop` remain advanced helpers for the project-owned cluster; normal use needs only `npm start`.
 
 The seeded `workshop-demo` space uses `DEMO_PASSWORD` from your private `.env.local`. Prefer a new private demonstration for presentation practice; automated integration tests create their own spaces and do not mutate the seeded one. Never commit `.env.local`, backups, database data or exported customer information.
 
-For an externally managed database, copy `.env.example` to `.env.local`, supply your own connection details, and run migration and seed commands. Skip `db:local`. Seed is idempotent and will not silently change existing passwords. `npm run dev` provides development mode; the verified final path uses a production build.
+For an externally managed database, copy `.env.example` to `.env.local`, supply your own connection details, and run migration and seed commands. `npm start` recognizes an external database and applies migration/seed without starting or stopping that database. Supply `DEMO_PASSWORD` and a local HTTP `APP_ORIGIN` when using the local launcher. For production hosting, use the explicit migration/seed/build sequence and `npm run start:server` (or the container command) with your process supervisor. Seed is idempotent and will not silently change existing passwords. `npm run dev` provides development mode; the verified final path uses a production build.
 
 ## Demonstration sequence
 
@@ -44,6 +47,7 @@ For a predictable guided run, reset first; manual changes can create additional 
 ```sh
 npm run typecheck
 npm test
+npm run test:startup
 npm run check:design
 npm run test:integration
 npm run backup -- --verify
