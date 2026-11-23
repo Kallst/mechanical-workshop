@@ -1,13 +1,21 @@
-import { translateText } from '@/i18n/messages';
+import { translateText } from '@/shared/i18n/messages';
 import { NextRequest, NextResponse } from 'next/server';
-import { authenticate } from '@/server/auth';
-import { csvFor, publicError } from '@/server/workshop';
+import { sessionToken } from '@/adapters/inbound/http/session-policy';
+import { presentCsv } from '@/adapters/inbound/http/presenters/csv';
+import { publicError } from '@/adapters/inbound/http/presenters/errors';
+import { authentication, reports } from '@/bootstrap/services';
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 export async function GET(request: NextRequest) {
-  try {
     const params = request.nextUrl.searchParams;
-    const csv = await csvFor(await authenticate(request), params.get('scenario') || undefined, params.get('order') || undefined, params.get('from') || undefined, params.get('to') || undefined, params.get('kind') || 'orders', params.get('lang') === 'es' ? 'es' : 'en');
-    return new NextResponse(csv, { headers: { 'Content-Type': 'text/csv;charset=utf-8', 'Content-Disposition': 'attachment; filename="workshop-report.csv"', 'Cache-Control': 'no-store' } });
-  } catch (error) { const result = publicError(error); return NextResponse.json({ error: translateText(request.nextUrl.searchParams.get('lang')==='es'?'es':'en', result.error) }, { status: result.status }); }
+    const locale = params.get('lang') === 'es' ? 'es' : 'en';
+    try {
+        const kind = params.get('kind') || 'orders';
+        const rows = await reports.reportFor(await authentication.authenticateToken(sessionToken(request)), params.get('scenario') || undefined, params.get('order') || undefined, params.get('from') || undefined, params.get('to') || undefined, kind);
+        return new NextResponse(presentCsv(rows, kind, locale), { headers: { 'Content-Type': 'text/csv;charset=utf-8', 'Content-Disposition': 'attachment; filename="workshop-report.csv"', 'Cache-Control': 'no-store' } });
+    }
+    catch (error) {
+        const result = publicError(error);
+        return NextResponse.json({ error: translateText(locale, result.error) }, { status: result.status });
+    }
 }

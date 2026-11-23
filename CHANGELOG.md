@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.3.0
+
+- Organize the workshop into domain, application use cases/ports, inbound web/HTTP adapters, outbound PostgreSQL/security adapters and bootstrap composition.
+- Remove mixed server modules and UI type dependencies on persistence. Keep CSV/localization at the presentation boundary.
+- Preserve transaction, idempotency, authorization, lockout, session and startup behavior while adding in-memory application tests and dependency-boundary checks.
+- Document the folder map in docs/architecture/hexagonal.md. Related to #28.
+
 ## 1.2.0
 
 - Replace the model atlas with the workshop graphite/orange style, six categories, topic/requirement search and an accessible vector viewer.

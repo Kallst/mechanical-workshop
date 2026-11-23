@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-23",
+  "change": "Hexagonal folder and dependency organization",
+  "domainRulesChanged": false,
+  "databaseMigration": false,
+  "privateConfigurationChanged": false,
+  "checks": {
+    "typecheck": "passed",
+    "unitAndArchitecture": 26,
+    "startup": 8,
+    "httpSubtests": 11,
+    "httpParent": 1,
+    "modelStructural": 377,
+    "productionBuild": "passed",
+    "oneCommandStartup": "passed"
+  },
+  "browserWorkflow": {
+    "checks": [
+      "Manager closeout rejection",
+      "Technician intervention pause/resume",
+      "Technician material request",
+      "Clerk partial issue",
+      "Clerk return",
+      "Administrator reset and guided closeout",
+      "Invoice persistence",
+      "Spanish CSV",
+      "English CSV",
+      "Logout"
+    ],
+    "pageErrors": []
+  },
+  "boundaries": [
+    "Domain imports only domain",
+    "Application imports domain, ports and deterministic validation",
+    "Concrete adapters selected by bootstrap",
+    "Web uses application view types",
+    "SQL restricted to outbound persistence",
+    "CSV and localization remain presentation concerns"
+  ],
+  "limitations": [
+    "In-memory repositories are test helpers only",
+    "Local Chrome workflow checks are not a participant study",
+    "CI results are recorded separately in the pull request"
+  ]
+}

@@ -1,9 +1,8 @@
 'use client';
 import type { CSSProperties } from 'react';
-import type { snapshotFor } from '@/server/workshop';
-import { useI18n } from '@/i18n/provider';
+import type { WorkshopSnapshot as Snapshot } from '@/application/use-cases/workshop';
+import { useI18n } from '../i18n/provider';
 export function materialName(item:{id:string;name:string}|undefined,t:(value:string)=>string){return item?(['filter','oil','pads','hose'].includes(item.id)?t(item.name):item.name):'—';}
-type Snapshot=Awaited<ReturnType<typeof snapshotFor>>;
 export type View='overview'|'orders'|'directory'|'inventory'|'purchasing'|'equipment'|'costs'|'reports'|'simulation';
 const paths:Record<string,string>={workshop:'M3 21V8l9-5 9 5v13M3 10h18M7 21v-7h10v7M9 7h6',orders:'M8 4H5v17h14V4h-3M8 3h8v4H8zM8 12h8M8 16h5',stock:'M3 7l9-4 9 4v12l-9 4-9-4zM3 7l9 4 9-4M12 11v12',purchasing:'M3 4h2l3 12h11l3-9H6M10 21h.01M18 21h.01',results:'M4 21V3M4 21h18M8 16v-5M13 16V7M18 16V4',equipment:'M14 6a5 5 0 0 0-6-3l3 3-3 3-3-3a5 5 0 0 0 6 6l8 8 3-3-8-8z',play:'M8 4l13 8-13 8z',pause:'M7 4v16M17 4v16',arrow:'M4 12h16M14 6l6 6-6 6',check:'M5 12l4 4L20 5',alert:'M12 3l10 18H2zM12 9v5M12 18h.01',user:'M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M4 22v-3a8 8 0 0 1 16 0v3',exit:'M9 4H4v16h5M11 12h11M17 7l5 5-5 5',clock:'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18M12 7v6l4 2',truck:'M3 5h11v12H3zM14 10h4l4 5v2h-8M6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4M18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4',energy:'M13 2L4 14h7l-1 8 10-13h-7z',copy:'M8 8h13v13H8zM16 8V3H3v13h5',close:'M5 5l14 14M19 5L5 19'};
 export function Icon({name,size=20}:{name:string;size?:number}){return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={paths[name]||paths.workshop}/></svg>;}

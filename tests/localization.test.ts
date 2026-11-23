@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { migrationChecksums } from '../scripts/migration-checksum';
-import { translateText as t, spanish } from '../src/i18n/messages';
+import { translateText as t, spanish } from '../src/shared/i18n/messages';
 
 test('migration checksums accept existing Windows and Unix line endings but reject changed SQL', () => {
   const lf = 'CREATE TABLE sample(id integer);\nSELECT 1;\n';
