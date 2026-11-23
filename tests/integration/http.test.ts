@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { pool } from '../../src/server/db';
+import { pool } from '../../src/adapters/outbound/persistence/postgres/pool';
 const origin = process.env.APP_ORIGIN || 'http://127.0.0.1:3070';
 const password = `Integration-${randomUUID()}`;
 type Client = { cookie: string; code: string; scenario: string };
@@ -24,6 +24,7 @@ test('authenticated persisted workshop workflow, ownership, replay, concurrency,
   await t.test('anonymous reads fail and sign-up creates seven real accounts', async () => {
     assert.equal((await call('/api/workshop')).response.status, 401); admin = await createWorkspace();
     const snapshot = (await call('/api/workshop', {}, admin.cookie)).data;
+    const sessionContext = (await call('/api/session', {}, admin.cookie)).data; assert.equal(typeof sessionContext.scenarios[0].revision, 'string'); assert.equal(typeof snapshot.scenario.revision, 'number');
     assert.equal(snapshot.state.employees.length, 7); assert.equal(snapshot.costs['SO-1042'].total, 42468000);
     clerk = await as(admin, 'juanita'); tech = await as(admin, 'nicolas'); manager = await as(admin, 'juan-jacobo');
   });

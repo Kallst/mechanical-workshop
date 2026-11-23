@@ -1,6 +1,6 @@
 'use client';
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
-import { translateText, type Locale } from './messages';
+import { translateText, type Locale } from '@/shared/i18n/messages';
 const Context = createContext<{locale: Locale; setLocale: (locale: Locale) => void}>({locale:'es',setLocale:()=>{}});
 export function I18nProvider({children}: {children:ReactNode}) {
   const [locale,setValue]=useState<Locale>('es');
