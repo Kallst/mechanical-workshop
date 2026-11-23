@@ -8,7 +8,7 @@ export interface ScenarioRecord {
 export interface ScenarioSummary {
     id: string;
     name: string;
-    revision: number;
+    revision: string;
 }
 export interface WorkspaceContext {
     workspace: {

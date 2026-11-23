@@ -5,7 +5,7 @@ export class MemoryWorkshopRepository implements WorkshopRepository {
   scenarioId='00000000-0000-4000-8000-000000000002';
   data={state:createBaseline(),revision:0,audit:[] as AuditEntry[],receipts:{} as Record<string,CommandReceipt>};
   failAudit=false;
-  async context(workspaceId:string){if(workspaceId!==this.workspaceId)throw Error('Wrong workspace');return {workspace:{code:'memory-workshop',name:'Port test workshop'},scenarios:[{id:this.scenarioId,name:'Test scenario',revision:this.data.revision}]};}
+  async context(workspaceId:string){if(workspaceId!==this.workspaceId)throw Error('Wrong workspace');return {workspace:{code:'memory-workshop',name:'Port test workshop'},scenarios:[{id:this.scenarioId,name:'Test scenario',revision:String(this.data.revision)}]};}
   async audit(workspaceId:string,scenarioId:string){if(workspaceId!==this.workspaceId||scenarioId!==this.scenarioId)return [];return this.data.audit.map(row=>({actor_name:row.actorName,action:row.action,details:row.details,scenario_minute:row.minute,recorded_at:'2026-11-23T09:00:00Z'}));}
   async transaction<T>(operation:(unit:WorkshopUnitOfWork)=>Promise<T>):Promise<T>{
     const draft=structuredClone(this.data);

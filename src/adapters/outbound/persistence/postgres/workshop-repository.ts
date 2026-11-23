@@ -24,7 +24,7 @@ export class PostgresWorkshopRepository implements WorkshopRepository {
             name: string;
         };
         const rows = (await pool().query('SELECT id,name,revision FROM scenarios WHERE workspace_id=$1 ORDER BY created_at', [workspaceId])).rows;
-        return { workspace, scenarios: rows.map(row => ({ id: String(row.id), name: String(row.name), revision: Number(row.revision) })) };
+        return { workspace, scenarios: rows.map(row => ({ id: String(row.id), name: String(row.name), revision: String(row.revision) })) };
     }
     async audit(workspaceId: string, scenarioId: string): Promise<AuditRecord[]> {
         const rows = (await pool().query('SELECT actor_name,action,details,scenario_minute,recorded_at FROM audit_events WHERE scenario_id=$1 AND workspace_id=$2 ORDER BY recorded_at DESC LIMIT 100', [scenarioId, workspaceId])).rows;
