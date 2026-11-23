@@ -8,161 +8,161 @@
  viewBox="0.00 0.00 1440.00 429.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 404.2)">
 <title>order_states</title>
-<polygon fill="#ffffff" stroke="none" points="-25.2,25.2 -25.2,-404.2 1414.92,-404.2 1414.92,25.2 -25.2,25.2"/>
-<text xml:space="preserve" text-anchor="middle" x="694.86" y="-357" font-family="Arial" font-size="20.00">Service order lifecycle</text>
+<polygon fill="#171e24" stroke="none" points="-25.2,25.2 -25.2,-404.2 1414.92,-404.2 1414.92,25.2 -25.2,25.2"/>
+<text xml:space="preserve" text-anchor="middle" x="694.86" y="-357" font-family="Arial" font-size="20.00" fill="#e5edf3">Service order lifecycle</text>
 <!-- start -->
 <g id="node1" class="node">
 <title>start</title>
-<ellipse fill="#17253b" stroke="#17253b" cx="5.04" cy="-51" rx="5.04" ry="5.04"/>
+<ellipse fill="#e5edf3" stroke="#e5edf3" cx="5.04" cy="-51" rx="5.04" ry="5.04"/>
 </g>
 <!-- Draft -->
 <g id="node2" class="node">
 <title>Draft</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M111.17,-69C111.17,-69 81.08,-69 81.08,-69 75.08,-69 69.08,-63 69.08,-57 69.08,-57 69.08,-45 69.08,-45 69.08,-39 75.08,-33 81.08,-33 81.08,-33 111.17,-33 111.17,-33 117.17,-33 123.17,-39 123.17,-45 123.17,-45 123.17,-57 123.17,-57 123.17,-63 117.17,-69 111.17,-69"/>
-<text xml:space="preserve" text-anchor="middle" x="96.13" y="-47.1" font-family="Arial" font-size="13.00" fill="#17253b">Draft</text>
+<path fill="#232e37" stroke="#697b8b" d="M111.17,-69C111.17,-69 81.08,-69 81.08,-69 75.08,-69 69.08,-63 69.08,-57 69.08,-57 69.08,-45 69.08,-45 69.08,-39 75.08,-33 81.08,-33 81.08,-33 111.17,-33 111.17,-33 117.17,-33 123.17,-39 123.17,-45 123.17,-45 123.17,-57 123.17,-57 123.17,-63 117.17,-69 111.17,-69"/>
+<text xml:space="preserve" text-anchor="middle" x="96.13" y="-47.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Draft</text>
 </g>
 <!-- start&#45;&gt;Draft -->
 <g id="edge1" class="edge">
 <title>start&#45;&gt;Draft</title>
-<path fill="none" stroke="#65758c" d="M10.34,-51C19.34,-51 40.93,-51 60.07,-51"/>
-<polygon fill="#65758c" stroke="#65758c" points="59.9,-53.63 67.4,-51 59.9,-48.38 59.9,-53.63"/>
+<path fill="none" stroke="#9eacb7" d="M10.34,-51C19.34,-51 40.93,-51 60.07,-51"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="59.9,-53.63 67.4,-51 59.9,-48.38 59.9,-53.63"/>
 </g>
 <!-- Open -->
 <g id="node3" class="node">
 <title>Open</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M374.73,-120C374.73,-120 341.01,-120 341.01,-120 335.01,-120 329.01,-114 329.01,-108 329.01,-108 329.01,-96 329.01,-96 329.01,-90 335.01,-84 341.01,-84 341.01,-84 374.73,-84 374.73,-84 380.73,-84 386.73,-90 386.73,-96 386.73,-96 386.73,-108 386.73,-108 386.73,-114 380.73,-120 374.73,-120"/>
-<text xml:space="preserve" text-anchor="middle" x="357.87" y="-98.1" font-family="Arial" font-size="13.00" fill="#17253b">Open</text>
+<path fill="#232e37" stroke="#697b8b" d="M374.73,-120C374.73,-120 341.01,-120 341.01,-120 335.01,-120 329.01,-114 329.01,-108 329.01,-108 329.01,-96 329.01,-96 329.01,-90 335.01,-84 341.01,-84 341.01,-84 374.73,-84 374.73,-84 380.73,-84 386.73,-90 386.73,-96 386.73,-96 386.73,-108 386.73,-108 386.73,-114 380.73,-120 374.73,-120"/>
+<text xml:space="preserve" text-anchor="middle" x="357.87" y="-98.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Open</text>
 </g>
 <!-- Draft&#45;&gt;Open -->
 <g id="edge2" class="edge">
 <title>Draft&#45;&gt;Open</title>
-<path fill="none" stroke="#65758c" d="M123.46,-56.17C170.03,-65.32 267.02,-84.36 320.13,-94.79"/>
-<polygon fill="#65758c" stroke="#65758c" points="319.54,-97.35 327.41,-96.22 320.56,-92.2 319.54,-97.35"/>
-<text xml:space="preserve" text-anchor="middle" x="220.04" y="-104.82" font-family="Arial" font-size="11.00" fill="#374862">submit</text>
-<text xml:space="preserve" text-anchor="middle" x="220.04" y="-91.62" font-family="Arial" font-size="11.00" fill="#374862">[customer and vehicle valid]</text>
+<path fill="none" stroke="#9eacb7" d="M123.46,-56.17C170.03,-65.32 267.02,-84.36 320.13,-94.79"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="319.54,-97.35 327.41,-96.22 320.56,-92.2 319.54,-97.35"/>
+<text xml:space="preserve" text-anchor="middle" x="220.04" y="-104.82" font-family="Arial" font-size="11.00" fill="#c0ccd6">submit</text>
+<text xml:space="preserve" text-anchor="middle" x="220.04" y="-91.62" font-family="Arial" font-size="11.00" fill="#c0ccd6">[customer and vehicle valid]</text>
 </g>
 <!-- Cancelled -->
 <g id="node8" class="node">
 <title>Cancelled</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M678.91,-36C678.91,-36 619.17,-36 619.17,-36 613.17,-36 607.17,-30 607.17,-24 607.17,-24 607.17,-12 607.17,-12 607.17,-6 613.17,0 619.17,0 619.17,0 678.91,0 678.91,0 684.91,0 690.91,-6 690.91,-12 690.91,-12 690.91,-24 690.91,-24 690.91,-30 684.91,-36 678.91,-36"/>
-<text xml:space="preserve" text-anchor="middle" x="649.04" y="-14.1" font-family="Arial" font-size="13.00" fill="#17253b">Cancelled</text>
+<path fill="#232e37" stroke="#697b8b" d="M678.91,-36C678.91,-36 619.17,-36 619.17,-36 613.17,-36 607.17,-30 607.17,-24 607.17,-24 607.17,-12 607.17,-12 607.17,-6 613.17,0 619.17,0 619.17,0 678.91,0 678.91,0 684.91,0 690.91,-6 690.91,-12 690.91,-12 690.91,-24 690.91,-24 690.91,-30 684.91,-36 678.91,-36"/>
+<text xml:space="preserve" text-anchor="middle" x="649.04" y="-14.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Cancelled</text>
 </g>
 <!-- Draft&#45;&gt;Cancelled -->
 <g id="edge3" class="edge">
 <title>Draft&#45;&gt;Cancelled</title>
-<path fill="none" stroke="#65758c" d="M123.51,-49.38C164.77,-46.84 247.07,-41.8 316.9,-37.6 416.55,-31.61 533.08,-24.75 597.94,-20.94"/>
-<polygon fill="#65758c" stroke="#65758c" points="597.89,-23.57 605.23,-20.51 597.59,-18.33 597.89,-23.57"/>
-<text xml:space="preserve" text-anchor="middle" x="357.87" y="-54.1" font-family="Arial" font-size="11.00" fill="#374862">cancel</text>
-<text xml:space="preserve" text-anchor="middle" x="357.87" y="-40.9" font-family="Arial" font-size="11.00" fill="#374862">[no fulfilled work]</text>
+<path fill="none" stroke="#9eacb7" d="M123.51,-49.38C164.77,-46.84 247.07,-41.8 316.9,-37.6 416.55,-31.61 533.08,-24.75 597.94,-20.94"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="597.89,-23.57 605.23,-20.51 597.59,-18.33 597.89,-23.57"/>
+<text xml:space="preserve" text-anchor="middle" x="357.87" y="-54.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">cancel</text>
+<text xml:space="preserve" text-anchor="middle" x="357.87" y="-40.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[no fulfilled work]</text>
 </g>
 <!-- In progress -->
 <g id="node4" class="node">
 <title>In progress</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M682.51,-173C682.51,-173 615.56,-173 615.56,-173 609.56,-173 603.56,-167 603.56,-161 603.56,-161 603.56,-149 603.56,-149 603.56,-143 609.56,-137 615.56,-137 615.56,-137 682.51,-137 682.51,-137 688.51,-137 694.51,-143 694.51,-149 694.51,-149 694.51,-161 694.51,-161 694.51,-167 688.51,-173 682.51,-173"/>
-<text xml:space="preserve" text-anchor="middle" x="649.04" y="-151.1" font-family="Arial" font-size="13.00" fill="#17253b">In progress</text>
+<path fill="#232e37" stroke="#697b8b" d="M682.51,-173C682.51,-173 615.56,-173 615.56,-173 609.56,-173 603.56,-167 603.56,-161 603.56,-161 603.56,-149 603.56,-149 603.56,-143 609.56,-137 615.56,-137 615.56,-137 682.51,-137 682.51,-137 688.51,-137 694.51,-143 694.51,-149 694.51,-149 694.51,-161 694.51,-161 694.51,-167 688.51,-173 682.51,-173"/>
+<text xml:space="preserve" text-anchor="middle" x="649.04" y="-151.1" font-family="Arial" font-size="13.00" fill="#e5edf3">In progress</text>
 </g>
 <!-- Open&#45;&gt;In progress -->
 <g id="edge5" class="edge">
 <title>Open&#45;&gt;In progress</title>
-<path fill="none" stroke="#65758c" d="M387.12,-107.18C435.07,-115.97 533.13,-133.94 594.44,-145.18"/>
-<polygon fill="#65758c" stroke="#65758c" points="593.87,-147.74 601.72,-146.51 594.81,-142.58 593.87,-147.74"/>
-<text xml:space="preserve" text-anchor="middle" x="501.2" y="-170.49" font-family="Arial" font-size="11.00" fill="#374862">start intervention</text>
-<text xml:space="preserve" text-anchor="middle" x="501.2" y="-157.29" font-family="Arial" font-size="11.00" fill="#374862">[technician assigned and no</text>
-<text xml:space="preserve" text-anchor="middle" x="501.2" y="-144.09" font-family="Arial" font-size="11.00" fill="#374862">overlapping running work]</text>
+<path fill="none" stroke="#9eacb7" d="M387.12,-107.18C435.07,-115.97 533.13,-133.94 594.44,-145.18"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="593.87,-147.74 601.72,-146.51 594.81,-142.58 593.87,-147.74"/>
+<text xml:space="preserve" text-anchor="middle" x="501.2" y="-170.49" font-family="Arial" font-size="11.00" fill="#c0ccd6">start intervention</text>
+<text xml:space="preserve" text-anchor="middle" x="501.2" y="-157.29" font-family="Arial" font-size="11.00" fill="#c0ccd6">[technician assigned and no</text>
+<text xml:space="preserve" text-anchor="middle" x="501.2" y="-144.09" font-family="Arial" font-size="11.00" fill="#c0ccd6">overlapping running work]</text>
 </g>
 <!-- Open&#45;&gt;Cancelled -->
 <g id="edge4" class="edge">
 <title>Open&#45;&gt;Cancelled</title>
-<path fill="none" stroke="#65758c" d="M386.91,-91.99C399.37,-87.67 414.27,-82.68 427.83,-78.6 492.4,-59.18 509.65,-58.25 574.56,-40 582.28,-37.83 590.43,-35.46 598.39,-33.11"/>
-<polygon fill="#65758c" stroke="#65758c" points="599.02,-35.66 605.47,-31.01 597.53,-30.63 599.02,-35.66"/>
-<text xml:space="preserve" text-anchor="middle" x="501.2" y="-95.1" font-family="Arial" font-size="11.00" fill="#374862">cancel</text>
-<text xml:space="preserve" text-anchor="middle" x="501.2" y="-81.9" font-family="Arial" font-size="11.00" fill="#374862">[no net issues or started work]</text>
+<path fill="none" stroke="#9eacb7" d="M386.91,-91.99C399.37,-87.67 414.27,-82.68 427.83,-78.6 492.4,-59.18 509.65,-58.25 574.56,-40 582.28,-37.83 590.43,-35.46 598.39,-33.11"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="599.02,-35.66 605.47,-31.01 597.53,-30.63 599.02,-35.66"/>
+<text xml:space="preserve" text-anchor="middle" x="501.2" y="-95.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">cancel</text>
+<text xml:space="preserve" text-anchor="middle" x="501.2" y="-81.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[no net issues or started work]</text>
 </g>
 <!-- On hold -->
 <g id="node5" class="node">
 <title>On hold</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M997.57,-306C997.57,-306 950.11,-306 950.11,-306 944.11,-306 938.11,-300 938.11,-294 938.11,-294 938.11,-282 938.11,-282 938.11,-276 944.11,-270 950.11,-270 950.11,-270 997.57,-270 997.57,-270 1003.57,-270 1009.57,-276 1009.57,-282 1009.57,-282 1009.57,-294 1009.57,-294 1009.57,-300 1003.57,-306 997.57,-306"/>
-<text xml:space="preserve" text-anchor="middle" x="973.84" y="-284.1" font-family="Arial" font-size="13.00" fill="#17253b">On hold</text>
+<path fill="#232e37" stroke="#697b8b" d="M997.57,-306C997.57,-306 950.11,-306 950.11,-306 944.11,-306 938.11,-300 938.11,-294 938.11,-294 938.11,-282 938.11,-282 938.11,-276 944.11,-270 950.11,-270 950.11,-270 997.57,-270 997.57,-270 1003.57,-270 1009.57,-276 1009.57,-282 1009.57,-282 1009.57,-294 1009.57,-294 1009.57,-300 1003.57,-306 997.57,-306"/>
+<text xml:space="preserve" text-anchor="middle" x="973.84" y="-284.1" font-family="Arial" font-size="13.00" fill="#e5edf3">On hold</text>
 </g>
 <!-- In progress&#45;&gt;On hold -->
 <g id="edge6" class="edge">
 <title>In progress&#45;&gt;On hold</title>
-<path fill="none" stroke="#65758c" d="M654.75,-173.49C663.15,-202.13 683.69,-256.36 723.51,-280 786.88,-317.62 876.16,-308.76 928.91,-298.59"/>
-<polygon fill="#65758c" stroke="#65758c" points="929.37,-301.18 936.2,-297.12 928.33,-296.03 929.37,-301.18"/>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-337.1" font-family="Arial" font-size="11.00" fill="#374862">hold</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-323.9" font-family="Arial" font-size="11.00" fill="#374862">[no running intervention or active</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-310.7" font-family="Arial" font-size="11.00" fill="#374862">exclusive equipment session]</text>
+<path fill="none" stroke="#9eacb7" d="M654.75,-173.49C663.15,-202.13 683.69,-256.36 723.51,-280 786.88,-317.62 876.16,-308.76 928.91,-298.59"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="929.37,-301.18 936.2,-297.12 928.33,-296.03 929.37,-301.18"/>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-337.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">hold</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-323.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[no running intervention or active</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-310.7" font-family="Arial" font-size="11.00" fill="#c0ccd6">exclusive equipment session]</text>
 </g>
 <!-- Ready for review -->
 <g id="node6" class="node">
 <title>Ready for review</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M1023.57,-139C1023.57,-139 924.11,-139 924.11,-139 918.11,-139 912.11,-133 912.11,-127 912.11,-127 912.11,-115 912.11,-115 912.11,-109 918.11,-103 924.11,-103 924.11,-103 1023.57,-103 1023.57,-103 1029.57,-103 1035.57,-109 1035.57,-115 1035.57,-115 1035.57,-127 1035.57,-127 1035.57,-133 1029.57,-139 1023.57,-139"/>
-<text xml:space="preserve" text-anchor="middle" x="973.84" y="-117.1" font-family="Arial" font-size="13.00" fill="#17253b">Ready for review</text>
+<path fill="#232e37" stroke="#697b8b" d="M1023.57,-139C1023.57,-139 924.11,-139 924.11,-139 918.11,-139 912.11,-133 912.11,-127 912.11,-127 912.11,-115 912.11,-115 912.11,-109 918.11,-103 924.11,-103 924.11,-103 1023.57,-103 1023.57,-103 1029.57,-103 1035.57,-109 1035.57,-115 1035.57,-115 1035.57,-127 1035.57,-127 1035.57,-133 1029.57,-139 1023.57,-139"/>
+<text xml:space="preserve" text-anchor="middle" x="973.84" y="-117.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Ready for review</text>
 </g>
 <!-- In progress&#45;&gt;Ready for review -->
 <g id="edge8" class="edge">
 <title>In progress&#45;&gt;Ready for review</title>
-<path fill="none" stroke="#65758c" d="M694.92,-150.27C748.86,-144.59 839.97,-134.99 903.1,-128.35"/>
-<polygon fill="#65758c" stroke="#65758c" points="903.13,-130.98 910.31,-127.59 902.58,-125.76 903.13,-130.98"/>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-189.68" font-family="Arial" font-size="11.00" fill="#374862">request review</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-176.48" font-family="Arial" font-size="11.00" fill="#374862">[all interventions completed and</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-163.28" font-family="Arial" font-size="11.00" fill="#374862">requests settled and no active</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-150.08" font-family="Arial" font-size="11.00" fill="#374862">exclusive session]</text>
+<path fill="none" stroke="#9eacb7" d="M694.92,-150.27C748.86,-144.59 839.97,-134.99 903.1,-128.35"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="903.13,-130.98 910.31,-127.59 902.58,-125.76 903.13,-130.98"/>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-189.68" font-family="Arial" font-size="11.00" fill="#c0ccd6">request review</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-176.48" font-family="Arial" font-size="11.00" fill="#c0ccd6">[all interventions completed and</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-163.28" font-family="Arial" font-size="11.00" fill="#c0ccd6">requests settled and no active</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-150.08" font-family="Arial" font-size="11.00" fill="#c0ccd6">exclusive session]</text>
 </g>
 <!-- On hold&#45;&gt;In progress -->
 <g id="edge7" class="edge">
 <title>On hold&#45;&gt;In progress</title>
-<path fill="none" stroke="#65758c" d="M940.44,-269.55C923.74,-260.67 902.8,-250.49 883.11,-243.6 814.6,-219.64 789.68,-238.84 723.51,-209 706.68,-201.41 689.93,-189.52 676.68,-178.83"/>
-<polygon fill="#65758c" stroke="#65758c" points="678.71,-177.1 671.26,-174.34 675.36,-181.15 678.71,-177.1"/>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-260.1" font-family="Arial" font-size="11.00" fill="#374862">resume</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-246.9" font-family="Arial" font-size="11.00" fill="#374862">[assigned technician available]</text>
+<path fill="none" stroke="#9eacb7" d="M940.44,-269.55C923.74,-260.67 902.8,-250.49 883.11,-243.6 814.6,-219.64 789.68,-238.84 723.51,-209 706.68,-201.41 689.93,-189.52 676.68,-178.83"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="678.71,-177.1 671.26,-174.34 675.36,-181.15 678.71,-177.1"/>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-260.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">resume</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-246.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[assigned technician available]</text>
 </g>
 <!-- Ready for review&#45;&gt;In progress -->
 <g id="edge9" class="edge">
 <title>Ready for review&#45;&gt;In progress</title>
-<path fill="none" stroke="#65758c" d="M921.13,-102.59C869.57,-87.19 788.87,-71.18 723.51,-94.6 703.61,-101.73 685.23,-116.84 671.84,-130.16"/>
-<polygon fill="#65758c" stroke="#65758c" points="670.07,-128.22 666.73,-135.43 673.84,-131.87 670.07,-128.22"/>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-111.1" font-family="Arial" font-size="11.00" fill="#374862">return for work</text>
-<text xml:space="preserve" text-anchor="middle" x="803.31" y="-97.9" font-family="Arial" font-size="11.00" fill="#374862">[reason recorded]</text>
+<path fill="none" stroke="#9eacb7" d="M921.13,-102.59C869.57,-87.19 788.87,-71.18 723.51,-94.6 703.61,-101.73 685.23,-116.84 671.84,-130.16"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="670.07,-128.22 666.73,-135.43 673.84,-131.87 670.07,-128.22"/>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-111.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">return for work</text>
+<text xml:space="preserve" text-anchor="middle" x="803.31" y="-97.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[reason recorded]</text>
 </g>
 <!-- Closed -->
 <g id="node7" class="node">
 <title>Closed</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M1297.76,-139C1297.76,-139 1255.37,-139 1255.37,-139 1249.37,-139 1243.37,-133 1243.37,-127 1243.37,-127 1243.37,-115 1243.37,-115 1243.37,-109 1249.37,-103 1255.37,-103 1255.37,-103 1297.76,-103 1297.76,-103 1303.76,-103 1309.76,-109 1309.76,-115 1309.76,-115 1309.76,-127 1309.76,-127 1309.76,-133 1303.76,-139 1297.76,-139"/>
-<text xml:space="preserve" text-anchor="middle" x="1276.57" y="-117.1" font-family="Arial" font-size="13.00" fill="#17253b">Closed</text>
+<path fill="#232e37" stroke="#697b8b" d="M1297.76,-139C1297.76,-139 1255.37,-139 1255.37,-139 1249.37,-139 1243.37,-133 1243.37,-127 1243.37,-127 1243.37,-115 1243.37,-115 1243.37,-109 1249.37,-103 1255.37,-103 1255.37,-103 1297.76,-103 1297.76,-103 1303.76,-103 1309.76,-109 1309.76,-115 1309.76,-115 1309.76,-127 1309.76,-127 1309.76,-133 1303.76,-139 1297.76,-139"/>
+<text xml:space="preserve" text-anchor="middle" x="1276.57" y="-117.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Closed</text>
 </g>
 <!-- Ready for review&#45;&gt;Closed -->
 <g id="edge10" class="edge">
 <title>Ready for review&#45;&gt;Closed</title>
-<path fill="none" stroke="#65758c" d="M1036.06,-121C1095.19,-121 1183.11,-121 1234.36,-121"/>
-<polygon fill="#65758c" stroke="#65758c" points="1234.16,-123.63 1241.66,-121 1234.16,-118.38 1234.16,-123.63"/>
-<text xml:space="preserve" text-anchor="middle" x="1139.47" y="-150.7" font-family="Arial" font-size="11.00" fill="#374862">close</text>
-<text xml:space="preserve" text-anchor="middle" x="1139.47" y="-137.5" font-family="Arial" font-size="11.00" fill="#374862">[costs reconciled and manager</text>
-<text xml:space="preserve" text-anchor="middle" x="1139.47" y="-124.3" font-family="Arial" font-size="11.00" fill="#374862">authorized]</text>
+<path fill="none" stroke="#9eacb7" d="M1036.06,-121C1095.19,-121 1183.11,-121 1234.36,-121"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1234.16,-123.63 1241.66,-121 1234.16,-118.38 1234.16,-123.63"/>
+<text xml:space="preserve" text-anchor="middle" x="1139.47" y="-150.7" font-family="Arial" font-size="11.00" fill="#c0ccd6">close</text>
+<text xml:space="preserve" text-anchor="middle" x="1139.47" y="-137.5" font-family="Arial" font-size="11.00" fill="#c0ccd6">[costs reconciled and manager</text>
+<text xml:space="preserve" text-anchor="middle" x="1139.47" y="-124.3" font-family="Arial" font-size="11.00" fill="#c0ccd6">authorized]</text>
 </g>
 <!-- end0 -->
 <g id="node9" class="node">
 <title>end0</title>
-<ellipse fill="#17253b" stroke="#17253b" cx="1379.24" cy="-121" rx="6.48" ry="6.48"/>
-<ellipse fill="none" stroke="#17253b" cx="1379.24" cy="-121" rx="10.48" ry="10.48"/>
+<ellipse fill="#e5edf3" stroke="#e5edf3" cx="1379.24" cy="-121" rx="6.48" ry="6.48"/>
+<ellipse fill="none" stroke="#e5edf3" cx="1379.24" cy="-121" rx="10.48" ry="10.48"/>
 </g>
 <!-- Closed&#45;&gt;end0 -->
 <g id="edge11" class="edge">
 <title>Closed&#45;&gt;end0</title>
-<path fill="none" stroke="#65758c" d="M1310.25,-121C1326.52,-121 1345.59,-121 1359.39,-121"/>
-<polygon fill="#65758c" stroke="#65758c" points="1359.38,-123.63 1366.88,-121 1359.38,-118.38 1359.38,-123.63"/>
+<path fill="none" stroke="#9eacb7" d="M1310.25,-121C1326.52,-121 1345.59,-121 1359.39,-121"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1359.38,-123.63 1366.88,-121 1359.38,-118.38 1359.38,-123.63"/>
 </g>
 <!-- end1 -->
 <g id="node10" class="node">
 <title>end1</title>
-<ellipse fill="#17253b" stroke="#17253b" cx="973.84" cy="-18" rx="6.48" ry="6.48"/>
-<ellipse fill="none" stroke="#17253b" cx="973.84" cy="-18" rx="10.48" ry="10.48"/>
+<ellipse fill="#e5edf3" stroke="#e5edf3" cx="973.84" cy="-18" rx="6.48" ry="6.48"/>
+<ellipse fill="none" stroke="#e5edf3" cx="973.84" cy="-18" rx="10.48" ry="10.48"/>
 </g>
 <!-- Cancelled&#45;&gt;end1 -->
 <g id="edge12" class="edge">
 <title>Cancelled&#45;&gt;end1</title>
-<path fill="none" stroke="#65758c" d="M691.25,-18C761.84,-18 903.19,-18 954.06,-18"/>
-<polygon fill="#65758c" stroke="#65758c" points="953.96,-20.63 961.46,-18 953.96,-15.38 953.96,-20.63"/>
+<path fill="none" stroke="#9eacb7" d="M691.25,-18C761.84,-18 903.19,-18 954.06,-18"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="953.96,-20.63 961.46,-18 953.96,-15.38 953.96,-20.63"/>
 </g>
 </g>
 </svg>

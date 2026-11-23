@@ -1,18 +1,18 @@
 digraph material_delivery_activity {
-graph [rankdir=TB, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Material request and delivery - responsibility partitions", compound=true];
-node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
-edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+graph [rankdir=TB, bgcolor="#171e24", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label="Material request and delivery - responsibility partitions", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#232e37", color="#697b8b", fontcolor="#e5edf3", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#c0ccd6", color="#9eacb7", arrowsize=0.75];
 
 newrank=true;
-subgraph cluster_technician { label="Technician"; color="#bdc9d8";
-start [shape=point, width=0.14, fillcolor="#17253b"];
+subgraph cluster_technician { label="Technician"; color="#596977";
+start [shape=point, width=0.14, fillcolor="#e5edf3"];
 tech_end [shape=point, style=invis, width=0.01];
 request [label="Select order, item, quantity\nand submit request"];
 correct [label="Correct request or wait\nfor assignment / order reopening"];
 partial [shape=diamond, label="Accept partial\ndelivery?", style=filled];
 wait [label="Keep remaining request pending\nor cancel unfulfilled remainder"];
 }
-subgraph cluster_system { label="Application"; color="#bdc9d8";
+subgraph cluster_system { label="Application"; color="#596977";
 app_anchor [shape=point, style=invis, width=0.01];
 validate [label="Validate session, role, order\nand assigned technician"];
 valid [shape=diamond, label="Valid?", style=filled];
@@ -23,9 +23,9 @@ transaction [label="Within one transaction:\nlock and revalidate stock,\norder a
 saved [shape=diamond, label="Committed?", style=filled];
 failure [label="Roll back all changes\nReport conflict or technical failure"];
 result [label="Update fulfilled quantity,\norder cost and reorder suggestion"];
-end [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#17253b"];
+end [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#e5edf3"];
 }
-subgraph cluster_clerk { label="Warehouse clerk"; color="#bdc9d8";
+subgraph cluster_clerk { label="Warehouse clerk"; color="#596977";
 clerk_anchor [shape=point, style=invis, width=0.01];
 clerk_end [shape=point, style=invis, width=0.01];
 review [label="Review request and\nconfirm quantity to issue"];

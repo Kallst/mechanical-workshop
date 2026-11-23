@@ -158,13 +158,16 @@ def q(text):
 
 def graph(name, title, body, direction='LR'):
     source = ('digraph ' + name.replace('-', '_') + ' {\n'
-        + f'graph [rankdir={direction}, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label={q(title)}, compound=true];\n'
+        + f'graph [rankdir={direction}, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label={q(title)}, compound=true];\n'
         + 'node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];\n'
         + 'edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];\n'
         + body + '\n}\n')
     # ASCII notation avoids unsupported glyph-width metrics in the offline
-    # Graphviz build; personal names remain unchanged in product mockups.
+    # Graphviz build; personal names remain unchanged in the product.
     source = source.replace('·', '-').replace('−', '-').replace('«', '<<').replace('»', '>>')
+    palette = {'#ffffff':'#171e24','#f3f6fa':'#232e37','#a8b5c7':'#697b8b','#17253b':'#e5edf3','#374862':'#c0ccd6','#65758c':'#9eacb7','#e5f3f1':'#442b1c','#227b70':'#f28a3a','#bdc9d8':'#596977','#fff8eb':'#302a22','#94a0b1':'#8297a8','#5f6c7f':'#b3c2cc','#c9e8e1':'#49301e','#b46a19':'#f8a460','#9cb5bf':'#718a99','#a66a21':'#e69c60'}
+    for old, new in palette.items():
+        source = source.replace(old, new)
     (DIAGRAMS / (name + '.dot')).write_text(source, encoding='utf-8')
 
 def edge(a, b, label, attributes=''):
@@ -179,8 +182,16 @@ def context_view(name, ids, title):
             continue
         external = a if a in ACTORS else b
         entities.add(external)
-        lines += edge(a if a in ACTORS else 'app', b if b in ACTORS else 'app', fid + '\n' + label)
+        lines += edge(a if a in ACTORS else 'app', b if b in ACTORS else 'app', fid + '\n' + label, ', constraint=false')
     lines += '\n'.join(f'{k} [shape=box, style="filled", fillcolor="#ffffff", label={q(ACTORS[k])}];' for k in sorted(entities))
+    # Balance external actors on either side without changing business flows.
+    ordered = [key for key in ['staff','manager','technician','clerk','admin','telemetry','recipient','operator'] if key in entities]
+    split = (len(ordered) + 1) // 2
+    left, right = ordered[:split], ordered[split:]
+    lines += '\n{rank=same; ' + '; '.join(left) + ';}\n'
+    lines += '{rank=same; ' + '; '.join(right) + ';}\n'
+    lines += ''.join(f'{key} -> app [style=invis, weight=100];\n' for key in left)
+    lines += ''.join(f'app -> {key} [style=invis, weight=100];\n' for key in right)
     graph(name, title, lines)
 
 context_view('context-operations', {f'F{i:02}' for i in range(1, 13)}, 'Application context · operational view')

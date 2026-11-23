@@ -8,237 +8,237 @@
  viewBox="0.00 0.00 1319.00 845.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 819.32)">
 <title>dfd_p6</title>
-<polygon fill="#ffffff" stroke="none" points="-25.2,25.2 -25.2,-819.32 1294.12,-819.32 1294.12,25.2 -25.2,25.2"/>
-<text xml:space="preserve" text-anchor="middle" x="634.46" y="-772.12" font-family="Arial" font-size="20.00">DFD Level 1 projection &#45; 6.0 Report and run scenarios</text>
+<polygon fill="#171e24" stroke="none" points="-25.2,25.2 -25.2,-819.32 1294.12,-819.32 1294.12,25.2 -25.2,25.2"/>
+<text xml:space="preserve" text-anchor="middle" x="634.46" y="-772.12" font-family="Arial" font-size="20.00" fill="#e5edf3">DFD Level 1 projection &#45; 6.0 Report and run scenarios</text>
 <!-- admin -->
 <g id="node1" class="node">
 <title>admin</title>
-<polygon fill="#ffffff" stroke="#a8b5c7" points="192.46,-649.3 89.97,-649.3 89.97,-613.3 192.46,-613.3 192.46,-649.3"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-627.4" font-family="Arial" font-size="13.00" fill="#17253b">Administrator</text>
+<polygon fill="#171e24" stroke="#697b8b" points="192.46,-649.3 89.97,-649.3 89.97,-613.3 192.46,-613.3 192.46,-649.3"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-627.4" font-family="Arial" font-size="13.00" fill="#e5edf3">Administrator</text>
 </g>
 <!-- p6 -->
 <g id="node14" class="node">
 <title>p6</title>
-<ellipse fill="#c9e8e1" stroke="#a8b5c7" cx="625.23" cy="-428.3" rx="121.55" ry="35.3"/>
-<text xml:space="preserve" text-anchor="middle" x="625.23" y="-432.2" font-family="Arial" font-size="13.00" fill="#17253b">6.0</text>
-<text xml:space="preserve" text-anchor="middle" x="625.23" y="-416.6" font-family="Arial" font-size="13.00" fill="#17253b">Report and run scenarios</text>
+<ellipse fill="#49301e" stroke="#697b8b" cx="625.23" cy="-428.3" rx="121.55" ry="35.3"/>
+<text xml:space="preserve" text-anchor="middle" x="625.23" y="-432.2" font-family="Arial" font-size="13.00" fill="#e5edf3">6.0</text>
+<text xml:space="preserve" text-anchor="middle" x="625.23" y="-416.6" font-family="Arial" font-size="13.00" fill="#e5edf3">Report and run scenarios</text>
 </g>
 <!-- admin&#45;&gt;p6 -->
 <g id="edge1" class="edge">
 <title>admin&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M192.9,-634.8C260.9,-637.31 383.63,-633.99 474.69,-587.3 527.01,-560.47 570.84,-507.76 597.26,-470.39"/>
-<polygon fill="#65758c" stroke="#65758c" points="599.31,-472.03 601.44,-464.38 595,-469.03 599.31,-472.03"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-646.89" font-family="Arial" font-size="11.00" fill="#374862">F20</text>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-633.69" font-family="Arial" font-size="11.00" fill="#374862">Report and history query</text>
+<path fill="none" stroke="#9eacb7" d="M192.9,-634.8C260.9,-637.31 383.63,-633.99 474.69,-587.3 527.01,-560.47 570.84,-507.76 597.26,-470.39"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="599.31,-472.03 601.44,-464.38 595,-469.03 599.31,-472.03"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-646.89" font-family="Arial" font-size="11.00" fill="#c0ccd6">F20</text>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-633.69" font-family="Arial" font-size="11.00" fill="#c0ccd6">Report and history query</text>
 </g>
 <!-- d2 -->
 <g id="node2" class="node">
 <title>d2</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="0,-503.98 0,-572.62 282.43,-572.62 282.43,-503.98 0,-503.98"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-551.56" font-family="Arial" font-size="13.00" fill="#17253b">D2</text>
-<polyline fill="none" stroke="#a8b5c7" points="0,-538.3 282.43,-538.3"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-517.24" font-family="Arial" font-size="13.00" fill="#17253b">Customers vehicles orders and interventions</text>
+<polygon fill="#302a22" stroke="#697b8b" points="0,-503.98 0,-572.62 282.43,-572.62 282.43,-503.98 0,-503.98"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-551.56" font-family="Arial" font-size="13.00" fill="#e5edf3">D2</text>
+<polyline fill="none" stroke="#697b8b" points="0,-538.3 282.43,-538.3"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-517.24" font-family="Arial" font-size="13.00" fill="#e5edf3">Customers vehicles orders and interventions</text>
 </g>
 <!-- d2&#45;&gt;p6 -->
 <g id="edge6" class="edge">
 <title>d2&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M282.55,-505.73C292.32,-503.48 302.02,-501.25 311.43,-499.1 380.76,-483.22 458.79,-465.56 519.57,-451.85"/>
-<polygon fill="#65758c" stroke="#65758c" points="519.81,-454.49 526.55,-450.28 518.66,-449.36 519.81,-454.49"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-502.4" font-family="Arial" font-size="11.00" fill="#374862">Order and labor records</text>
+<path fill="none" stroke="#9eacb7" d="M282.55,-505.73C292.32,-503.48 302.02,-501.25 311.43,-499.1 380.76,-483.22 458.79,-465.56 519.57,-451.85"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="519.81,-454.49 526.55,-450.28 518.66,-449.36 519.81,-454.49"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-502.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Order and labor records</text>
 </g>
 <!-- d3 -->
 <g id="node3" class="node">
 <title>d3</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="5.78,-393.98 5.78,-462.62 276.65,-462.62 276.65,-393.98 5.78,-393.98"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-441.56" font-family="Arial" font-size="13.00" fill="#17253b">D3</text>
-<polyline fill="none" stroke="#a8b5c7" points="5.78,-428.3 276.65,-428.3"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-407.24" font-family="Arial" font-size="13.00" fill="#17253b">Items requests movements and purchases</text>
+<polygon fill="#302a22" stroke="#697b8b" points="5.78,-393.98 5.78,-462.62 276.65,-462.62 276.65,-393.98 5.78,-393.98"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-441.56" font-family="Arial" font-size="13.00" fill="#e5edf3">D3</text>
+<polyline fill="none" stroke="#697b8b" points="5.78,-428.3 276.65,-428.3"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-407.24" font-family="Arial" font-size="13.00" fill="#e5edf3">Items requests movements and purchases</text>
 </g>
 <!-- d3&#45;&gt;p6 -->
 <g id="edge7" class="edge">
 <title>d3&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M277.12,-428.3C345.09,-428.3 427.13,-428.3 494.38,-428.3"/>
-<polygon fill="#65758c" stroke="#65758c" points="494.33,-430.92 501.83,-428.3 494.33,-425.67 494.33,-430.92"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-431.6" font-family="Arial" font-size="11.00" fill="#374862">Inventory and purchasing records</text>
+<path fill="none" stroke="#9eacb7" d="M277.12,-428.3C345.09,-428.3 427.13,-428.3 494.38,-428.3"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="494.33,-430.92 501.83,-428.3 494.33,-425.67 494.33,-430.92"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-431.6" font-family="Arial" font-size="11.00" fill="#c0ccd6">Inventory and purchasing records</text>
 </g>
 <!-- d4 -->
 <g id="node4" class="node">
 <title>d4</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="18.78,-283.98 18.78,-352.62 263.65,-352.62 263.65,-283.98 18.78,-283.98"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-331.56" font-family="Arial" font-size="13.00" fill="#17253b">D4</text>
-<polyline fill="none" stroke="#a8b5c7" points="18.78,-318.3 263.65,-318.3"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-297.24" font-family="Arial" font-size="13.00" fill="#17253b">Equipment events sessions and alerts</text>
+<polygon fill="#302a22" stroke="#697b8b" points="18.78,-283.98 18.78,-352.62 263.65,-352.62 263.65,-283.98 18.78,-283.98"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-331.56" font-family="Arial" font-size="13.00" fill="#e5edf3">D4</text>
+<polyline fill="none" stroke="#697b8b" points="18.78,-318.3 263.65,-318.3"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-297.24" font-family="Arial" font-size="13.00" fill="#e5edf3">Equipment events sessions and alerts</text>
 </g>
 <!-- d4&#45;&gt;p6 -->
 <g id="edge8" class="edge">
 <title>d4&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M263.85,-346.06C342.93,-364.1 444.97,-387.39 520.27,-404.57"/>
-<polygon fill="#65758c" stroke="#65758c" points="519.48,-407.09 527.37,-406.19 520.65,-401.97 519.48,-407.09"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-396.02" font-family="Arial" font-size="11.00" fill="#374862">Equipment and alert records</text>
+<path fill="none" stroke="#9eacb7" d="M263.85,-346.06C342.93,-364.1 444.97,-387.39 520.27,-404.57"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="519.48,-407.09 527.37,-406.19 520.65,-401.97 519.48,-407.09"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-396.02" font-family="Arial" font-size="11.00" fill="#c0ccd6">Equipment and alert records</text>
 </g>
 <!-- d5 -->
 <g id="node5" class="node">
 <title>d5</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="45.51,-173.98 45.51,-242.62 236.92,-242.62 236.92,-173.98 45.51,-173.98"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-221.56" font-family="Arial" font-size="13.00" fill="#17253b">D5</text>
-<polyline fill="none" stroke="#a8b5c7" points="45.51,-208.3 236.92,-208.3"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-187.24" font-family="Arial" font-size="13.00" fill="#17253b">Cost snapshots and invoices</text>
+<polygon fill="#302a22" stroke="#697b8b" points="45.51,-173.98 45.51,-242.62 236.92,-242.62 236.92,-173.98 45.51,-173.98"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-221.56" font-family="Arial" font-size="13.00" fill="#e5edf3">D5</text>
+<polyline fill="none" stroke="#697b8b" points="45.51,-208.3 236.92,-208.3"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-187.24" font-family="Arial" font-size="13.00" fill="#e5edf3">Cost snapshots and invoices</text>
 </g>
 <!-- d5&#45;&gt;p6 -->
 <g id="edge9" class="edge">
 <title>d5&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M237.14,-238.54C304.83,-261.46 397.2,-295.52 474.69,-334.1 507.59,-350.48 542.45,-372.16 570.23,-390.59"/>
-<polygon fill="#65758c" stroke="#65758c" points="568.54,-392.62 576.24,-394.6 571.46,-388.26 568.54,-392.62"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-337.4" font-family="Arial" font-size="11.00" fill="#374862">Cost and invoice records</text>
+<path fill="none" stroke="#9eacb7" d="M237.14,-238.54C304.83,-261.46 397.2,-295.52 474.69,-334.1 507.59,-350.48 542.45,-372.16 570.23,-390.59"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="568.54,-392.62 576.24,-394.6 571.46,-388.26 568.54,-392.62"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-337.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Cost and invoice records</text>
 </g>
 <!-- d6 -->
 <g id="node6" class="node">
 <title>d6</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="1028.64,-692.98 1028.64,-761.62 1227.27,-761.62 1227.27,-692.98 1028.64,-692.98"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-740.56" font-family="Arial" font-size="13.00" fill="#17253b">D6</text>
-<polyline fill="none" stroke="#a8b5c7" points="1028.64,-727.3 1227.27,-727.3"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-706.24" font-family="Arial" font-size="13.00" fill="#17253b">Scenario clock and ownership</text>
+<polygon fill="#302a22" stroke="#697b8b" points="1028.64,-692.98 1028.64,-761.62 1227.27,-761.62 1227.27,-692.98 1028.64,-692.98"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-740.56" font-family="Arial" font-size="13.00" fill="#e5edf3">D6</text>
+<polyline fill="none" stroke="#697b8b" points="1028.64,-727.3 1227.27,-727.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-706.24" font-family="Arial" font-size="13.00" fill="#e5edf3">Scenario clock and ownership</text>
 </g>
 <!-- d6&#45;&gt;p6 -->
 <g id="edge12" class="edge">
 <title>d6&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M1031.92,-692.49C1007.96,-684.29 982.16,-675.95 957.98,-669.1 878.14,-646.48 845.44,-673.4 775.78,-628.3 715.74,-589.43 670.99,-517.61 646.74,-471.45"/>
-<polygon fill="#65758c" stroke="#65758c" points="649.21,-470.51 643.44,-465.05 644.55,-472.92 649.21,-470.51"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-672.4" font-family="Arial" font-size="11.00" fill="#374862">Scenario seed clock and ownership</text>
+<path fill="none" stroke="#9eacb7" d="M1031.92,-692.49C1007.96,-684.29 982.16,-675.95 957.98,-669.1 878.14,-646.48 845.44,-673.4 775.78,-628.3 715.74,-589.43 670.99,-517.61 646.74,-471.45"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="649.21,-470.51 643.44,-465.05 644.55,-472.92 649.21,-470.51"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-672.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario seed clock and ownership</text>
 </g>
 <!-- d7 -->
 <g id="node7" class="node">
 <title>d7</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="1087.9,-558.98 1087.9,-627.62 1168.01,-627.62 1168.01,-558.98 1087.9,-558.98"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-606.56" font-family="Arial" font-size="13.00" fill="#17253b">D7</text>
-<polyline fill="none" stroke="#a8b5c7" points="1087.9,-593.3 1168.01,-593.3"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-572.24" font-family="Arial" font-size="13.00" fill="#17253b">Audit trail</text>
+<polygon fill="#302a22" stroke="#697b8b" points="1087.9,-558.98 1087.9,-627.62 1168.01,-627.62 1168.01,-558.98 1087.9,-558.98"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-606.56" font-family="Arial" font-size="13.00" fill="#e5edf3">D7</text>
+<polyline fill="none" stroke="#697b8b" points="1087.9,-593.3 1168.01,-593.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-572.24" font-family="Arial" font-size="13.00" fill="#e5edf3">Audit trail</text>
 </g>
 <!-- d7&#45;&gt;p6 -->
 <g id="edge10" class="edge">
 <title>d7&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M1087.47,-583.95C1002,-563.62 805.11,-516.36 775.78,-505.3 746.06,-494.09 714.6,-478.51 688.24,-464.29"/>
-<polygon fill="#65758c" stroke="#65758c" points="689.76,-462.13 681.92,-460.85 687.25,-466.74 689.76,-462.13"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-555.49" font-family="Arial" font-size="11.00" fill="#374862">Attributed operation history</text>
+<path fill="none" stroke="#9eacb7" d="M1087.47,-583.95C1002,-563.62 805.11,-516.36 775.78,-505.3 746.06,-494.09 714.6,-478.51 688.24,-464.29"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="689.76,-462.13 681.92,-460.85 687.25,-466.74 689.76,-462.13"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-555.49" font-family="Arial" font-size="11.00" fill="#c0ccd6">Attributed operation history</text>
 </g>
 <!-- operator -->
 <g id="node8" class="node">
 <title>operator</title>
-<polygon fill="#ffffff" stroke="#a8b5c7" points="1209.2,-495.26 1046.71,-495.26 1046.71,-445.34 1209.2,-445.34 1209.2,-495.26"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-474.2" font-family="Arial" font-size="13.00" fill="#17253b">Demonstration operator</text>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-458.6" font-family="Arial" font-size="13.00" fill="#17253b">(own scenario only)</text>
+<polygon fill="#171e24" stroke="#697b8b" points="1209.2,-495.26 1046.71,-495.26 1046.71,-445.34 1209.2,-445.34 1209.2,-495.26"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-474.2" font-family="Arial" font-size="13.00" fill="#e5edf3">Demonstration operator</text>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-458.6" font-family="Arial" font-size="13.00" fill="#e5edf3">(own scenario only)</text>
 </g>
 <!-- operator&#45;&gt;p6 -->
 <g id="edge3" class="edge">
 <title>operator&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M1046.37,-452.89C1025.71,-445.93 1004.42,-436.36 986.98,-423.3 968.94,-409.79 977.96,-392.13 957.98,-381.7 876.06,-338.95 768.05,-367.21 697.88,-394.81"/>
-<polygon fill="#65758c" stroke="#65758c" points="697.33,-392.2 691.34,-397.43 699.28,-397.07 697.33,-392.2"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-411.4" font-family="Arial" font-size="11.00" fill="#374862">F22</text>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-398.2" font-family="Arial" font-size="11.00" fill="#374862">Scenario create pause advance and</text>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-385" font-family="Arial" font-size="11.00" fill="#374862">reset commands</text>
+<path fill="none" stroke="#9eacb7" d="M1046.37,-452.89C1025.71,-445.93 1004.42,-436.36 986.98,-423.3 968.94,-409.79 977.96,-392.13 957.98,-381.7 876.06,-338.95 768.05,-367.21 697.88,-394.81"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="697.33,-392.2 691.34,-397.43 699.28,-397.07 697.33,-392.2"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-411.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">F22</text>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-398.2" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario create pause advance and</text>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-385" font-family="Arial" font-size="11.00" fill="#c0ccd6">reset commands</text>
 </g>
 <!-- p1 -->
 <g id="node9" class="node">
 <title>p1</title>
-<ellipse fill="#f3f6fa" stroke="#a8b5c7" cx="141.21" cy="-98.3" rx="132.28" ry="35.3"/>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-102.2" font-family="Arial" font-size="13.00" fill="#17253b">1.0</text>
-<text xml:space="preserve" text-anchor="middle" x="141.21" y="-86.6" font-family="Arial" font-size="13.00" fill="#17253b">Manage identity and access</text>
+<ellipse fill="#232e37" stroke="#697b8b" cx="141.21" cy="-98.3" rx="132.28" ry="35.3"/>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-102.2" font-family="Arial" font-size="13.00" fill="#e5edf3">1.0</text>
+<text xml:space="preserve" text-anchor="middle" x="141.21" y="-86.6" font-family="Arial" font-size="13.00" fill="#e5edf3">Manage identity and access</text>
 </g>
 <!-- p1&#45;&gt;p6 -->
 <g id="edge5" class="edge">
 <title>p1&#45;&gt;p6</title>
-<path fill="none" stroke="#65758c" d="M241.48,-121.71C311.67,-141.8 405.25,-176.01 474.69,-228.9 530.87,-271.69 576.19,-340.96 601.67,-385.56"/>
-<polygon fill="#65758c" stroke="#65758c" points="599.33,-386.75 605.3,-392 603.91,-384.17 599.33,-386.75"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-245.4" font-family="Arial" font-size="11.00" fill="#374862">Authorized identity and scenario</text>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-232.2" font-family="Arial" font-size="11.00" fill="#374862">context</text>
+<path fill="none" stroke="#9eacb7" d="M241.48,-121.71C311.67,-141.8 405.25,-176.01 474.69,-228.9 530.87,-271.69 576.19,-340.96 601.67,-385.56"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="599.33,-386.75 605.3,-392 603.91,-384.17 599.33,-386.75"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-245.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Authorized identity and scenario</text>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-232.2" font-family="Arial" font-size="11.00" fill="#c0ccd6">context</text>
 </g>
 <!-- p2 -->
 <g id="node10" class="node">
 <title>p2</title>
-<ellipse fill="#f3f6fa" stroke="#a8b5c7" cx="1127.95" cy="-368.3" rx="138.92" ry="35.3"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-372.2" font-family="Arial" font-size="13.00" fill="#17253b">2.0</text>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-356.6" font-family="Arial" font-size="13.00" fill="#17253b">Manage workshop operations</text>
+<ellipse fill="#232e37" stroke="#697b8b" cx="1127.95" cy="-368.3" rx="138.92" ry="35.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-372.2" font-family="Arial" font-size="13.00" fill="#e5edf3">2.0</text>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-356.6" font-family="Arial" font-size="13.00" fill="#e5edf3">Manage workshop operations</text>
 </g>
 <!-- p3 -->
 <g id="node11" class="node">
 <title>p3</title>
-<ellipse fill="#f3f6fa" stroke="#a8b5c7" cx="1127.95" cy="-257.3" rx="140.97" ry="35.3"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-261.2" font-family="Arial" font-size="13.00" fill="#17253b">3.0</text>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-245.6" font-family="Arial" font-size="13.00" fill="#17253b">Manage stock and purchasing</text>
+<ellipse fill="#232e37" stroke="#697b8b" cx="1127.95" cy="-257.3" rx="140.97" ry="35.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-261.2" font-family="Arial" font-size="13.00" fill="#e5edf3">3.0</text>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-245.6" font-family="Arial" font-size="13.00" fill="#e5edf3">Manage stock and purchasing</text>
 </g>
 <!-- p4 -->
 <g id="node12" class="node">
 <title>p4</title>
-<ellipse fill="#f3f6fa" stroke="#a8b5c7" cx="1127.95" cy="-146.3" rx="94.46" ry="35.3"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-150.2" font-family="Arial" font-size="13.00" fill="#17253b">4.0</text>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-134.6" font-family="Arial" font-size="13.00" fill="#17253b">Monitor equipment</text>
+<ellipse fill="#232e37" stroke="#697b8b" cx="1127.95" cy="-146.3" rx="94.46" ry="35.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-150.2" font-family="Arial" font-size="13.00" fill="#e5edf3">4.0</text>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-134.6" font-family="Arial" font-size="13.00" fill="#e5edf3">Monitor equipment</text>
 </g>
 <!-- p5 -->
 <g id="node13" class="node">
 <title>p5</title>
-<ellipse fill="#f3f6fa" stroke="#a8b5c7" cx="1127.95" cy="-35.3" rx="129.72" ry="35.3"/>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-39.2" font-family="Arial" font-size="13.00" fill="#17253b">5.0</text>
-<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-23.6" font-family="Arial" font-size="13.00" fill="#17253b">Calculate costs and invoice</text>
+<ellipse fill="#232e37" stroke="#697b8b" cx="1127.95" cy="-35.3" rx="129.72" ry="35.3"/>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-39.2" font-family="Arial" font-size="13.00" fill="#e5edf3">5.0</text>
+<text xml:space="preserve" text-anchor="middle" x="1127.95" y="-23.6" font-family="Arial" font-size="13.00" fill="#e5edf3">Calculate costs and invoice</text>
 </g>
 <!-- p6&#45;&gt;admin -->
 <g id="edge2" class="edge">
 <title>p6&#45;&gt;admin</title>
-<path fill="none" stroke="#65758c" d="M577.41,-461.18C548.9,-479.83 511.05,-502.18 474.69,-516.3 405.55,-543.15 373.07,-509.64 311.43,-550.9 292.46,-563.6 301.04,-580.07 282.43,-593.3 258.88,-610.03 228.33,-619.4 201.76,-624.64"/>
-<polygon fill="#65758c" stroke="#65758c" points="201.31,-622.06 194.41,-625.99 202.26,-627.22 201.31,-622.06"/>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-567.4" font-family="Arial" font-size="11.00" fill="#374862">F21</text>
-<text xml:space="preserve" text-anchor="middle" x="393.06" y="-554.2" font-family="Arial" font-size="11.00" fill="#374862">Indicators and period reports</text>
+<path fill="none" stroke="#9eacb7" d="M577.41,-461.18C548.9,-479.83 511.05,-502.18 474.69,-516.3 405.55,-543.15 373.07,-509.64 311.43,-550.9 292.46,-563.6 301.04,-580.07 282.43,-593.3 258.88,-610.03 228.33,-619.4 201.76,-624.64"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="201.31,-622.06 194.41,-625.99 202.26,-627.22 201.31,-622.06"/>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-567.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">F21</text>
+<text xml:space="preserve" text-anchor="middle" x="393.06" y="-554.2" font-family="Arial" font-size="11.00" fill="#c0ccd6">Indicators and period reports</text>
 </g>
 <!-- p6&#45;&gt;d6 -->
 <g id="edge11" class="edge">
 <title>p6&#45;&gt;d6</title>
-<path fill="none" stroke="#65758c" d="M635.61,-463.77C652.81,-521.2 695.28,-633.46 775.78,-686.3 847.4,-733.31 945.32,-741.25 1019.56,-738.74"/>
-<polygon fill="#65758c" stroke="#65758c" points="1019.59,-741.37 1026.98,-738.45 1019.38,-736.12 1019.59,-741.37"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-741.28" font-family="Arial" font-size="11.00" fill="#374862">Owned scenario and clock state</text>
+<path fill="none" stroke="#9eacb7" d="M635.61,-463.77C652.81,-521.2 695.28,-633.46 775.78,-686.3 847.4,-733.31 945.32,-741.25 1019.56,-738.74"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1019.59,-741.37 1026.98,-738.45 1019.38,-736.12 1019.59,-741.37"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-741.28" font-family="Arial" font-size="11.00" fill="#c0ccd6">Owned scenario and clock state</text>
 </g>
 <!-- p6&#45;&gt;d7 -->
 <g id="edge17" class="edge">
 <title>p6&#45;&gt;d7</title>
-<path fill="none" stroke="#65758c" d="M651.16,-463.22C677.72,-497.3 723.13,-547.26 775.78,-570.3 876.43,-614.34 1008.94,-607.86 1078.9,-600.1"/>
-<polygon fill="#65758c" stroke="#65758c" points="1078.87,-602.75 1086.02,-599.28 1078.27,-597.53 1078.87,-602.75"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-608.51" font-family="Arial" font-size="11.00" fill="#374862">Attributed operation record</text>
+<path fill="none" stroke="#9eacb7" d="M651.16,-463.22C677.72,-497.3 723.13,-547.26 775.78,-570.3 876.43,-614.34 1008.94,-607.86 1078.9,-600.1"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1078.87,-602.75 1086.02,-599.28 1078.27,-597.53 1078.87,-602.75"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-608.51" font-family="Arial" font-size="11.00" fill="#c0ccd6">Attributed operation record</text>
 </g>
 <!-- p6&#45;&gt;operator -->
 <g id="edge4" class="edge">
 <title>p6&#45;&gt;operator</title>
-<path fill="none" stroke="#65758c" d="M742.37,-438.04C832.4,-445.59 955.32,-455.9 1037.73,-462.81"/>
-<polygon fill="#65758c" stroke="#65758c" points="1037.37,-465.42 1045.07,-463.43 1037.81,-460.19 1037.37,-465.42"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-485.21" font-family="Arial" font-size="11.00" fill="#374862">F23</text>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-472.01" font-family="Arial" font-size="11.00" fill="#374862">Scenario status and comparison</text>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-458.81" font-family="Arial" font-size="11.00" fill="#374862">results</text>
+<path fill="none" stroke="#9eacb7" d="M742.37,-438.04C832.4,-445.59 955.32,-455.9 1037.73,-462.81"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1037.37,-465.42 1045.07,-463.43 1037.81,-460.19 1037.37,-465.42"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-485.21" font-family="Arial" font-size="11.00" fill="#c0ccd6">F23</text>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-472.01" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario status and comparison</text>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-458.81" font-family="Arial" font-size="11.00" fill="#c0ccd6">results</text>
 </g>
 <!-- p6&#45;&gt;p2 -->
 <g id="edge13" class="edge">
 <title>p6&#45;&gt;p2</title>
-<path fill="none" stroke="#65758c" d="M667.13,-394.8C695.66,-373.69 735.67,-348.36 775.78,-337.1 857.6,-314.12 953.98,-325.24 1025.05,-340.24"/>
-<polygon fill="#65758c" stroke="#65758c" points="1024.22,-342.75 1032.11,-341.77 1025.33,-337.62 1024.22,-342.75"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-340.4" font-family="Arial" font-size="11.00" fill="#374862">Scenario workshop commands</text>
+<path fill="none" stroke="#9eacb7" d="M667.13,-394.8C695.66,-373.69 735.67,-348.36 775.78,-337.1 857.6,-314.12 953.98,-325.24 1025.05,-340.24"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1024.22,-342.75 1032.11,-341.77 1025.33,-337.62 1024.22,-342.75"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-340.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario workshop commands</text>
 </g>
 <!-- p6&#45;&gt;p3 -->
 <g id="edge14" class="edge">
 <title>p6&#45;&gt;p3</title>
-<path fill="none" stroke="#65758c" d="M651.86,-393.37C678.63,-359.88 723.92,-311.08 775.78,-287.9 839.67,-259.33 916.57,-250.18 982.09,-248.8"/>
-<polygon fill="#65758c" stroke="#65758c" points="981.88,-251.43 989.33,-248.69 981.79,-246.18 981.88,-251.43"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-304.4" font-family="Arial" font-size="11.00" fill="#374862">Scenario material and purchase</text>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-291.2" font-family="Arial" font-size="11.00" fill="#374862">commands</text>
+<path fill="none" stroke="#9eacb7" d="M651.86,-393.37C678.63,-359.88 723.92,-311.08 775.78,-287.9 839.67,-259.33 916.57,-250.18 982.09,-248.8"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="981.88,-251.43 989.33,-248.69 981.79,-246.18 981.88,-251.43"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-304.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario material and purchase</text>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-291.2" font-family="Arial" font-size="11.00" fill="#c0ccd6">commands</text>
 </g>
 <!-- p6&#45;&gt;p4 -->
 <g id="edge15" class="edge">
 <title>p6&#45;&gt;p4</title>
-<path fill="none" stroke="#65758c" d="M642.53,-393.13C665.55,-347.49 712.02,-268.77 775.78,-227.1 850.38,-178.34 950.7,-158.83 1025.02,-151.11"/>
-<polygon fill="#65758c" stroke="#65758c" points="1025.24,-153.72 1032.44,-150.37 1024.72,-148.5 1025.24,-153.72"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-230.4" font-family="Arial" font-size="11.00" fill="#374862">Scenario equipment events</text>
+<path fill="none" stroke="#9eacb7" d="M642.53,-393.13C665.55,-347.49 712.02,-268.77 775.78,-227.1 850.38,-178.34 950.7,-158.83 1025.02,-151.11"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1025.24,-153.72 1032.44,-150.37 1024.72,-148.5 1025.24,-153.72"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-230.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario equipment events</text>
 </g>
 <!-- p6&#45;&gt;p5 -->
 <g id="edge16" class="edge">
 <title>p6&#45;&gt;p5</title>
-<path fill="none" stroke="#65758c" d="M634.62,-393.08C651.02,-331.96 693.15,-206.28 775.78,-138.1 837.81,-86.91 924.38,-61.21 996.04,-48.31"/>
-<polygon fill="#65758c" stroke="#65758c" points="996.27,-50.93 1003.21,-47.06 995.37,-45.76 996.27,-50.93"/>
-<text xml:space="preserve" text-anchor="middle" x="866.88" y="-141.4" font-family="Arial" font-size="11.00" fill="#374862">Scenario cost and invoice commands</text>
+<path fill="none" stroke="#9eacb7" d="M634.62,-393.08C651.02,-331.96 693.15,-206.28 775.78,-138.1 837.81,-86.91 924.38,-61.21 996.04,-48.31"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="996.27,-50.93 1003.21,-47.06 995.37,-45.76 996.27,-50.93"/>
+<text xml:space="preserve" text-anchor="middle" x="866.88" y="-141.4" font-family="Arial" font-size="11.00" fill="#c0ccd6">Scenario cost and invoice commands</text>
 </g>
 </g>
 </svg>

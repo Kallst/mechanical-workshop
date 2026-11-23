@@ -1,12 +1,12 @@
 digraph use_cases_operations {
-graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Use cases - workshop and warehouse", compound=true];
-node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
-edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
-admin [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nAdministrator"];
-clerk [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nWarehouse clerk"];
-manager [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nWorkshop manager"];
-technician [shape=box, style=filled, fillcolor="#ffffff", label="<<actor>>\nTechnician"];
-subgraph cluster_subject { label="Mechanical Workshop"; labeljust=l; color="#bdc9d8";
+graph [rankdir=LR, bgcolor="#171e24", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label="Use cases - workshop and warehouse", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#232e37", color="#697b8b", fontcolor="#e5edf3", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#c0ccd6", color="#9eacb7", arrowsize=0.75];
+admin [shape=box, style=filled, fillcolor="#171e24", label="<<actor>>\nAdministrator"];
+clerk [shape=box, style=filled, fillcolor="#171e24", label="<<actor>>\nWarehouse clerk"];
+manager [shape=box, style=filled, fillcolor="#171e24", label="<<actor>>\nWorkshop manager"];
+technician [shape=box, style=filled, fillcolor="#171e24", label="<<actor>>\nTechnician"];
+subgraph cluster_subject { label="Mechanical Workshop"; labeljust=l; color="#596977";
 "UC-01" [shape=ellipse, label="UC-01\nMaintain customers and vehicles"];
 "UC-02" [shape=ellipse, label="UC-02\nManage service orders"];
 "UC-03" [shape=ellipse, label="UC-03\nAssign technicians"];
@@ -16,9 +16,9 @@ subgraph cluster_subject { label="Mechanical Workshop"; labeljust=l; color="#bdc
 "UC-07" [shape=ellipse, label="UC-07\nAccept material returns"];
 "UC-08" [shape=ellipse, label="UC-08\nReceive or adjust stock"];
 "UC-09" [shape=ellipse, label="UC-09\nManage replenishment"];
-S1 [shape=ellipse, fillcolor="#fff8eb", label="Validate order and assignment"];
-S2 [shape=ellipse, fillcolor="#fff8eb", label="Commit stock movement"];
-S3 [shape=ellipse, fillcolor="#fff8eb", label="Suggest replenishment"];
+S1 [shape=ellipse, fillcolor="#302a22", label="Validate order and assignment"];
+S2 [shape=ellipse, fillcolor="#302a22", label="Commit stock movement"];
+S3 [shape=ellipse, fillcolor="#302a22", label="Suggest replenishment"];
 }
 "manager" -> "UC-01" [label="", dir=none];
 "manager" -> "UC-02" [label="", dir=none];
@@ -30,10 +30,10 @@ S3 [shape=ellipse, fillcolor="#fff8eb", label="Suggest replenishment"];
 "clerk" -> "UC-08" [label="", dir=none];
 "admin" -> "UC-09" [label="", dir=none];
 "clerk" -> "UC-09" [label="", dir=none];
-"UC-06" -> "S1" [label="<<include>>", style=dashed, arrowhead=vee, color="#a66a21"];
-"UC-06" -> "S2" [label="<<include>>", style=dashed, arrowhead=vee, color="#a66a21"];
-"UC-07" -> "S2" [label="<<include>>", style=dashed, arrowhead=vee, color="#a66a21"];
-"UC-08" -> "S2" [label="<<include>>", style=dashed, arrowhead=vee, color="#a66a21"];
-"S3" -> "UC-06" [label="<<extend>>\nafter stock commit [inventory\nposition below reorder point]", style=dashed, arrowhead=vee, color="#a66a21"];
+"UC-06" -> "S1" [label="<<include>>", style=dashed, arrowhead=vee, color="#e69c60"];
+"UC-06" -> "S2" [label="<<include>>", style=dashed, arrowhead=vee, color="#e69c60"];
+"UC-07" -> "S2" [label="<<include>>", style=dashed, arrowhead=vee, color="#e69c60"];
+"UC-08" -> "S2" [label="<<include>>", style=dashed, arrowhead=vee, color="#e69c60"];
+"S3" -> "UC-06" [label="<<extend>>\nafter stock commit [inventory\nposition below reorder point]", style=dashed, arrowhead=vee, color="#e69c60"];
 
 }

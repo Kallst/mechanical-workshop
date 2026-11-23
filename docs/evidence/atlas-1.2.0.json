@@ -1,0 +1,535 @@
+{
+  "date": "2026-11-23",
+  "browser": "157.0.8103.80",
+  "modelViews": 17,
+  "locales": [
+    "es",
+    "en"
+  ],
+  "categories": 6,
+  "offlineChecks": [
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "context-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "context-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-p1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-p2",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-p3",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-p4",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-p5",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-p6",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "dfd-level-1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "order-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "intervention-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "equipment-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "material-delivery-activity",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "causal-inventory",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "causal-energy",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "use-cases-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "es",
+      "id": "use-cases-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "context-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "context-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-p1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-p2",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-p3",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-p4",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-p5",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-p6",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "dfd-level-1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "order-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "intervention-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "equipment-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "material-delivery-activity",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "causal-inventory",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "causal-energy",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "use-cases-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 1440,
+      "locale": "en",
+      "id": "use-cases-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "context-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "context-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-p1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-p2",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-p3",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-p4",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-p5",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-p6",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "dfd-level-1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "order-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "intervention-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "equipment-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "material-delivery-activity",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "causal-inventory",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "causal-energy",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "use-cases-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "es",
+      "id": "use-cases-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "context-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "context-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-p1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-p2",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-p3",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-p4",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-p5",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-p6",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "dfd-level-1",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "order-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "intervention-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "equipment-states",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "material-delivery-activity",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "causal-inventory",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "causal-energy",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "use-cases-operations",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "width": 390,
+      "locale": "en",
+      "id": "use-cases-control",
+      "loaded": true,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "interactionChecks": [
+    "Six grouped categories",
+    "Accent-insensitive search",
+    "Requirement search",
+    "Empty search state",
+    "Zoom",
+    "Keyboard fit and zoom",
+    "Fullscreen enter/exit",
+    "Back navigation",
+    "Locale and hash persist after reload",
+    "Localized SVG opening",
+    "Mobile navigation drawer",
+    "Header atlas link",
+    "Current-app return preserves session",
+    "Shared locale persists between app and atlas",
+    "Spanish SVG download"
+  ],
+  "applicationHeaderWidths": [
+    {
+      "width": 1440,
+      "actual": 1440
+    },
+    {
+      "width": 390,
+      "actual": 390
+    },
+    {
+      "width": 320,
+      "actual": 320
+    }
+  ],
+  "pageErrors": [],
+  "offlineExternalRequests": 0,
+  "automatedChecks": {
+    "typecheck": "passed",
+    "domain": 17,
+    "startup": 8,
+    "httpSubtests": 11,
+    "httpParent": 1,
+    "modelStructural": 376
+  },
+  "legacyPrototypeFiles": "Removed; historical versions remain in Git",
+  "legacyPublicRoutes": "404",
+  "limitations": [
+    "Local headless Chrome; no participant or physical-device certification",
+    "Diagrams explain design; they do not execute workshop operations"
+  ]
+}

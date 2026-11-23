@@ -1,6 +1,7 @@
 """Build a standalone, offline diagram atlas from the rendered SVGs."""
 from pathlib import Path
-import base64
+import csv
+import shutil
 import json
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -24,11 +25,16 @@ catalog = [
     ('Use cases', 'use-cases-operations', 'Workshop and warehouse goals', 'External actor classifiers are outside the subject boundary. Required include arrows point to supporting behavior. Conditional replenishment extends material issue after commit.'),
     ('Use cases', 'use-cases-control', 'Monitoring and control goals', 'Monitoring, costs, invoicing, reports, access, simulation, and audit are separate goals. An idle alert conditionally extends monitoring; acknowledging it is distinct from corrective action.'),
 ]
+requirements = list(csv.DictReader((DEST/'model-traceability.csv').open(encoding='utf-8',newline='')))
 models = []
 for group, identifier, title, description in catalog:
-    image = (DEST/'diagrams'/f'{identifier}.svg').read_bytes()
-    models.append(dict(group=group,id=identifier,title=title,description=description,image='data:image/svg+xml;base64,'+base64.b64encode(image).decode('ascii')))
+    models.append(dict(group=group,id=identifier,title=title,description=description,requirements=[row['requirement_id'] for row in requirements if identifier in row['model_ids'].split(';')]))
+localization = json.loads((ROOT/'tools/design/atlas-language.json').read_text(encoding='utf-8'))
 template = (ROOT/'tools/design/atlas-template.html').read_text(encoding='utf-8')
 payload = json.dumps(models,ensure_ascii=False).replace('</','<\\/')
-(DEST/'index.html').write_text(template.replace('/* MODEL_DATA */',payload),encoding='utf-8')
-print(json.dumps({'atlas_views':len(models),'external_resources':0}))
+language = json.dumps(localization,ensure_ascii=False).replace('</','<\\/')
+(DEST/'index.html').write_text(template.replace('/* MODEL_DATA */',payload).replace('/* LANGUAGE_DATA */',language),encoding='utf-8')
+print(json.dumps({'atlas_views':len(models),'locales':['es','en'],'external_resources':0}))
+
+for asset in ['atlas.css','atlas.js']:
+    shutil.copyfile(ROOT/'tools/design'/asset,DEST/asset)

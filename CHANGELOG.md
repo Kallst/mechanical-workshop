@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0
+
+- Replace the model atlas with the workshop graphite/orange style, six categories, topic/requirement search and an accessible vector viewer.
+- Add Spanish and English diagram renderings, shared language preference, zoom, drag, fullscreen and local/offline viewing.
+- Add a direct Diagrams link to the current application and preserve return navigation.
+- Remove the retired prototype files and public mockup routes; retain model contracts, editable sources and traceability.
+- Related to #24; verification is recorded in docs/evidence/atlas-1.2.0.json.
+
 ## 1.1.1
 
 - Allow warehouse staff to consult service orders already present in their redacted snapshot. Both overview order links now stay on the selected order instead of bouncing back to overview.

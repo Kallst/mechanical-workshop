@@ -1,14 +1,14 @@
 digraph causal_inventory {
-graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="B1 - inventory replenishment feedback", compound=true];
-node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
-edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+graph [rankdir=LR, bgcolor="#171e24", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label="B1 - inventory replenishment feedback", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#232e37", color="#697b8b", fontcolor="#e5edf3", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#c0ccd6", color="#9eacb7", arrowsize=0.75];
 
 stock [label="Available inventory"];
 shortage [label="Inventory shortfall\nagainst replenishment target"];
 suggestions [label="Suggested replenishment\nquantity"];
 authorization [label="Authorized purchase\nquantity"];
 receipts [label="Received material\nquantity"];
-control [shape=note, fillcolor="#fff8eb", label="B1 - balancing loop\nOne negative influence.\nReorder suggestion alone does not restore stock.\nPurchasing and supplier lead time create delays."];
+control [shape=note, fillcolor="#302a22", label="B1 - balancing loop\nOne negative influence.\nReorder suggestion alone does not restore stock.\nPurchasing and supplier lead time create delays."];
 "stock" -> "shortage" [label="-"];
 "shortage" -> "suggestions" [label="+"];
 "suggestions" -> "authorization" [label="+\n[administrator approval required]"];
