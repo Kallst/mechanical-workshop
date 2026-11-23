@@ -1,12 +1,10 @@
 'use client';
 import { useCallback, useEffect, useRef, useState, type FormEvent, type ReactNode } from 'react';
-import type { snapshotFor, contextFor } from '@/server/workshop';
+import type { WorkshopSnapshot as Snapshot, WorkshopContext as Context } from '@/application/use-cases/workshop';
 import type { EquipmentStatus, Role } from '@/domain/types';
-import { I18nProvider, useI18n } from '@/i18n/provider';
+import { I18nProvider, useI18n } from '../i18n/provider';
 import { Cockpit, OrderCards, StockVisual, EquipmentVisual, VehicleArt, materialName, Icon } from './visuals';
 import { AppChrome, LoginScreen } from './chrome';
-type Snapshot = Awaited<ReturnType<typeof snapshotFor>>;
-type Context = Awaited<ReturnType<typeof contextFor>>;
 type Option = {
     value: string;
     label: string;

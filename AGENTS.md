@@ -33,3 +33,12 @@
 ## Scope
 
 The model atlas contains design explanations and generated diagrams. The owner retired the original browser-only prototype in issue #24; do not restore its files, links or public route. Do not describe the application as runnable until implementation and its startup path have been verified. Architecture versions, package selection, hosting, and installation commands must be validated when implementation starts.
+
+
+## Architecture boundaries
+
+- Follow the folder map in docs/architecture/hexagonal.md. Keep domain independent of frameworks and adapters.
+- Application use cases depend on application ports and domain code, not SQL, HTTP, React, environment reads or concrete adapters.
+- Select adapters in src/bootstrap/services.ts. Preserve transaction-unit guarantees across repository implementations.
+- Keep Next.js entry points in src/app and web components in src/adapters/inbound/web. Avoid compatibility copies of retired server modules.
+- Run the dependency-boundary test and application tests when moving production code.

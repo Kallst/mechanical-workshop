@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { pool } from '../../src/server/db';
+import { pool } from '../../src/adapters/outbound/persistence/postgres/pool';
 const origin = process.env.APP_ORIGIN || 'http://127.0.0.1:3070';
 const password = `Integration-${randomUUID()}`;
 type Client = { cookie: string; code: string; scenario: string };

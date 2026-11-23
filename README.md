@@ -34,6 +34,10 @@ The graphite and orange interface groups work into Workshop, Warehouse, Purchasi
 
 Long histories are expandable. The simulation remains explicitly identified; it is not live physical telemetry. See [visual design and asset provenance](docs/visual-redesign.md).
 
+## Project structure
+
+The application follows a hexagonal dependency structure: `domain` holds rules, `application` holds use cases and ports, `adapters` handles incoming web/HTTP and outgoing PostgreSQL/security, and `bootstrap` connects them. `app` remains the Next.js framework entry point. See the [folder map, dependency diagram and operation walkthrough](docs/architecture/hexagonal.md). Folder READMEs explain each boundary.
+
 ## Implemented academic capabilities
 
 - Role-based access for administrators, workshop managers, warehouse clerks, and technicians.

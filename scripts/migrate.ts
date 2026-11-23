@@ -1,6 +1,6 @@
 import { readFile, readdir } from 'node:fs/promises';
 import { migrationChecksums } from './migration-checksum';
-import { pool } from '../src/server/db';
+import { pool } from '../src/adapters/outbound/persistence/postgres/pool';
 const client = await pool().connect();
 try {
   await client.query('SELECT pg_advisory_lock(713209126)');
