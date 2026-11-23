@@ -1,8 +1,8 @@
 digraph intervention_states {
-graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Intervention lifecycle", compound=true];
-node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
-edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
-start [shape=point, width=0.14, fillcolor="#17253b", color="#17253b"];
+graph [rankdir=LR, bgcolor="#171e24", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label="Intervention lifecycle", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#232e37", color="#697b8b", fontcolor="#e5edf3", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#c0ccd6", color="#9eacb7", arrowsize=0.75];
+start [shape=point, width=0.14, fillcolor="#e5edf3", color="#e5edf3"];
 "Planned" [label="Planned"];
 "Running" [label="Running"];
 "Paused" [label="Paused"];
@@ -13,7 +13,7 @@ start [shape=point, width=0.14, fillcolor="#17253b", color="#17253b"];
 "Paused" -> "Running" [label="resume\n[order permits work and technician\nfree]\n/ open new running time segment"];
 "Running" -> "Completed" [label="finish\n[outcome supplied and caller\nauthorized]\n/ close segment and record outcome"];
 "Paused" -> "Completed" [label="finish\n[outcome supplied and caller\nauthorized]\n/ record outcome; do not add paused\ntime"];
-end0 [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#17253b", color="#17253b"];
+end0 [shape=doublecircle, label="", width=0.18, height=0.18, fixedsize=true, fillcolor="#e5edf3", color="#e5edf3"];
 "Completed" -> "end0" [label=""];
 
 }

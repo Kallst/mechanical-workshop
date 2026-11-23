@@ -1,19 +1,19 @@
 digraph equipment_states {
-graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="Equipment observation states - composite view", compound=true];
-node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
-edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
+graph [rankdir=LR, bgcolor="#171e24", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label="Equipment observation states - composite view", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#232e37", color="#697b8b", fontcolor="#e5edf3", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#c0ccd6", color="#9eacb7", arrowsize=0.75];
 
 newrank=true;
-start [shape=point, width=0.14, fillcolor="#17253b", color="#17253b"];
+start [shape=point, width=0.14, fillcolor="#e5edf3", color="#e5edf3"];
 "Unknown power" [label="Unknown power"];
 Off [label="Off"];
 subgraph cluster_powered {
-  label="Powered - power known on"; color="#9cb5bf"; style=rounded;
+  label="Powered - power known on"; color="#718a99"; style=rounded;
   "Powered unknown activity" [label="Unknown activity"];
   Working [label="Working"];
   Idle [shape=record, label="{Idle|after 15 min [no alert for episode]\n/ open alert (internal action)}"];
 }
-note [shape=note, fillcolor="#fff8eb", label="Shared power-off and heartbeat transitions\napply to every Powered substate.\nOpening or acknowledging an alert\ndoes not leave or reset Idle.\nUnknown intervals remain explicit."];
+note [shape=note, fillcolor="#302a22", label="Shared power-off and heartbeat transitions\napply to every Powered substate.\nOpening or acknowledging an alert\ndoes not leave or reset Idle.\nUnknown intervals remain explicit."];
 "start" -> "Unknown power" [label=""];
 "Unknown power" -> "Off" [label="power sample\n[off observed]"];
 "Unknown power" -> "Powered unknown activity" [label="power sample\n[on observed and activity unknown]"];

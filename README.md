@@ -6,7 +6,7 @@ The workshop needs to connect technicians, service orders, material consumption,
 
 ## Current status
 
-The repository contains a working Next.js/React/TypeScript application, PostgreSQL persistence, real employee sessions and server permissions, guarded workshop workflows, inventory and purchasing, simulated equipment events, operational reports, stable educational invoices, and isolated demonstration workspaces. The model atlas and the original browser-only prototype remain available as design evidence.
+The repository contains a working Next.js/React/TypeScript application, PostgreSQL persistence, real employee sessions and server permissions, guarded workshop workflows, inventory and purchasing, simulated equipment events, operational reports, stable educational invoices, and isolated demonstration workspaces. The organized bilingual model atlas uses the current workshop theme. The retired browser-only prototype is available only in Git history.
 
 Local production compilation, 15 domain tests, 10 HTTP integration subtests, backup restoration and 18 Chrome viewport checks passed. See [implementation evidence and limits](docs/implementation.md). Quality targets, physical telemetry and real savings are not proven by these tests.
 
@@ -60,8 +60,6 @@ Long histories are expandable. The simulation remains explicitly identified; it 
 | [Delivery roadmap](docs/roadmap.md) | Implementation sequence and evidence required for each increment |
 | [System model atlas](docs/models/index.html) | Context, DFDs, states, activities, causal loops, and use cases |
 | [Model specifications](docs/models/README.md) | Policy decisions, textual use cases, data dictionary, and traceability |
-| [Application prototype](docs/mockups/index.html) | Seven responsive English views with temporary scenario interactions |
-| [Prototype walkthrough](docs/mockups/README.md) | Reproducible scenarios and explicit prototype limits |
 | [Contributing](CONTRIBUTING.md) | GitFlow, review, validation, and English conventions |
 
 ## Demonstration team
@@ -86,6 +84,6 @@ The application derives indicators from persisted operations. Simulation assumpt
 
 ## Previewing the design
 
-Open `docs/mockups/index.html` or `docs/models/index.html` in a current browser. Both use local resources and work without a build. Alternatively, run `python -m http.server 8000` from the repository root and visit `/docs/mockups/` or `/docs/models/` on that local server.
+Open Diagrams from the application header, or open `docs/models/index.html` locally without a server. The atlas groups 17 diagrams into six categories, supports Spanish/English labels, search, deep links, fit, zoom, drag, fullscreen and vector/source downloads. Keep its adjacent CSS/JS and diagrams directory when copying it. The former prototype and its `/design/mockups/*` URLs have been retired.
 
-Role selection in the prototype is a design preview, not authentication. Local prototype checks do not establish server integrity or security. See [design verification](docs/models/verification.md) for the checks performed and their limits.
+The atlas explains system design; it does not execute workshop operations. See [design verification](docs/models/verification.md) for the checks performed and their limits.

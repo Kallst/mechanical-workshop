@@ -2,7 +2,7 @@
 
 This matrix distinguishes evidence already present in the supplied presentations from new deliverables. A presentation containing a diagram does not establish that its behavior is implemented in software.
 
-The table below is the original-source audit: "remaining" describes what was missing before the modeling increment. New design evidence is now available in the [system model atlas](models/index.html), [lifecycle decisions](models/lifecycles.md), [data dictionary](models/data-flows.md), [17 textual use cases](models/use-cases.md), [model traceability](models/model-traceability.csv), and [responsive application prototype](mockups/index.html). These close the identified design gaps. The subsequent [server-backed application](implementation.md) now supplies executable acceptance evidence; real-world business validation remains pending.
+The table below is the original-source audit: "remaining" describes what was missing before the modeling increment. New design evidence is now available in the [system model atlas](models/index.html), [lifecycle decisions](models/lifecycles.md), [data dictionary](models/data-flows.md), [17 textual use cases](models/use-cases.md), [model traceability](models/model-traceability.csv). These close the identified design gaps. The subsequent [server-backed application](implementation.md) now supplies executable acceptance evidence; real-world business validation remains pending.
 
 | Topic | Existing evidence | Remaining deliverable | Planned demonstration |
 | --- | --- | --- | --- |

@@ -41,6 +41,8 @@ const auditLabels: Record<string,string> = {
 export type Locale = 'en' | 'es';
 export const spanish: Record<string, string> ={
   "Active interventions": "Intervenciones activas",
+  "Diagrams": "Diagramas",
+  "System diagrams": "Diagramas del sistema",
   "Workshop": "Taller",
   "Warehouse": "Almacén",
   "Purchasing": "Compras",
