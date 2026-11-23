@@ -1,15 +1,15 @@
 digraph dfd_p4 {
-graph [rankdir=LR, bgcolor="#ffffff", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, labelloc=t, label="DFD Level 1 projection - 4.0 Monitor equipment", compound=true];
-node [shape=box, style="rounded,filled", fillcolor="#f3f6fa", color="#a8b5c7", fontcolor="#17253b", fontname="Arial", fontsize=13, margin="0.18,0.13"];
-edge [fontname="Arial", fontsize=11, fontcolor="#374862", color="#65758c", arrowsize=0.75];
-d2 [shape=record, style=filled, fillcolor="#fff8eb", label="D2 | Customers vehicles orders and interventions"];
-d4 [shape=record, style=filled, fillcolor="#fff8eb", label="D4 | Equipment events sessions and alerts"];
-d7 [shape=record, style=filled, fillcolor="#fff8eb", label="D7 | Audit trail"];
-manager [shape=box, style=filled, fillcolor="#ffffff", label="Workshop manager"];
-p1 [shape=ellipse, fillcolor="#f3f6fa", label="1.0\nManage identity and access"];
-p4 [shape=ellipse, fillcolor="#c9e8e1", label="4.0\nMonitor equipment"];
-p6 [shape=ellipse, fillcolor="#f3f6fa", label="6.0\nReport and run scenarios"];
-telemetry [shape=box, style=filled, fillcolor="#ffffff", label="Simulated telemetry source"];
+graph [rankdir=LR, bgcolor="#171e24", pad="0.35", nodesep="0.55", ranksep="0.8", fontname="Arial", fontsize=20, fontcolor="#e5edf3", labelloc=t, label="DFD Level 1 projection - 4.0 Monitor equipment", compound=true];
+node [shape=box, style="rounded,filled", fillcolor="#232e37", color="#697b8b", fontcolor="#e5edf3", fontname="Arial", fontsize=13, margin="0.18,0.13"];
+edge [fontname="Arial", fontsize=11, fontcolor="#c0ccd6", color="#9eacb7", arrowsize=0.75];
+d2 [shape=record, style=filled, fillcolor="#302a22", label="D2 | Customers vehicles orders and interventions"];
+d4 [shape=record, style=filled, fillcolor="#302a22", label="D4 | Equipment events sessions and alerts"];
+d7 [shape=record, style=filled, fillcolor="#302a22", label="D7 | Audit trail"];
+manager [shape=box, style=filled, fillcolor="#171e24", label="Workshop manager"];
+p1 [shape=ellipse, fillcolor="#232e37", label="1.0\nManage identity and access"];
+p4 [shape=ellipse, fillcolor="#49301e", label="4.0\nMonitor equipment"];
+p6 [shape=ellipse, fillcolor="#232e37", label="6.0\nReport and run scenarios"];
+telemetry [shape=box, style=filled, fillcolor="#171e24", label="Simulated telemetry source"];
 "telemetry" -> "p4" [label="F13\nPower activity and heartbeat events"];
 "p4" -> "telemetry" [label="F14\nEvent acceptance or rejection"];
 "manager" -> "p4" [label="F15\nEquipment actions and alert\nacknowledgement"];

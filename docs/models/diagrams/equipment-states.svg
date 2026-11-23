@@ -8,180 +8,180 @@
  viewBox="0.00 0.00 1929.00 597.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(25.2 572.2)">
 <title>equipment_states</title>
-<polygon fill="#ffffff" stroke="none" points="-25.2,25.2 -25.2,-572.2 1903.79,-572.2 1903.79,25.2 -25.2,25.2"/>
-<text xml:space="preserve" text-anchor="middle" x="939.3" y="-525" font-family="Arial" font-size="20.00">Equipment observation states &#45; composite view</text>
+<polygon fill="#171e24" stroke="none" points="-25.2,25.2 -25.2,-572.2 1903.79,-572.2 1903.79,25.2 -25.2,25.2"/>
+<text xml:space="preserve" text-anchor="middle" x="939.3" y="-525" font-family="Arial" font-size="20.00" fill="#e5edf3">Equipment observation states &#45; composite view</text>
 <g id="clust1" class="cluster">
 <title>cluster_powered</title>
-<path fill="#ffffff" stroke="#9cb5bf" d="M1000.36,-211C1000.36,-211 1858.59,-211 1858.59,-211 1864.59,-211 1870.59,-217 1870.59,-223 1870.59,-223 1870.59,-495 1870.59,-495 1870.59,-501 1864.59,-507 1858.59,-507 1858.59,-507 1000.36,-507 1000.36,-507 994.36,-507 988.36,-501 988.36,-495 988.36,-495 988.36,-223 988.36,-223 988.36,-217 994.36,-211 1000.36,-211"/>
-<text xml:space="preserve" text-anchor="middle" x="1429.48" y="-485" font-family="Arial" font-size="20.00">Powered &#45; power known on</text>
+<path fill="#171e24" stroke="#718a99" d="M1000.36,-211C1000.36,-211 1858.59,-211 1858.59,-211 1864.59,-211 1870.59,-217 1870.59,-223 1870.59,-223 1870.59,-495 1870.59,-495 1870.59,-501 1864.59,-507 1858.59,-507 1858.59,-507 1000.36,-507 1000.36,-507 994.36,-507 988.36,-501 988.36,-495 988.36,-495 988.36,-223 988.36,-223 988.36,-217 994.36,-211 1000.36,-211"/>
+<text xml:space="preserve" text-anchor="middle" x="1429.48" y="-485" font-family="Arial" font-size="20.00" fill="#e5edf3">Powered &#45; power known on</text>
 </g>
 <!-- start -->
 <g id="node1" class="node">
 <title>start</title>
-<ellipse fill="#17253b" stroke="#17253b" cx="136.17" cy="-243" rx="5.04" ry="5.04"/>
+<ellipse fill="#e5edf3" stroke="#e5edf3" cx="136.17" cy="-243" rx="5.04" ry="5.04"/>
 </g>
 <!-- Unknown power -->
 <g id="node2" class="node">
 <title>Unknown power</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M438.48,-261C438.48,-261 343.35,-261 343.35,-261 337.35,-261 331.35,-255 331.35,-249 331.35,-249 331.35,-237 331.35,-237 331.35,-231 337.35,-225 343.35,-225 343.35,-225 438.48,-225 438.48,-225 444.48,-225 450.48,-231 450.48,-237 450.48,-237 450.48,-249 450.48,-249 450.48,-255 444.48,-261 438.48,-261"/>
-<text xml:space="preserve" text-anchor="middle" x="390.92" y="-239.1" font-family="Arial" font-size="13.00" fill="#17253b">Unknown power</text>
+<path fill="#232e37" stroke="#697b8b" d="M438.48,-261C438.48,-261 343.35,-261 343.35,-261 337.35,-261 331.35,-255 331.35,-249 331.35,-249 331.35,-237 331.35,-237 331.35,-231 337.35,-225 343.35,-225 343.35,-225 438.48,-225 438.48,-225 444.48,-225 450.48,-231 450.48,-237 450.48,-237 450.48,-249 450.48,-249 450.48,-255 444.48,-261 438.48,-261"/>
+<text xml:space="preserve" text-anchor="middle" x="390.92" y="-239.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Unknown power</text>
 </g>
 <!-- start&#45;&gt;Unknown power -->
 <g id="edge1" class="edge">
 <title>start&#45;&gt;Unknown power</title>
-<path fill="none" stroke="#65758c" d="M141.56,-243C162.77,-243 256.31,-243 322.32,-243"/>
-<polygon fill="#65758c" stroke="#65758c" points="322.02,-245.63 329.52,-243 322.02,-240.38 322.02,-245.63"/>
+<path fill="none" stroke="#9eacb7" d="M141.56,-243C162.77,-243 256.31,-243 322.32,-243"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="322.02,-245.63 329.52,-243 322.02,-240.38 322.02,-245.63"/>
 </g>
 <!-- Off -->
 <g id="node3" class="node">
 <title>Off</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M736.57,-428C736.57,-428 706.57,-428 706.57,-428 700.57,-428 694.57,-422 694.57,-416 694.57,-416 694.57,-404 694.57,-404 694.57,-398 700.57,-392 706.57,-392 706.57,-392 736.57,-392 736.57,-392 742.57,-392 748.57,-398 748.57,-404 748.57,-404 748.57,-416 748.57,-416 748.57,-422 742.57,-428 736.57,-428"/>
-<text xml:space="preserve" text-anchor="middle" x="721.57" y="-406.1" font-family="Arial" font-size="13.00" fill="#17253b">Off</text>
+<path fill="#232e37" stroke="#697b8b" d="M736.57,-428C736.57,-428 706.57,-428 706.57,-428 700.57,-428 694.57,-422 694.57,-416 694.57,-416 694.57,-404 694.57,-404 694.57,-398 700.57,-392 706.57,-392 706.57,-392 736.57,-392 736.57,-392 742.57,-392 748.57,-398 748.57,-404 748.57,-404 748.57,-416 748.57,-416 748.57,-422 742.57,-428 736.57,-428"/>
+<text xml:space="preserve" text-anchor="middle" x="721.57" y="-406.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Off</text>
 </g>
 <!-- Unknown power&#45;&gt;Off -->
 <g id="edge2" class="edge">
 <title>Unknown power&#45;&gt;Off</title>
-<path fill="none" stroke="#65758c" d="M397.14,-261.39C407.23,-293.14 432.62,-357.64 479.48,-387 543.21,-426.93 635.58,-422.29 685.45,-415.87"/>
-<polygon fill="#65758c" stroke="#65758c" points="685.68,-418.49 692.76,-414.87 684.97,-413.29 685.68,-418.49"/>
-<text xml:space="preserve" text-anchor="middle" x="543.07" y="-436.29" font-family="Arial" font-size="11.00" fill="#374862">power sample</text>
-<text xml:space="preserve" text-anchor="middle" x="543.07" y="-423.09" font-family="Arial" font-size="11.00" fill="#374862">[off observed]</text>
+<path fill="none" stroke="#9eacb7" d="M397.14,-261.39C407.23,-293.14 432.62,-357.64 479.48,-387 543.21,-426.93 635.58,-422.29 685.45,-415.87"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="685.68,-418.49 692.76,-414.87 684.97,-413.29 685.68,-418.49"/>
+<text xml:space="preserve" text-anchor="middle" x="543.07" y="-436.29" font-family="Arial" font-size="11.00" fill="#c0ccd6">power sample</text>
+<text xml:space="preserve" text-anchor="middle" x="543.07" y="-423.09" font-family="Arial" font-size="11.00" fill="#c0ccd6">[off observed]</text>
 </g>
 <!-- Powered unknown activity -->
 <g id="node4" class="node">
 <title>Powered unknown activity</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M1107.82,-364C1107.82,-364 1008.36,-364 1008.36,-364 1002.36,-364 996.36,-358 996.36,-352 996.36,-352 996.36,-340 996.36,-340 996.36,-334 1002.36,-328 1008.36,-328 1008.36,-328 1107.82,-328 1107.82,-328 1113.82,-328 1119.82,-334 1119.82,-340 1119.82,-340 1119.82,-352 1119.82,-352 1119.82,-358 1113.82,-364 1107.82,-364"/>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-342.1" font-family="Arial" font-size="13.00" fill="#17253b">Unknown activity</text>
+<path fill="#232e37" stroke="#697b8b" d="M1107.82,-364C1107.82,-364 1008.36,-364 1008.36,-364 1002.36,-364 996.36,-358 996.36,-352 996.36,-352 996.36,-340 996.36,-340 996.36,-334 1002.36,-328 1008.36,-328 1008.36,-328 1107.82,-328 1107.82,-328 1113.82,-328 1119.82,-334 1119.82,-340 1119.82,-340 1119.82,-352 1119.82,-352 1119.82,-358 1113.82,-364 1107.82,-364"/>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-342.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Unknown activity</text>
 </g>
 <!-- Unknown power&#45;&gt;Powered unknown activity -->
 <g id="edge3" class="edge">
 <title>Unknown power&#45;&gt;Powered unknown activity</title>
-<path fill="none" stroke="#65758c" d="M450.95,-252.14C573.72,-271.15 856.06,-314.87 987.46,-335.22"/>
-<polygon fill="#65758c" stroke="#65758c" points="986.97,-337.8 994.78,-336.35 987.77,-332.61 986.97,-337.8"/>
-<text xml:space="preserve" text-anchor="middle" x="721.57" y="-322.92" font-family="Arial" font-size="11.00" fill="#374862">power sample</text>
-<text xml:space="preserve" text-anchor="middle" x="721.57" y="-309.72" font-family="Arial" font-size="11.00" fill="#374862">[on observed and activity unknown]</text>
+<path fill="none" stroke="#9eacb7" d="M450.95,-252.14C573.72,-271.15 856.06,-314.87 987.46,-335.22"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="986.97,-337.8 994.78,-336.35 987.77,-332.61 986.97,-337.8"/>
+<text xml:space="preserve" text-anchor="middle" x="721.57" y="-322.92" font-family="Arial" font-size="11.00" fill="#c0ccd6">power sample</text>
+<text xml:space="preserve" text-anchor="middle" x="721.57" y="-309.72" font-family="Arial" font-size="11.00" fill="#c0ccd6">[on observed and activity unknown]</text>
 </g>
 <!-- Working -->
 <g id="node5" class="node">
 <title>Working</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M1397.07,-255C1397.07,-255 1347.47,-255 1347.47,-255 1341.47,-255 1335.47,-249 1335.47,-243 1335.47,-243 1335.47,-231 1335.47,-231 1335.47,-225 1341.47,-219 1347.47,-219 1347.47,-219 1397.07,-219 1397.07,-219 1403.07,-219 1409.07,-225 1409.07,-231 1409.07,-231 1409.07,-243 1409.07,-243 1409.07,-249 1403.07,-255 1397.07,-255"/>
-<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-233.1" font-family="Arial" font-size="13.00" fill="#17253b">Working</text>
+<path fill="#232e37" stroke="#697b8b" d="M1397.07,-255C1397.07,-255 1347.47,-255 1347.47,-255 1341.47,-255 1335.47,-249 1335.47,-243 1335.47,-243 1335.47,-231 1335.47,-231 1335.47,-225 1341.47,-219 1347.47,-219 1347.47,-219 1397.07,-219 1397.07,-219 1403.07,-219 1409.07,-225 1409.07,-231 1409.07,-231 1409.07,-243 1409.07,-243 1409.07,-249 1403.07,-255 1397.07,-255"/>
+<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-233.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Working</text>
 </g>
 <!-- Unknown power&#45;&gt;Working -->
 <g id="edge4" class="edge">
 <title>Unknown power&#45;&gt;Working</title>
-<path fill="none" stroke="#65758c" d="M450.93,-240.6C578.56,-235.55 889.76,-223.95 1150.68,-220 1207.74,-219.14 1222.25,-214.8 1279.07,-220 1294.66,-221.42 1311.54,-224.18 1326.54,-227.06"/>
-<polygon fill="#65758c" stroke="#65758c" points="1325.79,-229.58 1333.65,-228.47 1326.81,-224.43 1325.79,-229.58"/>
-<text xml:space="preserve" text-anchor="middle" x="900.99" y="-243.72" font-family="Arial" font-size="11.00" fill="#374862">complete sample</text>
-<text xml:space="preserve" text-anchor="middle" x="900.99" y="-230.52" font-family="Arial" font-size="11.00" fill="#374862">[on and working observed]</text>
+<path fill="none" stroke="#9eacb7" d="M450.93,-240.6C578.56,-235.55 889.76,-223.95 1150.68,-220 1207.74,-219.14 1222.25,-214.8 1279.07,-220 1294.66,-221.42 1311.54,-224.18 1326.54,-227.06"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1325.79,-229.58 1333.65,-228.47 1326.81,-224.43 1325.79,-229.58"/>
+<text xml:space="preserve" text-anchor="middle" x="900.99" y="-243.72" font-family="Arial" font-size="11.00" fill="#c0ccd6">complete sample</text>
+<text xml:space="preserve" text-anchor="middle" x="900.99" y="-230.52" font-family="Arial" font-size="11.00" fill="#c0ccd6">[on and working observed]</text>
 </g>
 <!-- Idle -->
 <g id="node6" class="node">
 <title>Idle</title>
-<path fill="#f3f6fa" stroke="#a8b5c7" d="M1611.02,-269.04C1611.02,-269.04 1850.59,-269.04 1850.59,-269.04 1856.59,-269.04 1862.59,-275.04 1862.59,-281.04 1862.59,-281.04 1862.59,-306.96 1862.59,-306.96 1862.59,-312.96 1856.59,-318.96 1850.59,-318.96 1850.59,-318.96 1611.02,-318.96 1611.02,-318.96 1605.02,-318.96 1599.02,-312.96 1599.02,-306.96 1599.02,-306.96 1599.02,-281.04 1599.02,-281.04 1599.02,-275.04 1605.02,-269.04 1611.02,-269.04"/>
-<text xml:space="preserve" text-anchor="middle" x="1622.46" y="-290.1" font-family="Arial" font-size="13.00" fill="#17253b">Idle</text>
-<polyline fill="none" stroke="#a8b5c7" points="1645.9,-269.04 1645.9,-318.96"/>
-<text xml:space="preserve" text-anchor="middle" x="1754.24" y="-297.9" font-family="Arial" font-size="13.00" fill="#17253b">after 15 min [no alert for episode]</text>
-<text xml:space="preserve" text-anchor="middle" x="1754.24" y="-282.3" font-family="Arial" font-size="13.00" fill="#17253b">/ open alert (internal action)</text>
+<path fill="#232e37" stroke="#697b8b" d="M1611.02,-269.04C1611.02,-269.04 1850.59,-269.04 1850.59,-269.04 1856.59,-269.04 1862.59,-275.04 1862.59,-281.04 1862.59,-281.04 1862.59,-306.96 1862.59,-306.96 1862.59,-312.96 1856.59,-318.96 1850.59,-318.96 1850.59,-318.96 1611.02,-318.96 1611.02,-318.96 1605.02,-318.96 1599.02,-312.96 1599.02,-306.96 1599.02,-306.96 1599.02,-281.04 1599.02,-281.04 1599.02,-275.04 1605.02,-269.04 1611.02,-269.04"/>
+<text xml:space="preserve" text-anchor="middle" x="1622.46" y="-290.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Idle</text>
+<polyline fill="none" stroke="#697b8b" points="1645.9,-269.04 1645.9,-318.96"/>
+<text xml:space="preserve" text-anchor="middle" x="1754.24" y="-297.9" font-family="Arial" font-size="13.00" fill="#e5edf3">after 15 min [no alert for episode]</text>
+<text xml:space="preserve" text-anchor="middle" x="1754.24" y="-282.3" font-family="Arial" font-size="13.00" fill="#e5edf3">/ open alert (internal action)</text>
 </g>
 <!-- Unknown power&#45;&gt;Idle -->
 <g id="edge5" class="edge">
 <title>Unknown power&#45;&gt;Idle</title>
-<path fill="none" stroke="#65758c" d="M416.83,-224.52C469.82,-187.13 598.79,-106 720.57,-106 720.57,-106 720.57,-106 1373.27,-106 1506.01,-106 1637.79,-209.22 1697.15,-262.69"/>
-<polygon fill="#65758c" stroke="#65758c" points="1695.26,-264.52 1702.57,-267.63 1698.79,-260.64 1695.26,-264.52"/>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-122.5" font-family="Arial" font-size="11.00" fill="#374862">complete sample</text>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-109.3" font-family="Arial" font-size="11.00" fill="#374862">[on and idle observed]</text>
+<path fill="none" stroke="#9eacb7" d="M416.83,-224.52C469.82,-187.13 598.79,-106 720.57,-106 720.57,-106 720.57,-106 1373.27,-106 1506.01,-106 1637.79,-209.22 1697.15,-262.69"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1695.26,-264.52 1702.57,-267.63 1698.79,-260.64 1695.26,-264.52"/>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-122.5" font-family="Arial" font-size="11.00" fill="#c0ccd6">complete sample</text>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-109.3" font-family="Arial" font-size="11.00" fill="#c0ccd6">[on and idle observed]</text>
 </g>
 <!-- Off&#45;&gt;Unknown power -->
 <g id="edge13" class="edge">
 <title>Off&#45;&gt;Unknown power</title>
-<path fill="none" stroke="#65758c" d="M694.18,-394.15C671.56,-381.09 637.81,-362.8 606.66,-350.6 552.11,-329.25 531.43,-343.06 479.48,-316 455.31,-303.41 431.8,-283.24 415.24,-267.29"/>
-<polygon fill="#65758c" stroke="#65758c" points="417.3,-265.63 410.11,-262.24 413.62,-269.37 417.3,-265.63"/>
-<text xml:space="preserve" text-anchor="middle" x="543.07" y="-367.1" font-family="Arial" font-size="11.00" fill="#374862">heartbeat timeout</text>
-<text xml:space="preserve" text-anchor="middle" x="543.07" y="-353.9" font-family="Arial" font-size="11.00" fill="#374862">[freshness limit exceeded]</text>
+<path fill="none" stroke="#9eacb7" d="M694.18,-394.15C671.56,-381.09 637.81,-362.8 606.66,-350.6 552.11,-329.25 531.43,-343.06 479.48,-316 455.31,-303.41 431.8,-283.24 415.24,-267.29"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="417.3,-265.63 410.11,-262.24 413.62,-269.37 417.3,-265.63"/>
+<text xml:space="preserve" text-anchor="middle" x="543.07" y="-367.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">heartbeat timeout</text>
+<text xml:space="preserve" text-anchor="middle" x="543.07" y="-353.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[freshness limit exceeded]</text>
 </g>
 <!-- Off&#45;&gt;Powered unknown activity -->
 <g id="edge6" class="edge">
 <title>Off&#45;&gt;Powered unknown activity</title>
-<path fill="none" stroke="#65758c" d="M748.82,-404.98C799.66,-395.25 913.07,-373.55 987.25,-359.36"/>
-<polygon fill="#65758c" stroke="#65758c" points="987.73,-361.94 994.61,-357.95 986.75,-356.79 987.73,-361.94"/>
-<text xml:space="preserve" text-anchor="middle" x="900.99" y="-403.97" font-family="Arial" font-size="11.00" fill="#374862">power on</text>
-<text xml:space="preserve" text-anchor="middle" x="900.99" y="-390.77" font-family="Arial" font-size="11.00" fill="#374862">[new event accepted]</text>
+<path fill="none" stroke="#9eacb7" d="M748.82,-404.98C799.66,-395.25 913.07,-373.55 987.25,-359.36"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="987.73,-361.94 994.61,-357.95 986.75,-356.79 987.73,-361.94"/>
+<text xml:space="preserve" text-anchor="middle" x="900.99" y="-403.97" font-family="Arial" font-size="11.00" fill="#c0ccd6">power on</text>
+<text xml:space="preserve" text-anchor="middle" x="900.99" y="-390.77" font-family="Arial" font-size="11.00" fill="#c0ccd6">[new event accepted]</text>
 </g>
 <!-- Powered unknown activity&#45;&gt;Working -->
 <g id="edge7" class="edge">
 <title>Powered unknown activity&#45;&gt;Working</title>
-<path fill="none" stroke="#65758c" d="M1071.08,-327.56C1086.53,-305.58 1115.61,-269.79 1150.68,-253.6 1206.91,-227.64 1279.82,-227.8 1326.09,-231.47"/>
-<polygon fill="#65758c" stroke="#65758c" points="1325.77,-234.08 1333.47,-232.12 1326.23,-228.85 1325.77,-234.08"/>
-<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-270.1" font-family="Arial" font-size="11.00" fill="#374862">activity sample</text>
-<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-256.9" font-family="Arial" font-size="11.00" fill="#374862">[working observed]</text>
+<path fill="none" stroke="#9eacb7" d="M1071.08,-327.56C1086.53,-305.58 1115.61,-269.79 1150.68,-253.6 1206.91,-227.64 1279.82,-227.8 1326.09,-231.47"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1325.77,-234.08 1333.47,-232.12 1326.23,-228.85 1325.77,-234.08"/>
+<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-270.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">activity sample</text>
+<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-256.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[working observed]</text>
 </g>
 <!-- Powered unknown activity&#45;&gt;Idle -->
 <g id="edge8" class="edge">
 <title>Powered unknown activity&#45;&gt;Idle</title>
-<path fill="none" stroke="#65758c" d="M1120.09,-354.36C1130.28,-355.46 1140.77,-356.41 1150.68,-357 1336.93,-368.14 1385.99,-367.79 1570.02,-337 1592.63,-333.22 1616.67,-327.61 1639.05,-321.69"/>
-<polygon fill="#65758c" stroke="#65758c" points="1639.52,-324.29 1646.08,-319.8 1638.16,-319.22 1639.52,-324.29"/>
-<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-380.19" font-family="Arial" font-size="11.00" fill="#374862">activity sample</text>
-<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-366.99" font-family="Arial" font-size="11.00" fill="#374862">[idle observed]</text>
+<path fill="none" stroke="#9eacb7" d="M1120.09,-354.36C1130.28,-355.46 1140.77,-356.41 1150.68,-357 1336.93,-368.14 1385.99,-367.79 1570.02,-337 1592.63,-333.22 1616.67,-327.61 1639.05,-321.69"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1639.52,-324.29 1646.08,-319.8 1638.16,-319.22 1639.52,-324.29"/>
+<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-380.19" font-family="Arial" font-size="11.00" fill="#c0ccd6">activity sample</text>
+<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-366.99" font-family="Arial" font-size="11.00" fill="#c0ccd6">[idle observed]</text>
 </g>
 <!-- Working&#45;&gt;Off -->
 <g id="edge14" class="edge">
 <title>Working&#45;&gt;Off</title>
-<path fill="none" stroke="#65758c" d="M988.37,-434.45C891.52,-437.44 804.24,-425.24 757.79,-417"/>
-<polygon fill="#65758c" stroke="#65758c" points="758.35,-414.44 750.5,-415.68 757.41,-419.6 758.35,-414.44"/>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-450.81" font-family="Arial" font-size="11.00" fill="#374862">power off</text>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-437.61" font-family="Arial" font-size="11.00" fill="#374862">[timestamp accepted]</text>
+<path fill="none" stroke="#9eacb7" d="M988.37,-434.45C891.52,-437.44 804.24,-425.24 757.79,-417"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="758.35,-414.44 750.5,-415.68 757.41,-419.6 758.35,-414.44"/>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-450.81" font-family="Arial" font-size="11.00" fill="#c0ccd6">power off</text>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-437.61" font-family="Arial" font-size="11.00" fill="#c0ccd6">[timestamp accepted]</text>
 </g>
 <!-- Working&#45;&gt;Powered unknown activity -->
 <g id="edge11" class="edge">
 <title>Working&#45;&gt;Powered unknown activity</title>
-<path fill="none" stroke="#65758c" d="M1340.94,-255.33C1323.33,-265.39 1300.47,-277.52 1279.07,-286 1251.78,-296.82 1182.28,-315.24 1128.63,-328.82"/>
-<polygon fill="#65758c" stroke="#65758c" points="1128.26,-326.21 1121.63,-330.59 1129.55,-331.3 1128.26,-326.21"/>
-<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-339.5" font-family="Arial" font-size="11.00" fill="#374862">activity stale</text>
-<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-326.3" font-family="Arial" font-size="11.00" fill="#374862">[power remains known on]</text>
+<path fill="none" stroke="#9eacb7" d="M1340.94,-255.33C1323.33,-265.39 1300.47,-277.52 1279.07,-286 1251.78,-296.82 1182.28,-315.24 1128.63,-328.82"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1128.26,-326.21 1121.63,-330.59 1129.55,-331.3 1128.26,-326.21"/>
+<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-339.5" font-family="Arial" font-size="11.00" fill="#c0ccd6">activity stale</text>
+<text xml:space="preserve" text-anchor="middle" x="1214.88" y="-326.3" font-family="Arial" font-size="11.00" fill="#c0ccd6">[power remains known on]</text>
 </g>
 <!-- Working&#45;&gt;Idle -->
 <g id="edge9" class="edge">
 <title>Working&#45;&gt;Idle</title>
-<path fill="none" stroke="#65758c" d="M1409.39,-238.28C1449.02,-240.09 1514.4,-244.29 1570.02,-253.6 1590.02,-256.95 1611.19,-261.54 1631.36,-266.43"/>
-<polygon fill="#65758c" stroke="#65758c" points="1630.55,-268.93 1638.46,-268.18 1631.81,-263.84 1630.55,-268.93"/>
-<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-270.1" font-family="Arial" font-size="11.00" fill="#374862">activity idle</text>
-<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-256.9" font-family="Arial" font-size="11.00" fill="#374862">[timestamp accepted]</text>
+<path fill="none" stroke="#9eacb7" d="M1409.39,-238.28C1449.02,-240.09 1514.4,-244.29 1570.02,-253.6 1590.02,-256.95 1611.19,-261.54 1631.36,-266.43"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1630.55,-268.93 1638.46,-268.18 1631.81,-263.84 1630.55,-268.93"/>
+<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-270.1" font-family="Arial" font-size="11.00" fill="#c0ccd6">activity idle</text>
+<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-256.9" font-family="Arial" font-size="11.00" fill="#c0ccd6">[timestamp accepted]</text>
 </g>
 <!-- Idle&#45;&gt;Unknown power -->
 <g id="edge15" class="edge">
 <title>Idle&#45;&gt;Unknown power</title>
-<path fill="none" stroke="#65758c" d="M1678.3,-211C1617.22,-124.06 1506.69,0 1373.27,0 720.57,0 720.57,0 720.57,0 601.08,0 570.32,-41.36 479.48,-119 446.66,-147.05 419.99,-189.98 405.03,-217.26"/>
-<polygon fill="#65758c" stroke="#65758c" points="402.91,-215.67 401.67,-223.52 407.53,-218.16 402.91,-215.67"/>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-16.5" font-family="Arial" font-size="11.00" fill="#374862">heartbeat timeout</text>
-<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-3.3" font-family="Arial" font-size="11.00" fill="#374862">[freshness limit exceeded]</text>
+<path fill="none" stroke="#9eacb7" d="M1678.3,-211C1617.22,-124.06 1506.69,0 1373.27,0 720.57,0 720.57,0 720.57,0 601.08,0 570.32,-41.36 479.48,-119 446.66,-147.05 419.99,-189.98 405.03,-217.26"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="402.91,-215.67 401.67,-223.52 407.53,-218.16 402.91,-215.67"/>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-16.5" font-family="Arial" font-size="11.00" fill="#c0ccd6">heartbeat timeout</text>
+<text xml:space="preserve" text-anchor="middle" x="1058.09" y="-3.3" font-family="Arial" font-size="11.00" fill="#c0ccd6">[freshness limit exceeded]</text>
 </g>
 <!-- Idle&#45;&gt;Powered unknown activity -->
 <g id="edge12" class="edge">
 <title>Idle&#45;&gt;Powered unknown activity</title>
-<path fill="none" stroke="#65758c" d="M1677.03,-319.38C1619.48,-345.41 1523.87,-383.89 1436.47,-397 1328.35,-413.22 1202.43,-387.2 1126.83,-366.75"/>
-<polygon fill="#65758c" stroke="#65758c" points="1127.71,-364.27 1119.78,-364.81 1126.32,-369.33 1127.71,-364.27"/>
-<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-418.58" font-family="Arial" font-size="11.00" fill="#374862">activity stale</text>
-<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-405.38" font-family="Arial" font-size="11.00" fill="#374862">[power remains known on]</text>
+<path fill="none" stroke="#9eacb7" d="M1677.03,-319.38C1619.48,-345.41 1523.87,-383.89 1436.47,-397 1328.35,-413.22 1202.43,-387.2 1126.83,-366.75"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1127.71,-364.27 1119.78,-364.81 1126.32,-369.33 1127.71,-364.27"/>
+<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-418.58" font-family="Arial" font-size="11.00" fill="#c0ccd6">activity stale</text>
+<text xml:space="preserve" text-anchor="middle" x="1372.27" y="-405.38" font-family="Arial" font-size="11.00" fill="#c0ccd6">[power remains known on]</text>
 </g>
 <!-- Idle&#45;&gt;Working -->
 <g id="edge10" class="edge">
 <title>Idle&#45;&gt;Working</title>
-<path fill="none" stroke="#65758c" d="M1598.69,-301.77C1555.64,-301.24 1507.96,-297.28 1465.47,-286 1444.96,-280.56 1423.93,-269.85 1407.14,-259.82"/>
-<polygon fill="#65758c" stroke="#65758c" points="1408.8,-257.76 1401.03,-256.08 1406.05,-262.24 1408.8,-257.76"/>
-<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-317.16" font-family="Arial" font-size="11.00" fill="#374862">activity working</text>
-<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-303.96" font-family="Arial" font-size="11.00" fill="#374862">[timestamp accepted]</text>
+<path fill="none" stroke="#9eacb7" d="M1598.69,-301.77C1555.64,-301.24 1507.96,-297.28 1465.47,-286 1444.96,-280.56 1423.93,-269.85 1407.14,-259.82"/>
+<polygon fill="#9eacb7" stroke="#9eacb7" points="1408.8,-257.76 1401.03,-256.08 1406.05,-262.24 1408.8,-257.76"/>
+<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-317.16" font-family="Arial" font-size="11.00" fill="#c0ccd6">activity working</text>
+<text xml:space="preserve" text-anchor="middle" x="1517.74" y="-303.96" font-family="Arial" font-size="11.00" fill="#c0ccd6">[timestamp accepted]</text>
 </g>
 <!-- note -->
 <g id="node7" class="node">
 <title>note</title>
-<polygon fill="#fff8eb" stroke="#a8b5c7" points="266.35,-384.36 0,-384.36 0,-287.64 272.35,-287.64 272.35,-378.36 266.35,-384.36"/>
-<polyline fill="none" stroke="#a8b5c7" points="266.35,-384.36 266.35,-378.36"/>
-<polyline fill="none" stroke="#a8b5c7" points="272.35,-378.36 266.35,-378.36"/>
-<text xml:space="preserve" text-anchor="middle" x="136.17" y="-363.3" font-family="Arial" font-size="13.00" fill="#17253b">Shared power&#45;off and heartbeat transitions</text>
-<text xml:space="preserve" text-anchor="middle" x="136.17" y="-347.7" font-family="Arial" font-size="13.00" fill="#17253b">apply to every Powered substate.</text>
-<text xml:space="preserve" text-anchor="middle" x="136.17" y="-332.1" font-family="Arial" font-size="13.00" fill="#17253b">Opening or acknowledging an alert</text>
-<text xml:space="preserve" text-anchor="middle" x="136.17" y="-316.5" font-family="Arial" font-size="13.00" fill="#17253b">does not leave or reset Idle.</text>
-<text xml:space="preserve" text-anchor="middle" x="136.17" y="-300.9" font-family="Arial" font-size="13.00" fill="#17253b">Unknown intervals remain explicit.</text>
+<polygon fill="#302a22" stroke="#697b8b" points="266.35,-384.36 0,-384.36 0,-287.64 272.35,-287.64 272.35,-378.36 266.35,-384.36"/>
+<polyline fill="none" stroke="#697b8b" points="266.35,-384.36 266.35,-378.36"/>
+<polyline fill="none" stroke="#697b8b" points="272.35,-378.36 266.35,-378.36"/>
+<text xml:space="preserve" text-anchor="middle" x="136.17" y="-363.3" font-family="Arial" font-size="13.00" fill="#e5edf3">Shared power&#45;off and heartbeat transitions</text>
+<text xml:space="preserve" text-anchor="middle" x="136.17" y="-347.7" font-family="Arial" font-size="13.00" fill="#e5edf3">apply to every Powered substate.</text>
+<text xml:space="preserve" text-anchor="middle" x="136.17" y="-332.1" font-family="Arial" font-size="13.00" fill="#e5edf3">Opening or acknowledging an alert</text>
+<text xml:space="preserve" text-anchor="middle" x="136.17" y="-316.5" font-family="Arial" font-size="13.00" fill="#e5edf3">does not leave or reset Idle.</text>
+<text xml:space="preserve" text-anchor="middle" x="136.17" y="-300.9" font-family="Arial" font-size="13.00" fill="#e5edf3">Unknown intervals remain explicit.</text>
 </g>
 </g>
 </svg>

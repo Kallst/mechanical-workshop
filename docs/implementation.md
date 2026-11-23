@@ -2,7 +2,7 @@
 
 ## Delivered application
 
-The application implements FR-01 through FR-20 as an academic workshop simulation. See [running instructions](running.md). The earlier static prototype remains a design artifact and does not share state with this application.
+The application implements FR-01 through FR-20 as an academic workshop simulation. See [running instructions](running.md). The earlier static prototype was retired in issue #24; its historical evidence remains in Git history. The current model atlas explains the application design without executing operations.
 
 | Capability | Implemented behavior | Verification |
 | --- | --- | --- |
@@ -69,3 +69,9 @@ Issue #17 supersedes the original English-only product-copy constraint while pre
 Local verification: strict TypeScript; 17 domain/localization/migration checks; eight startup checks; ten HTTP integration subtests plus their parent; production startup and compilation; 18 view/viewport combinations at 1440 and 390 pixels; keyboard map/equipment navigation; real role switching, localized closeout rejection, intervention pause/resume, material request, partial issue, return, guided closeout, invoice persistence, localized CSV and logout. No browser page errors or page-level horizontal overflow were observed. See [machine-readable evidence](evidence/visual-1.1.0.json). These checks are not a participant usability study or physical sensor validation.
 
 The Windows verification also exposed newline-only legacy migration checksums and transient Next export directory locks. Migration matching accepts only the LF/CRLF equivalents of the supplied SQL. Production builds retry only recursive mkdir EPERM/EACCES inside .next, with bounded delays; persistent denials still fail. Existing data and credentials are preserved.
+
+## Organized bilingual atlas (1.2.0)
+
+Issue #24 replaces the old atlas/prototype navigation with the current graphite/orange workshop theme. Six categories organize 17 models. The atlas supports topic/requirement search, deep links, related models, fit/zoom/drag, fullscreen and local vector/source access. The application header links directly to Diagrams; returning preserves the authenticated session. Spanish and English SVGs share the same node/edge topology. Technical DOT and contracts remain English. The original prototype files and /design/mockups routes are retired; there is no link back to that interface.
+
+Verification: 68 diagram/locale/viewport combinations passed at 1440 and 390 pixels without page errors or page-level overflow. Offline browsing made no external requests. Search, hash/history navigation, shared locale, fullscreen, zoom, keyboard controls and the mobile drawer passed. The application header was checked at 1440, 390 and 320 pixels. Hosted Spanish SVG download and return to the current workshop passed. Strict TypeScript, 17 domain/localization tests, eight startup checks, eleven HTTP subtests plus parent and 376 model checks passed. See evidence/atlas-1.2.0.json. These are local Chrome checks, not a participant study or cross-browser certification.

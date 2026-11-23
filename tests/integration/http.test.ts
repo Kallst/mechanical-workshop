@@ -27,6 +27,12 @@ test('authenticated persisted workshop workflow, ownership, replay, concurrency,
     assert.equal(snapshot.state.employees.length, 7); assert.equal(snapshot.costs['SO-1042'].total, 42468000);
     clerk = await as(admin, 'juanita'); tech = await as(admin, 'nicolas'); manager = await as(admin, 'juan-jacobo');
   });
+  await t.test('organized atlas serves both vector languages and retires the legacy UI', async () => {
+    const atlas = await fetch(origin + '/design/models/index.html'); assert.equal(atlas.status,200); const html = await atlas.text(); assert.match(html,/atlas.css/); assert.match(html,/atlas.js/); assert.doesNotMatch(html,/Open application prototype|href="[^"]*mockups/);
+    for(const asset of ['atlas.css','atlas.js','diagrams/context-operations.svg','diagrams/es/context-operations.svg']) assert.equal((await fetch(origin+'/design/models/'+asset)).status,200,asset);
+    for(const asset of ['index.html','prototype.js','prototype.css','README.md']) assert.equal((await fetch(origin+'/design/mockups/'+asset)).status,404,asset);
+    assert.equal((await fetch(origin+'/design/models/missing.svg')).status,404);
+  });
   await t.test('role is server-derived and cross-origin writes fail', async () => {
     const forbidden = await command(tech, 'material.issue', { requestId: 'REQ-208', quantity: '1', role: 'Warehouse clerk' }); assert.equal(forbidden.response.status, 403);
     const crossOrigin = await call('/api/workshop', { method: 'POST', headers: { Origin: 'https://untrusted.example' }, body: JSON.stringify({ scenarioId: admin.scenario, action: 'clock.advance', payload: { minutes: 5 }, key: randomUUID() }) }, admin.cookie); assert.equal(crossOrigin.response.status, 403);

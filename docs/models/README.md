@@ -4,7 +4,7 @@ Status: reviewed design baseline. These models specify intended application beha
 
 ## Visual navigation
 
-Open [the model atlas](index.html) to inspect the diagrams, process projections, and their design notes. Every diagram is also available as an editable DOT source and a rendered SVG in [diagrams](diagrams/).
+Open [the model atlas](index.html) to inspect six organized categories using the current graphite/orange theme, search and the vector viewer. Spanish and English diagram renderings are available; source DOT and technical specifications remain English. The atlas works locally with no external services. Every diagram is also available as an editable DOT source and a rendered SVG in [diagrams](diagrams/).
 
 | View | Purpose | Source |
 | --- | --- | --- |
@@ -21,7 +21,7 @@ Open [the model atlas](index.html) to inspect the diagrams, process projections,
 | Operational use cases | Workshop and warehouse actor goals and supporting behavior | [SVG](diagrams/use-cases-operations.svg) · [DOT](diagrams/use-cases-operations.dot) |
 | Control use cases | Monitoring, finance, reporting, access, and demonstration actor goals | [SVG](diagrams/use-cases-control.svg) · [DOT](diagrams/use-cases-control.dot) |
 
-Supporting specifications: [lifecycles and policy decisions](lifecycles.md), [context and data dictionary](data-flows.md), [use case specifications](use-cases.md), [model traceability](model-traceability.csv), and [mockup walkthrough](../mockups/README.md).
+Supporting specifications: [lifecycles and policy decisions](lifecycles.md), [context and data dictionary](data-flows.md), [use case specifications](use-cases.md), [model traceability](model-traceability.csv).
 
 ## Notation and boundaries
 
@@ -57,3 +57,20 @@ python tools/design/verify-design.py
 ```
 
 The generator writes the shared [model contract](model-contract.json), DOT files, and traceability. The renderer creates SVGs using the pinned Viz.js version. The atlas builder embeds the rendered SVGs in a standalone page so viewing requires no CDN. Generated files are committed for immediate viewing without installing authoring tools. Review generated changes before committing them.
+
+
+## Atlas organization and regeneration
+
+Six categories organize the 17 diagrams: Context, Data flows, States, Activities, Feedback and Use cases. Search accepts topics, IDs and linked requirement IDs without requiring accents. Each diagram supports deep links, adjacent-model navigation, fit/zoom/drag, fullscreen and vector/source access. English DOT and technical specifications remain authoritative; the Spanish SVGs are localized presentations of the same node/edge topology. When hosted, SVG links download; when opened from file, they open the existing local vector in another tab.
+
+Developer regeneration, from the repository root:
+
+```sh
+npm install --prefix tools/design --ignore-scripts --no-package-lock
+python tools/design/build-models.py
+node tools/design/render-models.mjs
+python tools/design/build-atlas.py
+npm run check:design
+```
+
+The render helper uses pinned Viz.js and measures Spanish with equivalent Latin base glyphs before restoring accents in the SVG. This avoids the bundled metric limitation while preserving readable translated labels. The atlas keeps local CSS, JavaScript and vector assets next to its HTML; it uses no remote fonts or rendering services. The legacy prototype files and route are retired; do not restore them as atlas navigation.

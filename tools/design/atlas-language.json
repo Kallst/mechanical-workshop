@@ -1,0 +1,308 @@
+{
+  "ui": {
+    "System diagrams": "Diagramas del sistema",
+    "Back to workshop": "Volver al taller",
+    "Model atlas": "ATLAS DEL TALLER",
+    "The workshop, explained.": "El taller, explicado.",
+    "Explore how people, materials, equipment and information connect.": "Explora cómo se conectan personas, materiales, equipos e información.",
+    "Diagrams": "Diagramas",
+    "Categories": "Categorías",
+    "Use cases": "Casos de uso",
+    "Search diagrams": "Buscar diagramas",
+    "Search by topic, process or requirement…": "Busca por tema, proceso o requisito…",
+    "All diagrams": "Todos los diagramas",
+    "Recommended route": "Ruta recomendada",
+    "Start with the boundary. Follow the flows. Explore the rules and feedback.": "Empieza por los límites. Sigue los flujos. Explora las reglas y la retroalimentación.",
+    "Explore": "Explorar",
+    "Open diagram": "Abrir diagrama",
+    "Home": "Inicio",
+    "Previous diagram": "Diagrama anterior",
+    "Next diagram": "Diagrama siguiente",
+    "Fit width": "Ajustar al ancho",
+    "Zoom out": "Alejar",
+    "Zoom in": "Acercar",
+    "Fullscreen": "Pantalla completa",
+    "Exit fullscreen": "Salir de pantalla completa",
+    "Download SVG": "Descargar SVG",
+    "DOT source": "Fuente DOT",
+    "Model details": "Detalles del modelo",
+    "Requirements": "Requisitos",
+    "Related diagrams": "Diagramas relacionados",
+    "No matching diagrams": "No hay diagramas coincidentes",
+    "Try another topic or a requirement such as FR-04.": "Prueba otro tema o un requisito como FR-04.",
+    "Clear search": "Limpiar búsqueda",
+    "System model views": "Categorías y diagramas",
+    "Language": "Idioma",
+    "Design models · academic simulation": "Modelos de diseño · simulación académica",
+    "Drag to explore · use zoom to read labels": "Arrastra para explorar · usa el zoom para leer",
+    "Wide reference · use the six process views for detail": "Referencia amplia · consulta las seis vistas por proceso para leer el detalle",
+    "Technical specifications": "Especificaciones técnicas",
+    "Offline atlas": "Atlas sin conexión",
+    "Menu": "Menú",
+    "Close menu": "Cerrar menú",
+    "Loading diagram…": "Cargando diagrama…",
+    "Diagram could not be loaded.": "No se pudo cargar el diagrama.",
+    "Close": "Cerrar",
+    "Keyboard: + / − to zoom, 0 to fit, Esc to leave fullscreen.": "Teclado: + / − para zoom, 0 para ajustar, Esc para salir de pantalla completa.",
+    "Local vector files · no external services": "Vectores locales · sin servicios externos",
+    "Fit diagram": "Ajustar diagrama",
+    "Zoom": "Zoom",
+    "Diagram viewer": "Visor del diagrama",
+    "Open SVG": "Abrir SVG"
+  },
+  "groups": {
+    "Context": {
+      "es": "Visión general",
+      "enDescription": "The system boundary and its connections.",
+      "esDescription": "Los límites del sistema y sus conexiones.",
+      "icon": "network"
+    },
+    "Data flows": {
+      "es": "Flujos de información",
+      "enDescription": "Six processes, their inputs and their outputs.",
+      "esDescription": "Seis procesos, sus entradas y sus salidas.",
+      "icon": "flow"
+    },
+    "States": {
+      "es": "Ciclos de vida",
+      "enDescription": "How orders, interventions and equipment change.",
+      "esDescription": "Cómo cambian órdenes, intervenciones y equipos.",
+      "icon": "cycle"
+    },
+    "Activities": {
+      "es": "Operación y responsables",
+      "enDescription": "The material delivery workflow, across roles.",
+      "esDescription": "La entrega de materiales, paso a paso y por rol.",
+      "icon": "activity"
+    },
+    "Feedback": {
+      "es": "Retroalimentación",
+      "enDescription": "Inventory and energy balancing loops.",
+      "esDescription": "Los ciclos de control de inventario y energía.",
+      "icon": "feedback"
+    },
+    "Use cases": {
+      "es": "Roles y casos de uso",
+      "enDescription": "What each role does inside the workshop.",
+      "esDescription": "Qué hace cada rol dentro del taller.",
+      "icon": "people"
+    }
+  },
+  "models": {
+    "context-operations": {
+      "esTitle": "Límites de la operación",
+      "enDescription": "Who sends commands to the workshop and what comes back.",
+      "esDescription": "Quién envía acciones al taller y qué recibe como resultado.",
+      "keywords": [
+        "sistema",
+        "limites",
+        "operacion",
+        "roles",
+        "trabajador",
+        "tecnico",
+        "administrador"
+      ]
+    },
+    "context-control": {
+      "esTitle": "Límites del control y la entrega",
+      "enDescription": "The same system boundary, focused on monitoring, reports and invoices.",
+      "esDescription": "El mismo sistema, enfocado en supervisión, reportes y facturas.",
+      "keywords": [
+        "sistema",
+        "limites",
+        "control",
+        "entrega",
+        "telemetria",
+        "reportes",
+        "factura"
+      ]
+    },
+    "dfd-p1": {
+      "esTitle": "1.0 Identidad y acceso",
+      "enDescription": "From sign-in credentials to a verified session and role.",
+      "esDescription": "De las credenciales a una sesión y un rol verificados.",
+      "keywords": [
+        "identidad",
+        "acceso",
+        "sesion",
+        "autenticacion",
+        "contrasena"
+      ]
+    },
+    "dfd-p2": {
+      "esTitle": "2.0 Operación del taller",
+      "enDescription": "Orders, assignments and interventions connect people to work.",
+      "esDescription": "Órdenes, asignaciones e intervenciones vinculan personas con trabajo.",
+      "keywords": [
+        "orden",
+        "asignacion",
+        "intervencion",
+        "tecnico",
+        "trabajo",
+        "taller"
+      ]
+    },
+    "dfd-p3": {
+      "esTitle": "3.0 Inventario y compras",
+      "enDescription": "Requests, issues and purchases become traceable stock movements.",
+      "esDescription": "Solicitudes, entregas y compras generan movimientos trazables.",
+      "keywords": [
+        "inventario",
+        "compras",
+        "almacen",
+        "entrega",
+        "materiales",
+        "existencias"
+      ]
+    },
+    "dfd-p4": {
+      "esTitle": "4.0 Supervisión de equipos",
+      "enDescription": "Observations become intervals, coverage and idle alerts.",
+      "esDescription": "Las observaciones se convierten en intervalos, cobertura y alertas.",
+      "keywords": [
+        "equipo",
+        "energia",
+        "telemetria",
+        "alerta",
+        "compresor",
+        "inactividad"
+      ]
+    },
+    "dfd-p5": {
+      "esTitle": "5.0 Costos y facturación",
+      "enDescription": "Material, labor and estimated energy feed the invoice snapshot.",
+      "esDescription": "Materiales, mano de obra y energía estimada forman el costo de la factura.",
+      "keywords": [
+        "costos",
+        "factura",
+        "energia",
+        "mano",
+        "obra",
+        "materiales"
+      ]
+    },
+    "dfd-p6": {
+      "esTitle": "6.0 Reportes y escenarios",
+      "enDescription": "Recorded operations feed reports and reproducible scenarios.",
+      "esDescription": "Las operaciones registradas alimentan reportes y escenarios reproducibles.",
+      "keywords": [
+        "reloj",
+        "simulacion",
+        "reportes",
+        "escenario",
+        "semilla"
+      ]
+    },
+    "dfd-level-1": {
+      "esTitle": "Referencia completa del nivel 1",
+      "enDescription": "The six logical processes and seven stores in one large reference.",
+      "esDescription": "Los seis procesos lógicos y siete almacenes de datos en una referencia amplia."
+    },
+    "order-states": {
+      "esTitle": "Ciclo de una orden de servicio",
+      "enDescription": "From draft to closure, with guards at each transition.",
+      "esDescription": "Del borrador al cierre, con condiciones en cada transición.",
+      "keywords": [
+        "orden",
+        "borrador",
+        "abierta",
+        "pausa",
+        "revision",
+        "cierre"
+      ]
+    },
+    "intervention-states": {
+      "esTitle": "Ciclo de una intervención",
+      "enDescription": "Only active segments add labor time; pauses remain separate.",
+      "esDescription": "Solo los tramos activos suman mano de obra; las pausas quedan separadas.",
+      "keywords": [
+        "intervencion",
+        "tiempo",
+        "pausa",
+        "finalizar",
+        "tecnico"
+      ]
+    },
+    "equipment-states": {
+      "esTitle": "Estados de un equipo",
+      "enDescription": "Power, useful activity and unknown data remain distinct.",
+      "esDescription": "Encendido, actividad útil y datos desconocidos se distinguen.",
+      "keywords": [
+        "equipos",
+        "encendido",
+        "apagado",
+        "energia",
+        "actividad",
+        "desconocido"
+      ]
+    },
+    "material-delivery-activity": {
+      "esTitle": "Entrega de materiales por rol",
+      "enDescription": "Technician, application and warehouse share one validated workflow.",
+      "esDescription": "Técnico, aplicación y almacén comparten un flujo con validaciones.",
+      "keywords": [
+        "materiales",
+        "entrega",
+        "solicitud",
+        "responsable",
+        "almacen",
+        "tecnico",
+        "transaccion"
+      ]
+    },
+    "causal-inventory": {
+      "esTitle": "B1 · Reposición de inventario",
+      "enDescription": "Approval, ordering and actual receipt close the replenishment loop.",
+      "esDescription": "Aprobar, comprar y recibir cierra el ciclo de reposición.",
+      "keywords": [
+        "inventario",
+        "reposicion",
+        "existencias",
+        "compras",
+        "compensador"
+      ]
+    },
+    "causal-energy": {
+      "esTitle": "B2 · Control de equipos en vacío",
+      "enDescription": "An alert prompts human action; acknowledgement alone does not stop equipment.",
+      "esDescription": "La alerta impulsa una acción humana; reconocerla no detiene el equipo.",
+      "keywords": [
+        "energia",
+        "consumo",
+        "compresor",
+        "vacio",
+        "inactividad",
+        "compensador"
+      ]
+    },
+    "use-cases-operations": {
+      "esTitle": "Taller y almacén: casos de uso",
+      "enDescription": "Operational roles, their goals and the required supporting behavior.",
+      "esDescription": "Roles operativos, sus objetivos y las acciones de apoyo necesarias.",
+      "keywords": [
+        "roles",
+        "casos",
+        "uso",
+        "tecnico",
+        "jefe",
+        "almacen",
+        "taller"
+      ]
+    },
+    "use-cases-control": {
+      "esTitle": "Control y resultados: casos de uso",
+      "enDescription": "Monitoring, finance, access and the demonstration scenario.",
+      "esDescription": "Supervisión, finanzas, acceso y escenario de demostración.",
+      "keywords": [
+        "roles",
+        "casos",
+        "uso",
+        "administrador",
+        "factura",
+        "costos",
+        "reportes",
+        "energia"
+      ]
+    }
+  }
+}

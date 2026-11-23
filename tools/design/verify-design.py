@@ -89,8 +89,15 @@ for path in [ROOT/'README.md', ROOT/'CONTRIBUTING.md', ROOT/'AGENTS.md', *sorted
         if link.startswith(('#','data:','mailto:')) or '://' in link or '${' in link: continue
         target=link.split('#',1)[0].split('?',1)[0]
         require((path.parent/target).exists(), f'Local reference resolves: {path.relative_to(ROOT)} {target}')
-prototype=(ROOT/'docs/mockups/prototype.js').read_text(encoding='utf-8')
+seed=(ROOT/'src/domain/seed.ts').read_text(encoding='utf-8')
 for name in ['Brian','Nicolás','Álan','Tamara','Juan Jacobo','Anderson','Juanita']:
-    require(name in prototype, f'Employee name preserved: {name}')
-require(not re.search(r'\b(fetch|XMLHttpRequest|WebSocket)\s*\(',prototype), 'Browser prototype has no server or external API dependency')
-print(json.dumps({'result':'passed','structural_checks':len(checks),'boundary_flows':23,'diagrams':17,'textual_use_cases':17,'traced_requirements':30}))
+    require(name in seed, f'Employee name preserved: {name}')
+require(not (ROOT/'docs/mockups/index.html').exists(), 'Legacy prototype page is retired')
+spanish=sorted((MODELS/'diagrams/es').glob('*.svg'))
+require(len(spanish)==17, '17 Spanish vector diagrams')
+for translated in spanish:
+    english=ET.fromstring((MODELS/'diagrams'/translated.name).read_text(encoding='utf-8'))
+    localized=ET.fromstring(translated.read_text(encoding='utf-8'))
+    topology=lambda doc:[(e.attrib.get('class'),e.attrib.get('id')) for e in doc.iter() if e.attrib.get('class') in ['node','edge']]
+    require(topology(english)==topology(localized), f'Localized diagram retains nodes and edges: {translated.stem}')
+print(json.dumps({'result':'passed','structural_checks':len(checks),'boundary_flows':23,'diagrams':17,'locales':2,'textual_use_cases':17,'traced_requirements':30}))

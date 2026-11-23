@@ -1,5 +1,7 @@
 # Design verification
 
+The original prototype behavior record below is historical. The owner retired its interactive files and public route in issue #24. The current atlas uses the workshop theme, organized bilingual navigation and localized vectors; executable workshop verification is recorded in implementation.md.
+
 Verification scope: the system-model baseline and browser-only design prototype. This document does not certify the future full-stack application, server authorization, persistence, concurrency safety, telemetry delivery, or business savings.
 
 The recorded browser assertions, layout measurements, atlas image checks, and final typography checks are available in [the browser verification record](browser-verification.json).
